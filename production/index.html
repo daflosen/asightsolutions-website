@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="asightsolutions - Digital solutions and strategies that help your processes thrive and your business grow">
+    <title>asightsolutions® - Digital Growth</title>
+    
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Inline Critical CSS for Performance -->
+    <style>
+        /* Reset & Base */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { 
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; 
+            line-height: 1.6;
+            color: #000;
+            background: #fff;
+        }
+        
+        /* Container */
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 2rem; }
+        
+        /* Typography */
+        .text-xs { font-size: 0.75rem; }
+        .text-sm { font-size: 0.875rem; }
+        .text-base { font-size: 1rem; }
+        .text-lg { font-size: 1.125rem; }
+        .text-xl { font-size: 1.25rem; }
+        .text-2xl { font-size: 1.5rem; }
+        .text-3xl { font-size: 1.875rem; }
+        .text-4xl { font-size: 2.25rem; }
+        .text-5xl { font-size: 3rem; }
+        .text-6xl { font-size: 3.75rem; }
+        .text-7xl { font-size: 4.5rem; }
+        .text-8xl { font-size: 6rem; }
+        
+        .font-light { font-weight: 300; }
+        .font-normal { font-weight: 400; }
+        .font-medium { font-weight: 500; }
+        .font-bold { font-weight: 700; }
+        
+        /* Colors */
+        .text-white { color: #fff; }
+        .text-gray-400 { color: #9ca3af; }
+        .text-gray-500 { color: #6b7280; }
+        .text-gray-600 { color: #4b5563; }
+        .bg-white { background-color: #fff; }
+        .bg-gray-50 { background-color: #f9fafb; }
+        .bg-gray-100 { background-color: #f3f4f6; }
+        .bg-cyan-50 { background-color: #ecfeff; }
+        .bg-cyan-600 { background-color: #0891b2; }
+        
+        /* Layout */
+        .min-h-screen { min-height: 100vh; }
+        .flex { display: flex; }
+        .grid { display: grid; }
+        .items-center { align-items: center; }
+        .justify-center { justify-content: center; }
+        .gap-4 { gap: 1rem; }
+        .gap-8 { gap: 2rem; }
+        .gap-16 { gap: 4rem; }
+        
+        /* Spacing */
+        .p-4 { padding: 1rem; }
+        .p-8 { padding: 2rem; }
+        .p-12 { padding: 3rem; }
+        .px-8 { padding-left: 2rem; padding-right: 2rem; }
+        .py-16 { padding-top: 4rem; padding-bottom: 4rem; }
+        .py-20 { padding-top: 5rem; padding-bottom: 5rem; }
+        .mb-4 { margin-bottom: 1rem; }
+        .mb-8 { margin-bottom: 2rem; }
+        .mb-12 { margin-bottom: 3rem; }
+        .mt-8 { margin-top: 2rem; }
+        .my-4 { margin-top: 1rem; margin-bottom: 1rem; }
+        
+        /* Border Radius */
+        .rounded-lg { border-radius: 0.5rem; }
+        .rounded-xl { border-radius: 0.75rem; }
+        .rounded-2xl { border-radius: 1rem; }
+        .rounded-full { border-radius: 9999px; }
+        
+        /* Effects */
+        .opacity-60 { opacity: 0.6; }
+        .opacity-70 { opacity: 0.7; }
+        .opacity-90 { opacity: 0.9; }
+        .shadow-lg { box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }
+        .transition { transition: all 0.3s ease; }
+        
+        /* Animations */
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-scroll { animation: scroll 30s linear infinite; }
+        
+        /* Responsive Grid */
+        @media (min-width: 768px) {
+            .md\\:text-5xl { font-size: 3rem; }
+            .md\\:text-7xl { font-size: 4.5rem; }
+            .md\\:text-8xl { font-size: 6rem; }
+            .md\\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .md\\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+            .md\\:h-\\[500px\\] { height: 500px; }
+        }
+        
+        /* Custom Styles */
+        .hero-gradient { 
+            background: linear-gradient(135deg, #3AA6B9, #2C8A94); 
+        }
+        .services-gradient { 
+            background: linear-gradient(135deg, #3AA6B9, #06B6D4); 
+        }
+        .text-center { text-align: center; }
+        .max-w-2xl { max-width: 42rem; }
+        .max-w-7xl { max-width: 80rem; }
+        .mx-auto { margin-left: auto; margin-right: auto; }
+        .overflow-hidden { overflow: hidden; }
+        .leading-tight { line-height: 1.25; }
+        
+        /* Button */
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 2rem;
+            border-radius: 9999px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .btn-white {
+            background-color: #fff;
+            color: #0891b2;
+        }
+        .btn-white:hover {
+            background-color: #f3f4f6;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-gradient min-h-screen flex items-center justify-center">
+            <div class="text-center text-white px-8">
+                <h1 class="text-6xl md:text-8xl font-light mb-4">
+                    asight<sup class="text-2xl opacity-60">®</sup>
+                </h1>
+                <h2 class="text-4xl md:text-5xl font-light mb-8">Solutions</h2>
+                <p class="text-xl opacity-90 max-w-2xl mx-auto">
+                    Digital solutions and strategies that help
+                    your processes thrive and your business grow.
+                </p>
+            </div>
+        </section>
+
+        <!-- Logo Slider -->
+        <section class="py-16 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-8">
+                <p class="text-sm mb-8">● Our clients (2016-25©)</p>
+                <div class="overflow-hidden">
+                    <div class="flex gap-16 animate-scroll" style="width: 200%;">
+                        <div class="flex gap-16 text-2xl text-gray-400">
+                            <span>AUTOMATION</span>
+                            <span>JCR AUTOMATION</span>
+                            <span>BRUSA</span>
+                            <span>FESTOOL</span>
+                            <span>Mercedes-Benz</span>
+                            <span>MTU</span>
+                        </div>
+                        <div class="flex gap-16 text-2xl text-gray-400">
+                            <span>AUTOMATION</span>
+                            <span>JCR AUTOMATION</span>
+                            <span>BRUSA</span>
+                            <span>FESTOOL</span>
+                            <span>Mercedes-Benz</span>
+                            <span>MTU</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Digital Solution -->
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-8">
+                <h2 class="text-6xl md:text-7xl font-light mb-8">
+                    Your Digital<br>Solution.
+                </h2>
+                <p class="text-xl mb-12">©2025</p>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="p-12 bg-cyan-50 rounded-2xl transition shadow-lg">
+                        <h3 class="text-2xl font-bold mb-4">CRYPTAX</h3>
+                        <p class="text-gray-600">(2023)</p>
+                        <p>Tax Software for Crypto Currencies</p>
+                        <div class="mt-8 text-6xl" style="color: #a0dde5;">»»»</div>
+                    </div>
+                    <div class="p-12 bg-gray-100 rounded-2xl transition shadow-lg">
+                        <h3 class="text-2xl font-bold mb-4">RMentiX</h3>
+                        <p class="text-gray-600">(2024)</p>
+                        <p>Risk Management for Projects</p>
+                        <div class="mt-8 text-6xl text-gray-400">R</div>
+                    </div>
+                    <div class="p-12 bg-gray-100 rounded-2xl transition shadow-lg">
+                        <h3 class="text-2xl font-bold mb-4">M365</h3>
+                        <p class="text-gray-600">(2023)</p>
+                        <p>Microsoft Power Platform Processes and Tools</p>
+                        <div class="mt-8 text-6xl text-gray-400">ERP 365</div>
+                    </div>
+                    <div class="p-12 bg-gray-100 rounded-2xl transition shadow-lg">
+                        <h3 class="text-2xl font-bold mb-4">Mastermali</h3>
+                        <p class="text-gray-600">(2024)</p>
+                        <p>Digital Marketing Solutions</p>
+                        <div class="mt-8 text-6xl text-gray-400">✓</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services -->
+        <section class="py-20 services-gradient">
+            <div class="max-w-7xl mx-auto px-8 text-white">
+                <div class="mb-8">
+                    <span class="text-sm opacity-70">● Services</span>
+                </div>
+                <h2 class="text-6xl md:text-8xl font-light mb-12">Services.</h2>
+                
+                <div class="grid md:grid-cols-3 gap-8 mb-12">
+                    <div>
+                        <h3 class="text-xl mb-2">Process Digitalization & Tools</h3>
+                    </div>
+                    <div>
+                        <h3 class="text-xl mb-2">Web Design & SEO</h3>
+                    </div>
+                    <div>
+                        <h3 class="text-xl mb-2">Full Stack & Low Code Development</h3>
+                        <p class="text-sm opacity-70">...and Trusted even :)</p>
+                    </div>
+                </div>
+
+                <a href="#contact" class="btn btn-white">
+                    All services
+                </a>
+            </div>
+        </section>
+
+        <!-- Stats -->
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-8">
+                <div class="mb-8">
+                    <span class="text-sm">● Why choose us</span>
+                </div>
+                <h2 class="text-4xl md:text-5xl font-light mb-12 leading-tight">
+                    Proven results for every project,<br>
+                    with a focus on precision and<br>
+                    functionality.
+                </h2>
+                
+                <div class="grid md:grid-cols-2 gap-16">
+                    <div style="background: linear-gradient(to bottom right, #1f2937, #111827);" class="rounded-2xl" style="height: 24rem;">
+                    </div>
+                    <div>
+                        <h3 class="text-2xl mb-8">
+                            No overhead, just tools precisely targeting your<br>
+                            very individual processual needs.
+                        </h3>
+                        <p class="text-gray-600 mb-12">
+                            Thoughtful, powerful<br>
+                            and user centered tools that make your work easier.
+                        </p>
+                        
+                        <div class="grid grid-cols-2 gap-8">
+                            <div>
+                                <span class="text-sm text-gray-500">01</span>
+                                <h3 class="text-6xl font-bold my-4">50+</h3>
+                                <p>Successful projects<br>completed</p>
+                            </div>
+                            <div>
+                                <span class="text-sm text-gray-500">02</span>
+                                <h3 class="text-6xl font-bold my-4">98%</h3>
+                                <p>Customer<br>satisfaction rate</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-8">
+                <div class="mb-8">
+                    <span class="text-sm">● About us</span>
+                </div>
+                <h2 class="text-2xl mb-8">asightsolutions©</h2>
+                <h3 class="text-5xl md:text-6xl font-light mb-8 leading-tight">
+                    How we launch process<br>
+                    optimizations projects and tool<br>
+                    integrations.
+                </h3>
+                <p class="text-xl text-gray-600">
+                    See how our team combines creativity, technology,<br>
+                    and strategy to build powerful digital solutions.
+                </p>
+            </div>
+        </section>
+
+        <!-- Team -->
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-8">
+                <h2 class="text-2xl mb-8">asightsolutions®</h2>
+                <h3 class="text-5xl md:text-6xl font-light mb-16">
+                    The faces behind<br>
+                    the projects.
+                </h3>
+                
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div>
+                        <h3 class="text-2xl mb-4">Be part of our mission</h3>
+                        <p class="text-gray-600 mb-8">
+                            If you're ready to create and<br>
+                            collaborate, we'd love to hear from you.
+                        </p>
+                        <a href="#contact" class="btn" style="background: #000; color: #fff;">
+                            Apply now
+                        </a>
+                    </div>
+                    <div class="flex items-center">
+                        <p class="text-lg text-gray-600">
+                            We believe great work comes<br>
+                            from collaboration. That's why we work<br>
+                            closely with each other to ensure every<br>
+                            project meets your goals and exceeds<br>
+                            expectations.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-8">
+                <h2 class="text-7xl md:text-8xl font-light mb-8">FAQ.</h2>
+                <p class="text-xl text-gray-600 mb-16">
+                    Got questions? We've got answers. Here's<br>
+                    everything you need to know about working with us.
+                </p>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section id="contact" class="py-20 services-gradient">
+            <div class="max-w-7xl mx-auto px-8 text-white">
+                <h2 class="text-5xl md:text-6xl font-light mb-8">Let's talk.</h2>
+                <p class="text-xl mb-8">
+                    Tell us about your project—whether it's process<br>
+                    optimization, UX/UI or your digital presence on the web.
+                </p>
+                <p class="mb-2">hello@asightsolutions.com</p>
+                <p>+49 151 571 65 903</p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="py-16 bg-gray-100">
+            <div class="text-center">
+                <h3 class="text-6xl font-light mb-4">asight®</h3>
+                <p class="text-sm">Solutions</p>
+                <p class="text-sm mt-8 text-gray-600">
+                    © 2025 asightsolutions®. All rights reserved.
+                </p>
+            </div>
+        </footer>
+    </main>
+</body>
+</html>

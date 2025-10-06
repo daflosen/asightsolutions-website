@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', 'Inter Placeholder', sans-serif;
+  background: #B8B8B8;
+  overflow-x: hidden;
+  color: rgb(255, 255, 255);
+}
+
+/* Loading Screen */
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #B8B8B8;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.6s ease;
+  opacity: 1;
+}
+
+.loading-screen.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+.loading-content {
+  text-align: center;
+}
+
+.loading-logo {
+  font-size: 4rem;
+  font-weight: 200;
+  color: #fff;
+  margin-bottom: 2rem;
+  letter-spacing: -3px;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Hauptcontainer */
+.main-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+/* Türkise Farbkleckse */
+.ink-splash {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.ink-blob {
+  position: absolute;
+  background: rgb(58, 166, 185);
+  opacity: 0.95;
+  filter: blur(100px);
+  border-radius: 50%;
+}
+
+.ink-blob:nth-child(1) {
+  width: 800px;
+  height: 800px;
+  top: -200px;
+  right: -200px;
+  animation: float1 20s ease-in-out infinite;
+}
+
+.ink-blob:nth-child(2) {
+  width: 600px;
+  height: 600px;
+  bottom: -150px;
+  right: -100px;
+  animation: float2 15s ease-in-out infinite;
+}
+@keyframes float1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-30px, 30px) scale(1.1); }
+}
+
+@keyframes float2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(40px, -20px) scale(0.95); }
+}
+
+/* Logo Styling */
+.logo-container {
+  position: relative;
+  z-index: 10;
+  padding: 0 60px;
+  max-width: 1400px;
+  width: 100%;
+}
+
+.logo-main {
+  font-size: clamp(120px, 20vw, 380px);
+  font-weight: 200;
+  letter-spacing: -0.04em;
+  line-height: 0.85;
+  color: rgb(255, 255, 255);
+  position: relative;
+  display: inline-block;
+}
+
+/* R im Kreis */
+.registered {
+  position: absolute;
+  top: 0.05em;
+  right: -0.15em;
+  width: 0.25em;
+  height: 0.25em;
+  background: rgb(255, 255, 255);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.5em;
+  font-weight: 500;
+  color: rgb(58, 166, 185);
+}
+/* Solutions Text */
+.logo-sub {
+  position: absolute;
+  bottom: -0.02em;
+  right: 0;
+  font-size: 0.28em;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: rgb(255, 255, 255);
+}
+
+/* Service Liste */
+.services-list {
+  position: absolute;
+  right: 60px;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: right;
+  z-index: 10;
+}
+
+.services-list div {
+  font-size: clamp(14px, 1.1vw, 18px);
+  font-weight: 400;
+  line-height: 1.6;
+  color: rgb(255, 255, 255);
+  margin: 8px 0;
+  letter-spacing: 0.01em;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .logo-container {
+    padding: 0 30px;
+  }
+
+  .logo-main {
+    font-size: clamp(80px, 15vw, 200px);
+  }
+
+  .services-list {
+    position: relative;
+    right: auto;
+    top: auto;
+    transform: none;
+    text-align: left;
+    margin-top: 40px;
+    padding: 0 30px;
+  }
+
+  .services-list div {
+    font-size: 14px;
+  }
+}
