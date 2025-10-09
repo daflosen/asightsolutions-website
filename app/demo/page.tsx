@@ -7,7 +7,6 @@ import {
   Stats,
   About,
   Testimonials,
-  CaseStudy,
   Team,
   FAQ,
   CTA,
@@ -32,7 +31,6 @@ export default function DemoPage() {
       <Stats />
       <About />
       <Testimonials />
-      <CaseStudy />
       <Team />
       <FAQ />
       <CTA />

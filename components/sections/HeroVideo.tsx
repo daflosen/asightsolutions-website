@@ -7,19 +7,27 @@ export default function HeroVideo() {
   const videoContainerRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
+    let ticking = false
+
     const handleScroll = () => {
-      if (videoContainerRef.current) {
-        const heroSection = videoContainerRef.current.parentElement
-        if (heroSection) {
-          const rect = heroSection.getBoundingClientRect()
-          const scrollProgress = Math.max(0, Math.min(1, -rect.top / rect.height))
-          const scale = 1 - (scrollProgress * 0.05)
-          videoContainerRef.current.style.transform = `scale(${scale})`
-        }
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          if (videoContainerRef.current) {
+            const heroSection = videoContainerRef.current.parentElement
+            if (heroSection) {
+              const rect = heroSection.getBoundingClientRect()
+              const scrollProgress = Math.max(0, Math.min(1, -rect.top / rect.height))
+              const scale = 1 - (scrollProgress * 0.05)
+              videoContainerRef.current.style.transform = `scale(${scale})`
+            }
+          }
+          ticking = false
+        })
+        ticking = true
       }
     }
 
-    window.addEventListener('scroll', handleScroll)
+    window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
@@ -31,7 +39,8 @@ export default function HeroVideo() {
       {/* Video Container Background */}
       <div
         ref={videoContainerRef}
-        className="absolute inset-4 md:inset-8 rounded-3xl overflow-hidden transition-transform duration-300"
+        className="absolute inset-4 md:inset-8 rounded-3xl overflow-hidden"
+        style={{ transition: 'transform 0.1s cubic-bezier(0.33, 1, 0.68, 1)' }}
       >
         {/* Video Background */}
         <video
