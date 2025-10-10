@@ -61,7 +61,8 @@ export default function DigitalSolution() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-6xl md:text-8xl font-bold tracking-super-tight leading-super-tight mb-8"
+            className="text-[48px] md:text-[56px] font-semibold leading-[1.2] mb-8"
+            style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif', color: '#2d3436' }}
           >
             Your Digital<br />
             Solution.

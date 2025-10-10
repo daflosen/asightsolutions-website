@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 export default function Stats() {
   return (
@@ -11,13 +12,16 @@ export default function Stats() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <div className="mb-8">
-            <span className="text-sm">● Why choose us</span>
+          <div className="mb-8 flex items-center gap-3">
+            <span className="w-6 h-6 bg-gray-900 rounded-full inline-flex items-center justify-center text-white text-sm font-bold">
+              +
+            </span>
+            <span className="text-sm font-bold">Why choose us</span>
           </div>
-          <h2 className="text-5xl md:text-6xl lg:text-7xl font-light mb-12 leading-tight">
+          <h2 className="text-[48px] md:text-[56px] font-semibold mb-12 leading-[1.2]" style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif', color: '#2d3436' }}>
             Proven results for every project,<br />
-            with a focus on precision and<br />
-            functionality.
+            <span style={{ color: '#B3B4B5' }}>with a focus on precision and<br />
+            functionality.</span>
           </h2>
         </motion.div>
 
@@ -26,24 +30,28 @@ export default function Stats() {
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl h-96 md:h-[500px]"
-          />
+            className="relative rounded-2xl h-96 md:h-[500px] overflow-hidden shadow-2xl"
+          >
+            <Image
+              src="/images/Laptop_Oben.jpg"
+              alt="Development workspace"
+              fill
+              className="object-cover"
+              priority
+            />
+          </motion.div>
 
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-2xl mb-8">
+            <p className="text-2xl mb-12" style={{ color: '#2d3436' }}>
               No overhead, just tools precisely targeting your<br />
-              very individual processual needs.
-            </h3>
-            <p className="text-gray-600 mb-12">
-              Thoughtful, powerful<br />
-              and user centered tools that make your work easier.
+              very individual processual needs. <span style={{ color: '#B3B4B5' }}>Thoughtful, powerful and user centered tools that make your work easier.</span>
             </p>
 
-            <div className="grid grid-cols-2 gap-8">
+            <div className="grid grid-cols-2 gap-8 mb-12">
               <div>
                 <span className="text-sm text-gray-500">01</span>
                 <h3 className="text-6xl font-bold my-4">50+</h3>
@@ -59,6 +67,34 @@ export default function Stats() {
                   Customer<br />
                   satisfaction rate
                 </p>
+              </div>
+            </div>
+
+            {/* Company Logos */}
+            <div className="flex items-center gap-8 opacity-60">
+              <div className="relative h-8 w-24">
+                <Image
+                  src="/images/RmentiX_Logo.jpg"
+                  alt="RE Automation"
+                  fill
+                  className="object-contain filter grayscale"
+                />
+              </div>
+              <div className="relative h-8 w-24">
+                <Image
+                  src="/images/Logo_Brusa.svg"
+                  alt="Brusa"
+                  fill
+                  className="object-contain filter grayscale"
+                />
+              </div>
+              <div className="relative h-8 w-24">
+                <Image
+                  src="/images/Logo_JR_Automation.svg"
+                  alt="JR Automation"
+                  fill
+                  className="object-contain filter grayscale"
+                />
               </div>
             </div>
           </motion.div>

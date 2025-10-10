@@ -29,6 +29,7 @@ const config: Config = {
         'primary-dark': '#2C8A94',
         dark: '#000000',
         light: '#ffffff',
+        heading: '#2d3436',
         gray: {
           50: '#fafafa',
           100: '#f5f5f5',

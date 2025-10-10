@@ -12,8 +12,8 @@ export default function CaseStudy() {
     offset: ["start end", "end start"]
   })
 
-  // Scale image down by 7% as user scrolls (1 to 0.93) - transform from bottom
-  const imageScale = useTransform(scrollYProgress, [0, 1], [1, 0.93])
+  // Scale image down by 15% as user scrolls (1 to 0.85) - transform from bottom
+  const imageScale = useTransform(scrollYProgress, [0, 1], [1, 0.85])
 
   return (
     <section ref={sectionRef} className="py-20 bg-gray-50">
@@ -30,8 +30,8 @@ export default function CaseStudy() {
             Every project we take on is<br />
             designed for long-term success.
           </p>
-          <h2 className="text-5xl font-normal mb-8 leading-tight text-gray-900">
-            Our approach is straight forward: <span className="font-semibold">we focus on precisely targeting functionality</span> ensuring that every digital solution serves a clear purpose without unnecessary complexity and overhead.
+          <h2 className="text-[48px] md:text-[56px] font-semibold mb-8 leading-[1.2]" style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif', color: '#2d3436' }}>
+            Our approach is straight forward: <span className="font-bold">we focus on precisely targeting functionality</span> ensuring that every digital solution serves a clear purpose without unnecessary complexity and overhead.
           </h2>
           <p className="text-lg text-gray-600 leading-relaxed">
             We don't overpromise or use flashy marketing language. We simply build well-designed, functional tools and strategies that help businesses succeed.
@@ -39,7 +39,7 @@ export default function CaseStudy() {
         </motion.div>
 
         {/* Main Container */}
-        <div className="relative h-[600px]">
+        <div className="relative h-[600px] rounded-3xl">
 
           {/* Background - Full Size with gradient */}
           <div
@@ -79,7 +79,7 @@ export default function CaseStudy() {
           <div className="absolute inset-0 z-[3]">
 
           {/* Text Overlay on Teal Background (Top Left) */}
-          <div className="absolute left-0 top-0 w-[60%] p-12 text-white z-[3] pointer-events-none">
+          <div className="absolute left-0 top-0 w-[60%] p-8 lg:p-12 text-white z-[3] pointer-events-none">
             <div className="mb-8 pointer-events-auto">
               <div className="flex items-start justify-between mb-6 max-w-xl">
                 <div>
@@ -97,7 +97,7 @@ export default function CaseStudy() {
 
             {/* Large Title */}
             <div className="mb-8">
-              <h2 className="text-5xl md:text-6xl lg:text-7xl font-light leading-none">
+              <h2 className="text-[48px] md:text-[56px] font-semibold leading-[1.2]" style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
                 asightsolutions®
               </h2>
             </div>
@@ -115,43 +115,43 @@ export default function CaseStudy() {
             </div>
           </div>
 
-          {/* FLOATING CARDS - Right Side (OVER the woman) */}
-          <div className="lg:absolute lg:right-[5%] lg:w-[45%] lg:top-[10%] mt-8 lg:mt-0 space-y-6">
+          {/* FLOATING CARDS - Right Side (Contained within 600px height) */}
+          <div className="absolute right-4 lg:right-8 w-[45%] lg:w-[40%] top-6 lg:top-8 bottom-6 overflow-y-auto pr-2 space-y-4">
 
             {/* Performance Boost Card */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="bg-white rounded-3xl p-8 shadow-2xl"
+              className="bg-white rounded-2xl p-4 lg:p-6 shadow-xl"
             >
-              <p className="text-xs text-gray-500 mb-3">Performance Boost:</p>
-              <h4 className="text-3xl font-bold mb-2">Top Ten Keyword Positionings</h4>
-              <p className="text-4xl font-bold mb-1">+20,</p>
-              <p className="text-2xl font-bold">Bounce rate -23%</p>
+              <p className="text-[10px] text-gray-500 mb-2">Performance Boost:</p>
+              <h4 className="text-xl lg:text-2xl font-bold mb-1">Top Ten Keyword Positionings</h4>
+              <p className="text-2xl lg:text-3xl font-bold mb-1">+20,</p>
+              <p className="text-lg lg:text-xl font-bold">Bounce rate -23%</p>
 
-              <div className="mt-6">
-                <p className="text-xs text-gray-500 mb-2">Conversion Rate Improvement:</p>
-                <p className="text-3xl font-bold">2.2% → 5.9%</p>
+              <div className="mt-4">
+                <p className="text-[10px] text-gray-500 mb-1">Conversion Rate Improvement:</p>
+                <p className="text-xl lg:text-2xl font-bold">2.2% → 5.9%</p>
               </div>
             </motion.div>
 
             {/* Stats Grid */}
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-cols-2 gap-3 lg:gap-4">
               {/* Pagehealth Score */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="bg-white rounded-3xl p-6 shadow-xl flex flex-col items-center justify-center"
+                className="bg-white rounded-2xl p-4 shadow-lg flex flex-col items-center justify-center"
               >
-                <div className="text-center mb-3">
-                  <div className="w-20 h-20 rounded-full border-8 border-gray-200 flex items-center justify-center mx-auto">
-                    <span className="text-2xl font-bold">99</span>
+                <div className="text-center mb-2">
+                  <div className="w-14 h-14 lg:w-16 lg:h-16 rounded-full border-4 lg:border-6 border-gray-200 flex items-center justify-center mx-auto">
+                    <span className="text-lg lg:text-xl font-bold">99</span>
                   </div>
                 </div>
-                <p className="text-xs text-gray-500 text-center">Pagehealth score</p>
+                <p className="text-[9px] text-gray-500 text-center">Pagehealth score</p>
               </motion.div>
 
               {/* Chart */}
@@ -160,9 +160,9 @@ export default function CaseStudy() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.2 }}
-                className="bg-white rounded-3xl p-4 shadow-xl"
+                className="bg-white rounded-2xl p-3 shadow-lg"
               >
-                <div className="flex items-end justify-between gap-1 h-24 mb-2">
+                <div className="flex items-end justify-between gap-1 h-16 lg:h-20 mb-2">
                   <div className="flex flex-col justify-end items-center flex-1">
                     <div className="bg-gray-200 w-full h-3 rounded-t" />
                   </div>
@@ -174,17 +174,17 @@ export default function CaseStudy() {
                   </div>
                   <div className="flex flex-col justify-end items-center flex-1 relative">
                     <div className="bg-[#3AA6B9] w-full h-full rounded-t" />
-                    <div className="absolute -top-4 bg-[#3AA6B9] text-white text-[9px] px-1 py-0.5 rounded">
+                    <div className="absolute -top-3 bg-[#3AA6B9] text-white text-[8px] px-1 py-0.5 rounded">
                       +3k
                     </div>
                   </div>
                 </div>
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-lg font-bold">38K</p>
-                    <p className="text-[9px] text-gray-500">Visits</p>
+                    <p className="text-sm lg:text-base font-bold">38K</p>
+                    <p className="text-[8px] text-gray-500">Visits</p>
                   </div>
-                  <div className="bg-[#3AA6B9] text-white text-[9px] px-2 py-0.5 rounded-full">
+                  <div className="bg-[#3AA6B9] text-white text-[8px] px-1.5 py-0.5 rounded-full">
                     +80%
                   </div>
                 </div>
@@ -197,19 +197,19 @@ export default function CaseStudy() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
-              className="bg-white rounded-3xl p-8 shadow-2xl"
+              className="bg-white rounded-2xl p-4 lg:p-6 shadow-xl"
             >
-              <div className="flex items-start gap-1 mb-3">
+              <div className="flex items-start gap-0.5 mb-2">
                 {[...Array(5)].map((_, i) => (
-                  <span key={i} className="text-yellow-400">★</span>
+                  <span key={i} className="text-yellow-400 text-sm">★</span>
                 ))}
               </div>
-              <p className="text-sm text-gray-700 mb-4">
+              <p className="text-xs text-gray-700 mb-3 leading-relaxed">
                 "Thanks to the strong methodological approach we were able to increase our e-commerce return by 230%"
               </p>
-              <div className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded-full bg-gray-300" />
-                <p className="text-sm text-gray-600">Jürgen Rentscher</p>
+              <div className="flex items-center gap-2">
+                <div className="w-7 h-7 rounded-full bg-gray-300" />
+                <p className="text-xs text-gray-600">Jürgen Rentscher</p>
               </div>
             </motion.div>
 

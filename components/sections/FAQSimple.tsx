@@ -38,7 +38,7 @@ export default function FAQSimple() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-8">FAQ.</h2>
+            <h2 className="text-[48px] md:text-[56px] font-semibold mb-8 leading-[1.2]" style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif', color: '#2d3436' }}>FAQ.</h2>
             <p className="text-xl text-gray-600">
               Got questions? We&apos;ve got answers. Here&apos;s<br />
               everything you need to know about working with us.

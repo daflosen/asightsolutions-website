@@ -35,7 +35,7 @@ export default function Testimonials() {
           <div className="mb-8">
             <span className="text-sm">● Testimonials</span>
           </div>
-          <h2 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-4">Experiences.</h2>
+          <h2 className="text-[48px] md:text-[56px] font-semibold mb-4 leading-[1.2]" style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif', color: '#2d3436' }}>Experiences.</h2>
           <p className="text-xl mb-12">©2025</p>
         </motion.div>
 

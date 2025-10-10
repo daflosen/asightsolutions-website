@@ -17,9 +17,9 @@ export default function Home() {
       <LogoGrid />
       <DigitalSolution />
       <Services />
+      <Stats />
       <CaseStudy />
       <ServicesSimple />
-      <Stats />
       <Testimonials />
       <FAQSimple />
       <CTASimple />

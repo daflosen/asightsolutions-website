@@ -10,7 +10,8 @@ export default function CTASimple() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-5xl md:text-6xl lg:text-7xl font-light mb-8"
+          className="text-[48px] md:text-[56px] font-semibold mb-8 leading-[1.2]"
+          style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}
         >
           Let&apos;s talk.
         </motion.h2>
