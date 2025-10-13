@@ -1,10 +1,25 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 
 export default function HeroVideo() {
   const videoContainerRef = useRef<HTMLDivElement>(null)
+  const videoRef = useRef<HTMLVideoElement>(null)
+  const [shouldPlayVideo, setShouldPlayVideo] = useState(false)
+
+  // Wait for loading screen to finish (approx 3.9 seconds total)
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShouldPlayVideo(true)
+      if (videoRef.current) {
+        videoRef.current.currentTime = 0 // Reset to start
+        videoRef.current.play().catch(err => console.log('Video play failed:', err))
+      }
+    }, 3900) // Matches LoadingScreen duration (2500 + 1400)
+
+    return () => clearTimeout(timer)
+  }, [])
 
   useEffect(() => {
     let ticking = false
@@ -44,7 +59,7 @@ export default function HeroVideo() {
       >
         {/* Video Background */}
         <video
-          autoPlay
+          ref={videoRef}
           muted
           loop
           playsInline

@@ -51,42 +51,50 @@ export default function DigitalSolution() {
   return (
     <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-6">
-        <div className="mb-16 text-center">
+        <div className="mb-16">
           <span className="inline-flex items-center gap-2 text-sm font-medium mb-8">
             <span className="w-2 h-2 bg-dark rounded-full" />
             (27)
           </span>
 
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-[48px] md:text-[56px] font-semibold leading-[1.2] mb-8"
-            style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif', color: '#2d3436' }}
-          >
-            Your Digital<br />
-            Solution.
-          </motion.h2>
+          <div className="max-w-5xl mx-auto">
+            <div className="flex justify-between items-start gap-12">
+              <div className="flex-1">
+                <motion.h2
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  className="text-[120px] md:text-[140px] font-bold leading-[0.9] mb-4"
+                >
+                  Your Digital<br />
+                  Solution.
+                </motion.h2>
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.1 }}
+                  className="text-lg font-bold text-gray-500"
+                >
+                  ©2025
+                </motion.p>
+              </div>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="text-gray-600 max-w-2xl mx-auto mb-4"
-          >
-            We&apos;ve helped businesses across industries achieve their digitalization goals. Here are some of our recent tools.
-          </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.3 }}
-            className="text-6xl font-bold"
-          >
-            ©2025
-          </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 }}
+                className="flex-1"
+              >
+                <p className="text-base text-gray-500 leading-relaxed">
+                  We&apos;ve helped businesses across<br />
+                  industries achieve their digitalization<br />
+                  goals. Here are some of our recent tools.
+                </p>
+              </motion.div>
+            </div>
+          </div>
         </div>
 
         {/* Project Grid */}

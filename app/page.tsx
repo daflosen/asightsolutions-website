@@ -1,7 +1,8 @@
 import HeroVideo from '@/components/sections/HeroVideo'
-import LogoGrid from '@/components/sections/LogoGrid'
+import OurClients from '@/components/sections/OurClients'
 import DigitalSolution from '@/components/sections/DigitalSolution'
 import Services from '@/components/sections/Services'
+import AboutUs from '@/components/sections/AboutUs'
 import CaseStudy from '@/components/sections/CaseStudy'
 import ServicesSimple from '@/components/sections/ServicesSimple'
 import Stats from '@/components/sections/Stats'
@@ -14,13 +15,14 @@ export default function Home() {
   return (
     <main>
       <HeroVideo />
-      <LogoGrid />
+      <OurClients />
       <DigitalSolution />
-      <Services />
       <Stats />
+      <Services />
+      <AboutUs />
+      <Testimonials />
       <CaseStudy />
       <ServicesSimple />
-      <Testimonials />
       <FAQSimple />
       <CTASimple />
       <FooterSimple />

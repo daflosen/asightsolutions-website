@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 
-export default function LogoGrid() {
+export default function OurClients() {
   const sectionRef = useRef<HTMLElement>(null)
   const [isScrolled, setIsScrolled] = useState(false)
 
@@ -45,58 +45,64 @@ export default function LogoGrid() {
           <p className="text-sm text-gray-600">(2016-25©)</p>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-          <div className="bg-white rounded-2xl p-8 flex items-center justify-center aspect-square hover:shadow-lg transition-shadow">
+          <div className="bg-white rounded-2xl p-8 flex items-center justify-center aspect-square hover:shadow-xl transition-all border border-gray-200">
             <Image
               src="/images/Logo_JR_Automation.svg"
               alt="JR Automation"
-              width={100}
-              height={64}
-              className="max-w-full max-h-16 opacity-60 grayscale"
+              width={140}
+              height={90}
+              className="max-w-full max-h-24 opacity-90 grayscale hover:grayscale-0 transition-all"
+              style={{ filter: 'contrast(1.3) brightness(0.95)' }}
             />
           </div>
-          <div className="bg-white rounded-2xl p-8 flex items-center justify-center aspect-square hover:shadow-lg transition-shadow">
+          <div className="bg-white rounded-2xl p-8 flex items-center justify-center aspect-square hover:shadow-xl transition-all border border-gray-200">
             <Image
               src="/images/Logo_JR_Automation.svg"
               alt="JR Automation"
-              width={100}
-              height={64}
-              className="max-w-full max-h-16 opacity-30 grayscale"
+              width={140}
+              height={90}
+              className="max-w-full max-h-24 opacity-90 grayscale hover:grayscale-0 transition-all"
+              style={{ filter: 'contrast(1.3) brightness(0.95)' }}
             />
           </div>
-          <div className="bg-white rounded-2xl p-8 flex items-center justify-center aspect-square hover:shadow-lg transition-shadow">
+          <div className="bg-white rounded-2xl p-8 flex items-center justify-center aspect-square hover:shadow-xl transition-all border border-gray-200">
             <Image
               src="/images/Logo_Brusa.svg"
               alt="Brusa"
-              width={100}
-              height={64}
-              className="max-w-full max-h-16 opacity-30 grayscale"
+              width={140}
+              height={90}
+              className="max-w-full max-h-24 opacity-90 grayscale hover:grayscale-0 transition-all"
+              style={{ filter: 'contrast(1.3) brightness(0.95)' }}
             />
           </div>
-          <div className="bg-white rounded-2xl p-8 flex items-center justify-center aspect-square hover:shadow-lg transition-shadow">
+          <div className="bg-white rounded-2xl p-8 flex items-center justify-center aspect-square hover:shadow-xl transition-all border border-gray-200">
             <Image
               src="/images/Logo_Festool.svg"
               alt="Festool"
-              width={100}
-              height={64}
-              className="max-w-full max-h-16 opacity-30 grayscale"
+              width={140}
+              height={90}
+              className="max-w-full max-h-24 opacity-90 grayscale hover:grayscale-0 transition-all"
+              style={{ filter: 'contrast(1.3) brightness(0.95)' }}
             />
           </div>
-          <div className="bg-white rounded-2xl p-8 flex items-center justify-center aspect-square hover:shadow-lg transition-shadow">
+          <div className="bg-white rounded-2xl p-8 flex items-center justify-center aspect-square hover:shadow-xl transition-all border border-gray-200">
             <Image
               src="/images/Logo_Mercedes.svg"
               alt="Mercedes-Benz"
-              width={100}
-              height={64}
-              className="max-w-full max-h-16 opacity-30 grayscale"
+              width={140}
+              height={90}
+              className="max-w-full max-h-24 opacity-90 grayscale hover:grayscale-0 transition-all"
+              style={{ filter: 'contrast(1.3) brightness(0.95)' }}
             />
           </div>
-          <div className="bg-white rounded-2xl p-8 flex items-center justify-center aspect-square hover:shadow-lg transition-shadow">
+          <div className="bg-white rounded-2xl p-8 flex items-center justify-center aspect-square hover:shadow-xl transition-all border border-gray-200">
             <Image
               src="/images/Logo_mtu.svg"
               alt="MTU"
-              width={100}
-              height={64}
-              className="max-w-full max-h-16 opacity-30 grayscale"
+              width={140}
+              height={90}
+              className="max-w-full max-h-24 opacity-90 grayscale hover:grayscale-0 transition-all"
+              style={{ filter: 'contrast(1.3) brightness(0.95)' }}
             />
           </div>
         </div>

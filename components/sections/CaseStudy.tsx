@@ -16,30 +16,42 @@ export default function CaseStudy() {
   const imageScale = useTransform(scrollYProgress, [0, 1], [1, 0.85])
 
   return (
-    <section ref={sectionRef} className="py-20 bg-gray-50">
+    <section ref={sectionRef} className="py-20" style={{ backgroundColor: '#F5F5F5' }}>
       <div className="container mx-auto px-6">
         {/* Header Text */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="max-w-4xl mb-16"
-        >
-          <p className="text-sm text-gray-500 mb-8">
-            asightsolutions®<br />
-            Every project we take on is<br />
-            designed for long-term success.
-          </p>
-          <h2 className="text-[48px] md:text-[56px] font-semibold mb-8 leading-[1.2]" style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif', color: '#2d3436' }}>
-            Our approach is straight forward: <span className="font-bold">we focus on precisely targeting functionality</span> ensuring that every digital solution serves a clear purpose without unnecessary complexity and overhead.
-          </h2>
-          <p className="text-lg text-gray-600 leading-relaxed">
-            We don't overpromise or use flashy marketing language. We simply build well-designed, functional tools and strategies that help businesses succeed.
-          </p>
-        </motion.div>
+        <div className="mb-16 flex items-start gap-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="flex-shrink-0"
+          >
+            <p className="text-sm text-gray-500">
+              <span className="font-bold">asightsolutions®</span><br />
+              Every project we take on is<br />
+              designed for long-term success.
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="flex-1 flex justify-center"
+          >
+            <div className="max-w-4xl">
+              <h2 className="text-[32px] md:text-[40px] font-semibold mb-8 leading-[1.2]" style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
+                <span className="text-gray-400">Our approach is straight forward: </span><span style={{ color: '#2d3436' }}>we focus on precisely targeting functionality ensuring that every digital solution serves a clear purpose without unnecessary complexity and overhead.</span>
+              </h2>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                We don't overpromise or use flashy marketing language. We simply build well-designed, functional tools and strategies that help businesses succeed.
+              </p>
+            </div>
+          </motion.div>
+        </div>
 
         {/* Main Container */}
-        <div className="relative h-[600px] rounded-3xl">
+        <div className="relative h-[600px] rounded-3xl mt-32">
 
           {/* Background - Full Size with gradient */}
           <div
@@ -57,87 +69,96 @@ export default function CaseStudy() {
             className="absolute z-[2]"
             style={{
               scale: imageScale,
-              transformOrigin: 'bottom left',
+              transformOrigin: 'bottom center',
               width: '50%',
-              left: '5%',
+              left: '15%',
               bottom: 0,
               height: '900px'
             }}
           >
             <div className="relative w-full h-full">
-              <Image
-                src="/images/Sophie_Gehlert_asightsolutions_WOBG.png"
-                alt="Sophie Gehlert"
-                fill
-                className="object-contain object-bottom"
-                priority
-              />
+              <div
+                className="absolute inset-0"
+                style={{
+                  maskImage: 'linear-gradient(to top, transparent 0%, rgba(0, 0, 0, 0.3) 5%, rgba(0, 0, 0, 0.7) 15%, black 25%)',
+                  WebkitMaskImage: 'linear-gradient(to top, transparent 0%, rgba(0, 0, 0, 0.3) 5%, rgba(0, 0, 0, 0.7) 15%, black 25%)'
+                }}
+              >
+                <Image
+                  src="/images/Sophie_Gehlert_asightsolutions_WOBG.png"
+                  alt="Sophie Gehlert"
+                  fill
+                  className="object-contain object-bottom"
+                  priority
+                />
+              </div>
             </div>
           </motion.div>
 
           {/* Text and Cards Container - on top */}
           <div className="absolute inset-0 z-[3]">
 
-          {/* Text Overlay on Teal Background (Top Left) */}
+          {/* Case Study - Top Left */}
           <div className="absolute left-0 top-0 w-[60%] p-8 lg:p-12 text-white z-[3] pointer-events-none">
-            <div className="mb-8 pointer-events-auto">
-              <div className="flex items-start justify-between mb-6 max-w-xl">
-                <div>
-                  <p className="text-sm mb-2 opacity-90">Case study (SEO)</p>
-                  <p className="text-xs opacity-70">
-                    ERP Customization,<br />
-                    Frontend Optimization,
-                  </p>
-                </div>
-                <button className="text-2xl w-10 h-10 rounded-full border border-white/30 flex items-center justify-center hover:bg-white/10 transition-colors">
-                  +
-                </button>
-              </div>
+            <div className="pointer-events-auto">
+              <p className="text-sm mb-2 opacity-90 font-bold">Case study (SEO)</p>
+              <p className="text-xs opacity-70">
+                ERP Customization,<br />
+                Frontend Optimization,
+              </p>
             </div>
+          </div>
 
-            {/* Large Title */}
-            <div className="mb-8">
-              <h2 className="text-[48px] md:text-[56px] font-semibold leading-[1.2]" style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
-                asightsolutions®
-              </h2>
-            </div>
+          {/* Plus Button - Top Right */}
+          <div className="absolute right-[40%] top-8 lg:top-12 text-white z-[3]">
+            <button className="text-2xl hover:opacity-80 transition-opacity pointer-events-auto">
+              +
+            </button>
+          </div>
 
-            {/* Description */}
-            <div className="max-w-md">
-              <p className="text-base mb-3 opacity-90">
+          {/* asightsolutions - Center */}
+          <div className="absolute left-0 top-0 w-[60%] h-full p-8 lg:p-12 text-white z-[3] pointer-events-none flex flex-col justify-center">
+            <h2 className="text-[48px] md:text-[56px] font-semibold leading-[1.2] text-white" style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
+              asightsolutions®
+            </h2>
+          </div>
+
+          {/* Description - Bottom Right in Teal Box */}
+          <div className="absolute left-0 bottom-0 w-[60%] p-8 lg:p-12 text-white z-[3] pointer-events-none flex justify-between items-end">
+            <a href="https://re-automation.net" target="_blank" rel="noopener noreferrer" className="text-sm opacity-80 hover:opacity-100 transition-opacity pointer-events-auto underline">
+              RE Automation Website →
+            </a>
+            <div className="flex flex-col items-end text-right">
+              <p className="text-base mb-2 opacity-90">
                 <span className="font-semibold">From Site Audits, Keyword Strategy and Backlink Analytics...</span>
               </p>
-              <div className="flex items-center gap-3">
-                <p className="text-sm opacity-80">RE Automation Website</p>
-                <span className="text-sm opacity-60">...we do it all.</span>
-                <span>→</span>
-              </div>
+              <p className="text-sm opacity-80">...we do it all</p>
             </div>
           </div>
 
           {/* FLOATING CARDS - Right Side (Contained within 600px height) */}
-          <div className="absolute right-4 lg:right-8 w-[45%] lg:w-[40%] top-6 lg:top-8 bottom-6 overflow-y-auto pr-2 space-y-4">
+          <div className="absolute right-4 lg:right-8 w-[45%] lg:w-[40%] top-6 lg:top-8 bottom-6 overflow-hidden pr-2 space-y-3">
 
             {/* Performance Boost Card */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="bg-white rounded-2xl p-4 lg:p-6 shadow-xl"
+              className="bg-white rounded-2xl p-3 lg:p-4 shadow-xl"
             >
-              <p className="text-[10px] text-gray-500 mb-2">Performance Boost:</p>
-              <h4 className="text-xl lg:text-2xl font-bold mb-1">Top Ten Keyword Positionings</h4>
-              <p className="text-2xl lg:text-3xl font-bold mb-1">+20,</p>
-              <p className="text-lg lg:text-xl font-bold">Bounce rate -23%</p>
+              <p className="text-[9px] text-gray-500 mb-1">Performance Boost:</p>
+              <h4 className="text-base lg:text-lg font-bold mb-1">Top Ten Keyword Positionings</h4>
+              <p className="text-xl lg:text-2xl font-bold mb-1">+20,</p>
+              <p className="text-base lg:text-lg font-bold">Bounce rate -23%</p>
 
-              <div className="mt-4">
-                <p className="text-[10px] text-gray-500 mb-1">Conversion Rate Improvement:</p>
-                <p className="text-xl lg:text-2xl font-bold">2.2% → 5.9%</p>
+              <div className="mt-2">
+                <p className="text-[9px] text-gray-500 mb-1">Conversion Rate Improvement:</p>
+                <p className="text-base lg:text-lg font-bold">2.2% → 5.9%</p>
               </div>
             </motion.div>
 
             {/* Stats Grid */}
-            <div className="grid grid-cols-2 gap-3 lg:gap-4">
+            <div className="grid grid-cols-2 gap-2 lg:gap-3">
               {/* Pagehealth Score */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -197,19 +218,19 @@ export default function CaseStudy() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
-              className="bg-white rounded-2xl p-4 lg:p-6 shadow-xl"
+              className="bg-white rounded-2xl p-3 lg:p-4 shadow-xl"
             >
-              <div className="flex items-start gap-0.5 mb-2">
+              <div className="flex items-start gap-0.5 mb-1">
                 {[...Array(5)].map((_, i) => (
-                  <span key={i} className="text-yellow-400 text-sm">★</span>
+                  <span key={i} className="text-yellow-400 text-xs">★</span>
                 ))}
               </div>
-              <p className="text-xs text-gray-700 mb-3 leading-relaxed">
+              <p className="text-[10px] text-gray-700 mb-2 leading-relaxed">
                 "Thanks to the strong methodological approach we were able to increase our e-commerce return by 230%"
               </p>
               <div className="flex items-center gap-2">
-                <div className="w-7 h-7 rounded-full bg-gray-300" />
-                <p className="text-xs text-gray-600">Jürgen Rentscher</p>
+                <div className="w-6 h-6 rounded-full bg-gray-300" />
+                <p className="text-[10px] text-gray-600">Jürgen Rentscher</p>
               </div>
             </motion.div>
 

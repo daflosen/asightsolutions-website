@@ -46,22 +46,22 @@ export default function DigitalSolution() {
         <div className="mb-16">
           <div className="flex items-center gap-2 mb-8">
             <span className="w-2 h-2 bg-black rounded-full" />
-            <span className="text-sm font-medium">(27)</span>
+            
           </div>
-          
-          <div className="flex justify-between items-start mb-12">
-            <div>
-              <h2 className="headline-xl mb-4">
+
+          <div className="flex justify-between items-start gap-12 mb-12">
+            <div className="flex-1">
+              <h2 className="text-6xl font-bold mb-3 leading-tight">
                 Your Digital<br />
                 Solution.
               </h2>
-              <p className="text-gray-600 max-w-md">
-                We've helped businesses across<br />
-                industries achieve their digitalization<br />
-                goals. Here are some of our recent tools.
+              <p className="text-sm text-gray-500">©2025</p>
+            </div>
+            <div className="flex-1">
+              <p className="text-base text-gray-500 leading-relaxed">
+                We've helped businesses across industries achieve their digitalization goals. Here are some of our recent tools.
               </p>
             </div>
-            <div className="text-6xl font-light">©2025</div>
           </div>
         </div>
 
