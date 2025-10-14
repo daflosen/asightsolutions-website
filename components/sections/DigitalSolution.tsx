@@ -58,37 +58,28 @@ export default function DigitalSolution() {
           </span>
 
           <div className="max-w-5xl mx-auto">
-            <div className="flex justify-between items-start gap-12">
-              <div className="flex-1">
-                <motion.h2
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  className="text-[120px] md:text-[140px] font-bold leading-[0.9] mb-4"
-                >
-                  Your Digital<br />
-                  Solution.
-                </motion.h2>
-                <motion.p
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.1 }}
-                  className="text-lg font-bold text-gray-500"
-                >
-                  ©2025
-                </motion.p>
-              </div>
+            <div className="flex justify-center items-start gap-12">
+              <motion.h2
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="text-left mb-4"
+                style={{ fontSize: '144px', fontWeight: 600, fontFamily: 'Inter, sans-serif', lineHeight: '0.9' }}
+              >
+                Your<br />
+                Digital<br />
+                Solution.
+              </motion.h2>
 
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.2 }}
-                className="flex-1"
+                className="flex-1 pt-8"
               >
-                <p className="text-base text-gray-500 leading-relaxed">
-                  We&apos;ve helped businesses across<br />
+                <p className="text-gray-500 leading-relaxed" style={{ fontSize: '16px', fontWeight: 600, fontFamily: 'Inter, sans-serif' }}>
+                  We've helped businesses across<br />
                   industries achieve their digitalization<br />
                   goals. Here are some of our recent tools.
                 </p>

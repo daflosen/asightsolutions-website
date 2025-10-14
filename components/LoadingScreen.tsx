@@ -20,7 +20,7 @@ export default function LoadingScreen() {
     return () => clearTimeout(timer)
   }, [])
 
-  const letters = 'asightsolutions'.split('')
+  const letters = 'asightsolutions®'.split('')
 
   if (!isVisible) return null
 
@@ -39,7 +39,7 @@ export default function LoadingScreen() {
         >
           <motion.div
             className="flex items-center gap-0 text-white"
-            style={{ fontSize: '3rem', fontWeight: 200, letterSpacing: '-0.02em' }}
+            style={{ fontSize: '38px', fontWeight: 600, letterSpacing: '-0.02em', fontFamily: 'Inter, sans-serif' }}
             animate={{ opacity: 0 }}
             transition={{ duration: 0.4 }}
           >
@@ -58,7 +58,7 @@ export default function LoadingScreen() {
           key="loading-initial"
           className="fixed top-0 left-0 w-full h-screen bg-gradient-to-br from-[#3AA6B9] to-[#2C8A94] flex items-center justify-center z-[9999]"
         >
-          <div className="flex items-center gap-0 text-white" style={{ fontSize: '3rem', fontWeight: 200, letterSpacing: '-0.02em' }}>
+          <div className="flex items-center gap-0 text-white" style={{ fontSize: '38px', fontWeight: 600, letterSpacing: '-0.02em', fontFamily: 'Inter, sans-serif' }}>
             {letters.map((letter, index) => (
               <motion.span
                 key={index}

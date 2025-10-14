@@ -75,39 +75,31 @@ export default function HeroVideo() {
         <div className="absolute inset-0 z-[3] opacity-5 mix-blend-overlay pointer-events-none grain-overlay" />
 
         {/* Main Logo "asight" */}
-        <h1 className="absolute left-[3.5%] top-[10%] z-10 font-semibold text-white leading-[1.2] text-left m-0 p-0 w-[57%]" style={{ fontSize: '20vw', letterSpacing: '-0.06em' }}>
-          asight<sup className="text-[33%] font-semibold align-super ml-[0.1em]">®</sup>
+        <h1 className="absolute left-[3.5%] z-10 text-white text-left m-0 p-0" style={{ fontSize: '18vw', letterSpacing: '-0.06em', fontWeight: 600, fontFamily: 'Inter, sans-serif', top: '64px', lineHeight: '0.9', width: 'fit-content' }}>
+          asight<sup className="align-super ml-[0.1em]" style={{ fontSize: '33%', fontWeight: 600 }}>®</sup>
         </h1>
+
+        {/* "solutions" Unterzeile - rechtsbündig mit "asight" Ende */}
+        <p className="absolute z-10 font-semibold text-white leading-[1.2] opacity-0 animate-fade-in" style={{ fontSize: '2.4vw', letterSpacing: '-0.06em', fontFamily: 'Inter, sans-serif', fontWeight: 600, top: 'calc(64px + 16vw)', left: '3.5%', width: '18vw', textAlign: 'right', animationDelay: '0.2s' }}>
+          solutions
+        </p>
       </div>
 
       {/* Services List Top Right */}
       <div className="absolute top-24 right-24 z-10 text-right opacity-0 animate-fade-in" style={{ animationDelay: '0.5s' }}>
-        <ul className="space-y-2 text-sm font-normal leading-relaxed text-white opacity-80">
+        <ul className="space-y-2 leading-relaxed text-white opacity-80" style={{ fontSize: '18px', fontWeight: 600, fontFamily: 'Inter, sans-serif' }}>
           <li>Process Digitalization & Tooling</li>
           <li>Web Design and SEO</li>
           <li>Full Stack & Low Code Development</li>
         </ul>
       </div>
 
-      {/* "solutions" Unterzeile */}
-      <div
-        className="absolute z-10 w-[20%] h-fit opacity-0 animate-fade-in"
-        style={{
-          top: 'calc(50% + 100px)',
-          left: 'calc(10% + 400px)',
-          animationDelay: '0.2s'
-        }}
-      >
-        <p className="relative w-[20%] h-[43px] font-semibold text-white leading-[1.2] text-left opacity-100 visible rotate-[2deg] origin-center m-0 p-0" style={{ fontSize: '98%', letterSpacing: '-0.06em' }}>
-          solutions
-        </p>
-      </div>
-
       {/* Static Plus Symbols */}
       <div
         className="absolute z-10 opacity-0 animate-fade-in"
         style={{
-          top: 'calc(50% + 170px)',
+          top: '60%',
+          transform: 'translateY(-50%)',
           left: '10%',
           width: 'calc(400px + 300px)',
           animationDelay: '0.3s'
@@ -131,7 +123,7 @@ export default function HeroVideo() {
           animationDelay: '0.4s'
         }}
       >
-        <h1 className="text-white text-[22px] font-normal leading-[1.4]">
+        <h1 className="text-white leading-[1.4]" style={{ fontSize: '22px', fontWeight: 600, fontFamily: 'Inter, sans-serif', textIndent: '2em' }}>
           Digital solutions and strategies that help<br />
           your processes thrive and your business grow.
         </h1>
@@ -169,11 +161,6 @@ export default function HeroVideo() {
             <span className="text-[11px] ml-[2px]">↗</span>
           </a>
         </div>
-      </div>
-
-      {/* Bottom Text */}
-      <div className="absolute bottom-20 left-10 text-white text-sm font-light z-10 opacity-60">
-        © 2024 asightsolutions®
       </div>
 
       {/* Partner Logos */}

@@ -12,17 +12,20 @@ export default function Stats() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <div className="mb-8 flex items-center gap-3">
-            <span className="w-6 h-6 bg-gray-900 rounded-full inline-flex items-center justify-center text-white text-sm font-bold">
-              +
-            </span>
-            <span className="text-sm font-bold">Why choose us</span>
+          <div className="flex items-start gap-24 mb-12">
+            <div className="flex items-center gap-3">
+              <span className="w-6 h-6 bg-gray-900 rounded-full inline-flex items-center justify-center text-white text-sm font-bold">
+                +
+              </span>
+              <span className="text-sm font-bold">Why choose us</span>
+            </div>
+
+            <h2 className="leading-[1.2]" style={{ fontSize: '60px', fontWeight: 600, fontFamily: 'Inter, sans-serif', color: '#2d3436' }}>
+              Proven results for every project,<br />
+              <span style={{ color: '#B3B4B5' }}>with a focus on precision and<br />
+              functionality.</span>
+            </h2>
           </div>
-          <h2 className="text-[48px] md:text-[56px] font-semibold mb-12 leading-[1.2]" style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif', color: '#2d3436' }}>
-            Proven results for every project,<br />
-            <span style={{ color: '#B3B4B5' }}>with a focus on precision and<br />
-            functionality.</span>
-          </h2>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-16">
