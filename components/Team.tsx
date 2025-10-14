@@ -44,8 +44,8 @@ export default function Team() {
             <div className="text-cyan-600 font-medium mb-8">asightsolutions®</div>
             
             <h2 className="headline-lg mb-8">
-              The faces{' '}
-              <span className="text-gray-500">behind the projects.</span>
+              The faces behind{' '}
+              <span className="text-gray-500">the projects.</span>
             </h2>
 
             <div className="space-y-8">

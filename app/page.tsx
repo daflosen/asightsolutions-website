@@ -4,7 +4,7 @@ import DigitalSolution from '@/components/sections/DigitalSolution'
 import Services from '@/components/sections/Services'
 import AboutUs from '@/components/sections/AboutUs'
 import CaseStudy from '@/components/sections/CaseStudy'
-import ServicesSimple from '@/components/sections/ServicesSimple'
+import Team from '@/components/sections/Team'
 import Stats from '@/components/sections/Stats'
 import Testimonials from '@/components/sections/Testimonials'
 import FAQSimple from '@/components/sections/FAQSimple'
@@ -22,7 +22,7 @@ export default function Home() {
       <AboutUs />
       <Testimonials />
       <CaseStudy />
-      <ServicesSimple />
+      <Team />
       <FAQSimple />
       <CTASimple />
       <FooterSimple />
