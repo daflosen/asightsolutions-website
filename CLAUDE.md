@@ -39,6 +39,22 @@ The codebase follows a section-based component architecture:
 
 4. **State Management**: Currently using React's built-in state (no Redux/Zustand)
 
+5. **Typography - Inter Font Configuration**:
+   - **CRITICAL**: Inter font MUST be loaded via both methods for correct rendering:
+     1. Google Fonts import in `app/globals.css`: `@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');`
+     2. Next.js Font optimization in `app/layout.tsx`: Import Inter from 'next/font/google' and apply to body
+   - **Font Weights Used**:
+     - 400 (Regular) - Body text, paragraphs
+     - 500 (Medium) - Paragraph text in FAQ answers
+     - 600 (Semibold) - Headings, FAQ titles, questions
+     - 700 (Bold) - Major headings
+   - **FAQ Section Specific**:
+     - "FAQ." heading: Inter Semibold (600), 144px
+     - Questions: Inter Semibold (600)
+     - Answers: Inter Regular (400)
+     - Subtitle: Inter Regular (400)
+   - **Why Both Methods**: The dual loading ensures Inter renders correctly across all browsers and prevents fallback to system fonts (which would cause visual differences like curved vs straight Q tails)
+
 ### Important Files to Know
 
 - `tailwind.config.ts` - Custom theme configuration with animations and colors

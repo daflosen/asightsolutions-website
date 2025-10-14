@@ -17,6 +17,14 @@ const faqs = [
     answer: 'Our SEO services include keyword research, on-page optimization, technical SEO, content strategy, and monthly performance reports.'
   },
   {
+    question: 'How come you are willing to teach us how to do all this by ourselves?',
+    answer: 'We believe in empowering our clients. By teaching you the fundamentals, we create long-term partnerships and help you maintain and grow your digital presence independently.'
+  },
+  {
+    question: 'Can you redesign my existing processes taking into account the given infrastructure?',
+    answer: 'Absolutely! We specialize in optimizing existing workflows and processes while working within your current infrastructure constraints.'
+  },
+  {
     question: 'How do I get started?',
     answer: 'Simply reach out via email or phone. We\'ll schedule a free consultation to discuss your project and provide a custom proposal.'
   }
@@ -30,52 +38,53 @@ export default function FAQSimple() {
   }
 
   return (
-    <section className="py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-8">
-        <div className="grid md:grid-cols-2 gap-16">
+    <section className="py-20" style={{ backgroundColor: '#F5F5F5' }}>
+      <div className="container mx-auto px-6">
+        <div className="grid lg:grid-cols-[350px_1fr] gap-12 items-start">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-[48px] md:text-[56px] font-semibold mb-8 leading-[1.2]" style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif', color: '#2d3436' }}>FAQ.</h2>
-            <p className="text-xl text-gray-600">
-              Got questions? We&apos;ve got answers. Here&apos;s<br />
-              everything you need to know about working with us.
+            <h2 className="text-[144px] mb-4 leading-[0.85]" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 600, color: '#000' }}>FAQ.</h2>
+            <p className="text-sm text-gray-500 leading-relaxed" style={{ fontWeight: 400 }}>
+              Got questions? We&apos;ve got answers. Here&apos;s everything you need to know about working with us.
             </p>
           </motion.div>
 
-          <div>
+          <div className="space-y-3">
             {faqs.map((faq, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="border-b border-gray-200 py-8"
+                transition={{ delay: index * 0.05 }}
+                className="bg-white rounded-2xl p-6"
               >
                 <button
                   onClick={() => toggleFaq(index)}
                   className="w-full flex justify-between items-center text-left cursor-pointer group"
                 >
-                  <span className="text-lg font-medium group-hover:text-[#3AA6B9] transition-colors">
+                  <span className="text-base pr-6" style={{ fontWeight: 600 }}>
                     {faq.question}
                   </span>
-                  <span
-                    className={`text-2xl font-light transition-transform ${
-                      activeIndex === index ? 'rotate-45' : ''
-                    }`}
-                  >
-                    +
-                  </span>
+                  <div className="flex-shrink-0">
+                    <div
+                      className={`w-6 h-6 bg-black rounded-full flex items-center justify-center text-white text-sm font-bold transition-transform ${
+                        activeIndex === index ? 'rotate-45' : ''
+                      }`}
+                    >
+                      +
+                    </div>
+                  </div>
                 </button>
                 <div
                   className={`overflow-hidden transition-all duration-300 ${
                     activeIndex === index ? 'max-h-[500px] pt-4' : 'max-h-0'
                   }`}
                 >
-                  <p className="text-gray-600">{faq.answer}</p>
+                  <p className="text-gray-600" style={{ fontWeight: 400, fontSize: '14px' }}>{faq.answer}</p>
                 </div>
               </motion.div>
             ))}
