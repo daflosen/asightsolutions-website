@@ -47,7 +47,7 @@ export default function HeroVideo() {
   }, [])
 
   return (
-    <section className="relative min-h-screen overflow-hidden bg-gray-50">
+    <section className="relative min-h-screen overflow-hidden" style={{ backgroundColor: '#F5F5F5' }}>
       {/* Grain Overlay */}
       <div className="grain-overlay" />
 
@@ -138,7 +138,7 @@ export default function HeroVideo() {
           animationDelay: '0.5s'
         }}
       >
-        <div className="w-[186px] h-[186px] rounded-l-[20px] overflow-hidden flex-shrink-0 bg-gray-100">
+        <div className="w-[186px] h-[186px] rounded-l-[20px] overflow-hidden flex-shrink-0" style={{ backgroundColor: '#F5F5F5' }}>
           <Image
             src="/images/Florian_Bartsch_20250925_FBA.png"
             alt="Florian Bartsch"

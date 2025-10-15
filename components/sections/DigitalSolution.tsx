@@ -49,7 +49,7 @@ const projects = [
 
 export default function DigitalSolution() {
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20" style={{ backgroundColor: '#F5F5F5' }}>
       <div className="container mx-auto px-6">
         <div className="mb-16">
           <span className="inline-flex items-center gap-2 text-sm font-medium mb-8">
