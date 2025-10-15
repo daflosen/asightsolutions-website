@@ -1,7 +1,6 @@
 'use client'
 
 import {
-  LogoSlider,
   DigitalSolution,
   Services,
   Stats,
@@ -25,7 +24,6 @@ export default function DemoPage() {
       </section>
 
       {/* All components */}
-      <LogoSlider />
       <DigitalSolution />
       <Services />
       <Stats />
