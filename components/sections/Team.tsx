@@ -107,6 +107,12 @@ export default function Team() {
                       alt={member.name}
                       className="w-full h-full object-cover transition-all duration-500 group-hover:scale-110 group-hover:blur-md"
                     />
+                  ) : member.id === 2 ? (
+                    <img
+                      src="/images/Jürgen_Rentschler_3zu4_SW-pica.png"
+                      alt={member.name}
+                      className="w-full h-full object-cover transition-all duration-500 group-hover:scale-110 group-hover:blur-md"
+                    />
                   ) : member.id === 3 ? (
                     <img
                       src="/images/Sophie_Gehlert_asightsolutions_1_WOBG.png"

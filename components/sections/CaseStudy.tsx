@@ -1,11 +1,14 @@
 'use client'
 
-import { motion, useScroll, useTransform } from 'framer-motion'
-import { useRef } from 'react'
+import { motion, useScroll, useTransform, useInView, animate } from 'framer-motion'
+import { useRef, useEffect, useState } from 'react'
 import Image from 'next/image'
 
 export default function CaseStudy() {
   const sectionRef = useRef<HTMLElement>(null)
+  const counterRef = useRef<HTMLDivElement>(null)
+  const isCounterInView = useInView(counterRef, { once: true, amount: 0.5 })
+  const [displayValue, setDisplayValue] = useState(0)
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,
@@ -14,6 +17,20 @@ export default function CaseStudy() {
 
   // Scale image down by 15% as user scrolls (1 to 0.85) - transform from bottom
   const imageScale = useTransform(scrollYProgress, [0, 1], [1, 0.85])
+
+  // Counter animation
+  useEffect(() => {
+    if (isCounterInView) {
+      const controls = animate(0, 35, {
+        duration: 2,
+        ease: "easeOut",
+        onUpdate: (latest) => {
+          setDisplayValue(Math.round(latest))
+        }
+      })
+      return controls.stop
+    }
+  }, [isCounterInView])
 
   return (
     <section ref={sectionRef} className="py-20" style={{ backgroundColor: '#F5F5F5' }}>
@@ -202,6 +219,7 @@ export default function CaseStudy() {
 
               {/* Chart */}
               <motion.div
+                ref={counterRef}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -211,7 +229,9 @@ export default function CaseStudy() {
                 {/* Header */}
                 <div className="mb-3">
                   <div className="flex items-center gap-2">
-                    <p className="text-2xl lg:text-3xl font-bold">38K</p>
+                    <p className="text-2xl lg:text-3xl font-bold">
+                      {displayValue}K
+                    </p>
                     <span className="bg-[#3AA6B9] text-white text-[8px] px-2 py-1 rounded-full font-semibold">+30%</span>
                   </div>
                   <p className="text-[9px] text-gray-500">quarterly visits</p>

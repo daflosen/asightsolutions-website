@@ -6,23 +6,23 @@ import Image from 'next/image'
 const projects = [
   {
     id: 1,
-    title: 'CRYPTAX',
+    title: 'ApeLedger',
     subtitle: 'Tax Software for Crypto Currencies',
     year: '(2023)',
-    description: 'CRYPTAX',
-    bgColor: 'bg-primary-50',
+    description: 'ApeLedger',
+    bgColor: 'bg-gray-100',
     logo: '>>>',
-    image: null
+    image: '/images/ApeLedger_Free.png'
   },
   {
     id: 2,
-    title: 'RMentiX',
+    title: 'RiskApe',
     subtitle: 'Risk Management for Projects',
     year: '(2024)',
     description: 'R',
     bgColor: 'bg-gray-100',
     logo: 'R',
-    image: '/images/RmentiX_Logo.jpg'
+    image: '/images/RisKApe_Free_Tuerkis.png'
   },
   {
     id: 3,
@@ -97,16 +97,20 @@ export default function DigitalSolution() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className={`${project.bgColor} rounded-3xl ${(project.id === 3 || project.id === 4) ? 'p-0 overflow-hidden relative' : 'p-12'} hover:shadow-xl transition-all cursor-pointer group h-[400px]`}
+              className={`${project.bgColor} rounded-3xl ${(project.id === 1 || project.id === 2 || project.id === 3 || project.id === 4) ? 'p-0 overflow-hidden relative' : 'p-12'} hover:shadow-xl transition-all cursor-pointer group h-[400px]`}
             >
-              {(project.id === 3 || project.id === 4) && project.image ? (
+              {(project.id === 1 || project.id === 2 || project.id === 3 || project.id === 4) && project.image ? (
                 <>
                   <div className="absolute inset-0 z-0">
                     <Image
                       src={project.image}
                       alt={project.title}
                       fill
-                      className="object-cover"
+                      className={
+                        project.id === 1 || project.id === 2
+                          ? "object-contain"
+                          : "object-cover"
+                      }
                     />
                   </div>
                   <div className="relative z-10 p-12">
@@ -141,7 +145,9 @@ export default function DigitalSolution() {
                           ? "object-contain object-right-bottom"
                           : project.id === 3
                             ? "object-cover"
-                            : "object-contain"
+                            : project.id === 1
+                              ? "object-cover"
+                              : "object-contain"
                       }
                     />
                   </div>

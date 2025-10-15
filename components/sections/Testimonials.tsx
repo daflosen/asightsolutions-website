@@ -1,6 +1,15 @@
 'use client'
 
+import { useRef, useEffect, useState } from 'react'
+import { useInView, animate } from 'framer-motion'
+
 export default function Testimonials() {
+  const statsRef = useRef<HTMLDivElement>(null)
+  const isStatsInView = useInView(statsRef, { once: true, amount: 0.5 })
+  const [toolsCount, setToolsCount] = useState(0)
+  const [projectsCount, setProjectsCount] = useState(0)
+  const [satisfactionCount, setSatisfactionCount] = useState(0)
+
   const testimonials = [
     {
       name: 'Janine Carter',
@@ -21,6 +30,44 @@ export default function Testimonials() {
       text: 'Impressive methodological approach. The solution from asight is exactly what we envisioned—clean, modern, and unique.'
     }
   ]
+
+  // Counter animations
+  useEffect(() => {
+    if (isStatsInView) {
+      // Tools counter (0 to 17)
+      const toolsControls = animate(0, 17, {
+        duration: 2,
+        ease: "easeOut",
+        onUpdate: (latest) => {
+          setToolsCount(Math.round(latest))
+        }
+      })
+
+      // Projects counter (0 to 50)
+      const projectsControls = animate(0, 50, {
+        duration: 2,
+        ease: "easeOut",
+        onUpdate: (latest) => {
+          setProjectsCount(Math.round(latest))
+        }
+      })
+
+      // Satisfaction counter (0 to 98)
+      const satisfactionControls = animate(0, 98, {
+        duration: 2,
+        ease: "easeOut",
+        onUpdate: (latest) => {
+          setSatisfactionCount(Math.round(latest))
+        }
+      })
+
+      return () => {
+        toolsControls.stop()
+        projectsControls.stop()
+        satisfactionControls.stop()
+      }
+    }
+  }, [isStatsInView])
 
   return (
     <section className="py-20" style={{ backgroundColor: '#F5F5F5' }}>
@@ -160,17 +207,17 @@ export default function Testimonials() {
         </div>
 
         {/* Stats Section */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+        <div ref={statsRef} className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
           <div>
-            <h3 className="text-6xl font-bold mb-2">17+</h3>
+            <h3 className="text-6xl font-bold mb-2">{toolsCount}+</h3>
             <p className="text-gray-600">Tools designed</p>
           </div>
           <div>
-            <h3 className="text-6xl font-bold mb-2">50+</h3>
+            <h3 className="text-6xl font-bold mb-2">{projectsCount}+</h3>
             <p className="text-gray-600">Successful<br />projects launched</p>
           </div>
           <div>
-            <h3 className="text-6xl font-bold mb-2">98%</h3>
+            <h3 className="text-6xl font-bold mb-2">{satisfactionCount}%</h3>
             <p className="text-gray-600">Client<br />satisfaction rate</p>
           </div>
         </div>

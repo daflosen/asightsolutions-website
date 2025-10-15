@@ -32,32 +32,69 @@ docker run -d \
 # Website ist jetzt erreichbar unter: http://localhost:3000
 ```
 
-### Option 2: Docker Compose (empfohlen für Produktion)
+### Option 2: Docker Compose mit Deployment-Script (empfohlen für Produktion)
 
-Beinhaltet Next.js + Nginx mit HTTPS-Support.
+Beinhaltet Next.js + Nginx mit HTTPS-Support und automatisierte Deployment-Scripts.
 
 ```bash
 # 1. Repository klonen
 git clone <your-repo-url>
 cd asightsolutions
 
-# 2. SSL-Zertifikate vorbereiten (siehe unten)
-mkdir -p nginx/ssl
+# 2. SSL-Zertifikate einrichten
+./scripts/setup-ssl.sh
+# Wähle Option 1 (self-signed) oder Option 3 (Let's Encrypt)
 
-# 3. Alle Services starten
-docker-compose up -d
+# 3. Vollständiges Deployment
+./scripts/deploy.sh deploy
 
 # 4. Logs ansehen
-docker-compose logs -f
+./scripts/deploy.sh logs
 
 # 5. Services stoppen
+./scripts/deploy.sh stop
+```
+
+### Option 3: Manuelle Docker Compose Nutzung
+
+```bash
+# Alle Services starten
+docker-compose up -d
+
+# Logs ansehen
+docker-compose logs -f
+
+# Services stoppen
 docker-compose down
 ```
 
 ## SSL/HTTPS Einrichtung
 
+### Automatisiertes Setup (empfohlen)
+
+```bash
+# Interaktives SSL-Setup Script
+./scripts/setup-ssl.sh
+
+# Mit spezifischer Domain
+./scripts/setup-ssl.sh yourdomain.com
+```
+
+Das Script bietet folgende Optionen:
+1. **Self-Signed Certificate** - Für Development/Testing
+2. **Let's Encrypt** - Mit lokaler Certbot-Installation
+3. **Let's Encrypt via Docker** - Empfohlen für Production
+4. **Certificate Info** - Zeigt Details zum aktuellen Zertifikat
+
 ### Option A: Let's Encrypt (kostenlos, automatisch)
 
+**Automatisch mit Script:**
+```bash
+./scripts/setup-ssl.sh
+# Wähle Option 3 (Let's Encrypt via Docker)
+```
+
+**Manuell:**
 ```bash
 # 1. Certbot installieren
 sudo apt update
@@ -76,6 +113,13 @@ sudo chmod 644 nginx/ssl/*.pem
 
 ### Option B: Self-Signed Certificates (nur für Testing)
 
+**Automatisch mit Script:**
+```bash
+./scripts/setup-ssl.sh
+# Wähle Option 1 (Self-Signed)
+```
+
+**Manuell:**
 ```bash
 # Self-signed Zertifikat erstellen
 mkdir -p nginx/ssl
@@ -312,7 +356,49 @@ services:
 - [ ] Logs auf Fehler geprüft
 - [ ] Backup-Strategie implementiert
 
-## Nützliche Befehle
+## Deployment-Scripts
+
+Das Projekt enthält hilfreiche Automatisierungs-Scripts:
+
+### deploy.sh - Haupt-Deployment-Script
+
+```bash
+# Vollständiges Deployment (Build + Start + Health Check)
+./scripts/deploy.sh deploy
+
+# Nur Services starten
+./scripts/deploy.sh start
+
+# Services stoppen
+./scripts/deploy.sh stop
+
+# Services neu starten
+./scripts/deploy.sh restart
+
+# Rebuild und Redeploy
+./scripts/deploy.sh rebuild
+
+# Logs anzeigen (mit Follow)
+./scripts/deploy.sh logs
+
+# Service-Status anzeigen
+./scripts/deploy.sh status
+
+# Cleanup (Container, Volumes, Images)
+./scripts/deploy.sh clean
+```
+
+### setup-ssl.sh - SSL-Zertifikate einrichten
+
+```bash
+# Interaktives Setup
+./scripts/setup-ssl.sh
+
+# Mit spezifischer Domain
+./scripts/setup-ssl.sh yourdomain.com
+```
+
+## Nützliche Docker-Befehle
 
 ```bash
 # Services neu starten
