@@ -81,7 +81,7 @@ export default function Testimonials() {
 
           <div className="flex-1 flex justify-center">
             <div>
-              <h2 className="text-[80px] md:text-[120px] font-bold leading-none mb-2">
+              <h2 className="text-[48px] md:text-[80px] lg:text-[120px] font-bold leading-none mb-2">
                 Experiences.
               </h2>
               <p className="text-base">©2025</p>

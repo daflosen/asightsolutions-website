@@ -69,7 +69,7 @@ export default function Team() {
               </div>
 
               {/* Bottom - Call to action and additional text */}
-              <div className="flex gap-8 items-start justify-between">
+              <div className="flex flex-col lg:flex-row gap-8 items-start justify-between">
                 <div className="flex-shrink-0">
                   <h4 className="text-base font-bold text-black mb-2">Be part of our mission</h4>
                   <p className="text-gray-600 mb-4 leading-relaxed text-sm max-w-[180px]">
@@ -79,8 +79,8 @@ export default function Team() {
                     Apply now
                   </button>
                 </div>
-                <div className="max-w-md ml-auto pl-20">
-                  <p className="text-xl lg:text-2xl font-bold leading-relaxed indent-12">
+                <div className="max-w-md lg:ml-auto lg:pl-20 pl-0">
+                  <p className="text-base lg:text-xl xl:text-2xl font-bold leading-relaxed indent-8 lg:indent-12">
                     <span className="text-black">We believe great work comes from collaboration.</span>{' '}
                     <span className="text-gray-600">That's why we work closely with each other to ensure every project meets your goals and exceeds expectations.</span>
                   </p>

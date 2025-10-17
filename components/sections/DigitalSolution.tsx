@@ -58,13 +58,13 @@ export default function DigitalSolution() {
           </span>
 
           <div className="max-w-5xl mx-auto">
-            <div className="flex justify-center items-start gap-12">
+            <div className="flex flex-col md:flex-row justify-center items-start gap-6 md:gap-12">
               <motion.h2
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 className="text-left mb-4"
-                style={{ fontSize: '144px', fontWeight: 600, fontFamily: 'Inter, sans-serif', lineHeight: '0.9' }}
+                style={{ fontSize: 'clamp(48px, 12vw, 144px)', fontWeight: 600, fontFamily: 'Inter, sans-serif', lineHeight: '0.9' }}
               >
                 Your<br />
                 Digital<br />
@@ -76,11 +76,11 @@ export default function DigitalSolution() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.2 }}
-                className="flex-1 pt-8"
+                className="flex-1 pt-0 md:pt-8"
               >
                 <p className="text-gray-500 leading-relaxed" style={{ fontSize: '16px', fontWeight: 600, fontFamily: 'Inter, sans-serif' }}>
-                  We've helped businesses across<br />
-                  industries achieve their digitalization<br />
+                  We've helped businesses across<br className="hidden md:block" />
+                  industries achieve their digitalization<br className="hidden md:block" />
                   goals. Here are some of our recent tools.
                 </p>
               </motion.div>

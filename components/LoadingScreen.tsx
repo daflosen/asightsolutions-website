@@ -30,7 +30,7 @@ export default function LoadingScreen() {
         <motion.div
           key="loading-exit"
           initial={{ y: 0 }}
-          animate={{ y: '-100%' }}
+          animate={{ y: '-100vh' }}
           transition={{
             duration: 1.3,
             ease: [0.11, 0, 0.5, 0], // Langsam starten (ease-in), dann stark beschleunigen
