@@ -31,14 +31,14 @@ export default function CTASimple() {
         />
       </div>
 
-      <div className="max-w-7xl mx-auto px-8 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-32 items-stretch">
+      <div className="max-w-7xl mx-auto px-4 md:px-8 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-32 items-stretch">
           {/* Left Side - Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="bg-white rounded-3xl p-8 shadow-xl"
+            className="bg-white rounded-3xl p-6 md:p-8 shadow-xl"
           >
             <p className="text-xs font-bold mb-4 text-gray-900">asightsolutions®</p>
 
@@ -98,29 +98,28 @@ export default function CTASimple() {
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="text-white flex flex-col justify-between"
+            className="text-white flex flex-col justify-between space-y-8 lg:space-y-0"
           >
             {/* Top Section */}
             <div>
-              <h2 className="text-7xl lg:text-8xl font-bold mb-8 leading-tight text-white">
+              <h2 className="text-[48px] md:text-7xl lg:text-8xl font-bold mb-4 md:mb-8 leading-tight text-white">
                 Let's talk.
               </h2>
 
-              <p className="text-xl lg:text-2xl leading-relaxed text-white opacity-90">
-                Tell us about your project—whether it's a process<br />
-                digitalization, SEO or your digital presence on the www.
+              <p className="text-base md:text-xl lg:text-2xl leading-relaxed text-white opacity-90">
+                Tell us about your project—whether it's a process digitalization, SEO or your digital presence on the www.
               </p>
             </div>
 
-            {/* Middle Section - Benefits Grid */}
-            <div className="grid grid-cols-2 gap-8">
+            {/* Middle Section - Benefits Grid - Stack on Mobile */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
               <div>
                 <div className="flex items-center gap-3 mb-2">
                   {/* Speedometer/Tacho Icon */}
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-6 h-6 text-white flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
-                  <h3 className="text-lg font-bold text-white">Quick response</h3>
+                  <h3 className="text-base md:text-lg font-bold text-white">Quick response</h3>
                 </div>
                 <p className="text-sm text-white opacity-80">
                   If you're ready to create and collaborate, we'd love to hear from you.
@@ -130,10 +129,10 @@ export default function CTASimple() {
               <div>
                 <div className="flex items-center gap-3 mb-2">
                   {/* Steps/Stairs Icon */}
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-6 h-6 text-white flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 21h4v-4h4v-4h4v-4h4V5h2" />
                   </svg>
-                  <h3 className="text-lg font-bold text-white">Clear next Steps</h3>
+                  <h3 className="text-base md:text-lg font-bold text-white">Clear next Steps</h3>
                 </div>
                 <p className="text-sm text-white opacity-80">
                   After the consultation, we'll provide you with a detailed plan and timeline.
@@ -149,7 +148,7 @@ export default function CTASimple() {
               transition={{ delay: 0.2 }}
               className="bg-white rounded-2xl p-4 flex items-center gap-4 max-w-sm"
             >
-              <div className="w-16 h-16 rounded-full overflow-hidden flex-shrink-0">
+              <div className="w-14 h-14 md:w-16 md:h-16 rounded-full overflow-hidden flex-shrink-0">
                 <img
                   src="/images/Alex_Eyb_SW.png"
                   alt="Alex Eyb"
@@ -157,9 +156,9 @@ export default function CTASimple() {
                 />
               </div>
               <div className="text-gray-900">
-                <p className="text-sm text-gray-600">Team Lead Acquisition</p>
-                <p className="text-xs text-gray-500">at asight®</p>
-                <p className="font-bold text-lg mt-1">Alex Eyb</p>
+                <p className="text-xs md:text-sm text-gray-600">Team Lead Acquisition</p>
+                <p className="text-[10px] md:text-xs text-gray-500">at asight®</p>
+                <p className="font-bold text-base md:text-lg mt-1">Alex Eyb</p>
               </div>
             </motion.div>
           </motion.div>

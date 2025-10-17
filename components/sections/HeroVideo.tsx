@@ -51,10 +51,10 @@ export default function HeroVideo() {
       {/* Grain Overlay */}
       <div className="grain-overlay" />
 
-      {/* Video Container Background */}
+      {/* Video Container Background - Rounded on all screens */}
       <div
         ref={videoContainerRef}
-        className="absolute inset-4 md:inset-8 rounded-3xl overflow-hidden"
+        className="absolute inset-2 sm:inset-4 md:inset-8 rounded-2xl md:rounded-3xl overflow-hidden"
         style={{ transition: 'transform 0.1s cubic-bezier(0.33, 1, 0.68, 1)' }}
       >
         {/* Video Background */}
@@ -114,9 +114,9 @@ export default function HeroVideo() {
         </div>
       </div>
 
-      {/* Tagline links unten - Responsive */}
+      {/* Tagline - Hidden on mobile, visible on desktop */}
       <div
-        className="absolute z-10 px-4 md:px-0 opacity-0 animate-fade-in"
+        className="hidden lg:block absolute z-10 px-4 md:px-0 opacity-0 animate-fade-in"
         style={{
           bottom: '60px',
           left: '5%',
@@ -131,9 +131,28 @@ export default function HeroVideo() {
         </h1>
       </div>
 
-      {/* Contact Card - Responsive */}
+      {/* Mobile - Services List (replaces contact card) */}
+      <div className="lg:hidden absolute bottom-[20px] left-[5%] right-[5%] z-[15] bg-white/95 backdrop-blur-sm rounded-[20px] shadow-[0_12px_40px_rgba(0,0,0,0.12)] p-6 opacity-0 animate-fade-in" style={{ animationDelay: '0.5s' }}>
+        <p className="text-xs font-bold mb-3 text-gray-900">Our Services</p>
+        <ul className="space-y-2.5">
+          <li className="flex items-center gap-3 text-gray-900">
+            <span className="w-1.5 h-1.5 bg-[#3AA6B9] rounded-full flex-shrink-0"></span>
+            <span className="text-sm font-semibold">Process Digitalization & Tooling</span>
+          </li>
+          <li className="flex items-center gap-3 text-gray-900">
+            <span className="w-1.5 h-1.5 bg-[#3AA6B9] rounded-full flex-shrink-0"></span>
+            <span className="text-sm font-semibold">Web Design and SEO</span>
+          </li>
+          <li className="flex items-center gap-3 text-gray-900">
+            <span className="w-1.5 h-1.5 bg-[#3AA6B9] rounded-full flex-shrink-0"></span>
+            <span className="text-sm font-semibold">Full Stack & Low Code Development</span>
+          </li>
+        </ul>
+      </div>
+
+      {/* Desktop - Contact Card (original) */}
       <div
-        className="absolute bottom-[20px] left-[5%] right-[5%] md:bottom-[80px] md:left-auto md:right-[100px] z-[15] w-[90%] md:w-[70%] lg:w-[25%] max-w-[600px] lg:max-w-none h-auto md:h-[186px] flex flex-col md:flex-row items-stretch gap-0 p-0 bg-white rounded-[20px] shadow-[0_12px_40px_rgba(0,0,0,0.12)] overflow-hidden opacity-0 animate-fade-in"
+        className="hidden lg:flex absolute bottom-[80px] right-[100px] z-[15] w-[25%] h-[186px] flex-row items-stretch gap-0 p-0 bg-white rounded-[20px] shadow-[0_12px_40px_rgba(0,0,0,0.12)] overflow-hidden opacity-0 animate-fade-in"
         style={{
           animationDelay: '0.5s'
         }}
