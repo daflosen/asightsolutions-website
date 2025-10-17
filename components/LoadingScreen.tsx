@@ -35,7 +35,8 @@ export default function LoadingScreen() {
             duration: 1.3,
             ease: [0.11, 0, 0.5, 0], // Langsam starten (ease-in), dann stark beschleunigen
           }}
-          className="fixed top-0 left-0 w-full h-screen bg-gradient-to-br from-[#3AA6B9] to-[#2C8A94] flex items-center justify-center z-[9999]"
+          className="fixed top-0 left-0 w-full bg-gradient-to-br from-[#3AA6B9] to-[#2C8A94] flex items-center justify-center z-[9999]"
+          style={{ height: '100vh', minHeight: '100vh', bottom: 0 }}
         >
           <motion.div
             className="flex items-center gap-0 text-white"
@@ -56,7 +57,8 @@ export default function LoadingScreen() {
       ) : (
         <motion.div
           key="loading-initial"
-          className="fixed top-0 left-0 w-full h-screen bg-gradient-to-br from-[#3AA6B9] to-[#2C8A94] flex items-center justify-center z-[9999]"
+          className="fixed top-0 left-0 w-full bg-gradient-to-br from-[#3AA6B9] to-[#2C8A94] flex items-center justify-center z-[9999]"
+          style={{ height: '100vh', minHeight: '100vh', bottom: 0 }}
         >
           <div className="flex items-center gap-0 text-white" style={{ fontSize: '38px', fontWeight: 600, letterSpacing: '-0.02em', fontFamily: 'Inter, sans-serif' }}>
             {letters.map((letter, index) => (
