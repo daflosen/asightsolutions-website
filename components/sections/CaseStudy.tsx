@@ -36,7 +36,7 @@ export default function CaseStudy() {
     <section ref={sectionRef} className="py-20" style={{ backgroundColor: '#F5F5F5' }}>
       <div className="container mx-auto px-6">
         {/* Header Text */}
-        <div className="mb-16 flex items-start gap-8">
+        <div className="mb-16 flex flex-col lg:flex-row items-start gap-6 lg:gap-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -54,36 +54,44 @@ export default function CaseStudy() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="flex-1 flex justify-center"
+            className="flex-1 lg:flex lg:justify-center"
           >
             <div className="max-w-4xl">
-              <h2 className="text-[32px] md:text-[40px] font-semibold mb-8 leading-[1.2]" style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
+              <h2 className="text-[24px] md:text-[32px] lg:text-[40px] font-semibold mb-6 lg:mb-8 leading-[1.2]" style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
                 <span className="text-gray-400">Our approach is straight forward: </span><span style={{ color: '#2d3436' }}>we focus on precisely targeting functionality ensuring that every digital solution serves a clear purpose without unnecessary complexity and overhead.</span>
               </h2>
-              <p className="text-lg text-gray-600 leading-relaxed">
+              <p className="text-base lg:text-lg text-gray-600 leading-relaxed">
                 We don't overpromise or use flashy marketing language. We simply build well-designed, functional tools and strategies that help businesses succeed.
               </p>
             </div>
           </motion.div>
         </div>
 
-        {/* Main Container */}
-        <div className="relative h-[600px] rounded-3xl mt-32">
+        {/* Main Container - Responsive height */}
+        <div className="relative h-auto md:h-[500px] lg:h-[600px] rounded-3xl mt-16 lg:mt-32">
 
-          {/* Background - Full Size with gradient */}
+          {/* Background - Full Size with gradient - Hidden on mobile, show on lg */}
           <div
-            className="absolute inset-0 rounded-3xl z-[1]"
+            className="hidden lg:block absolute inset-0 rounded-3xl z-[1]"
             style={{
               background: 'linear-gradient(to right, #3AA6B9 60%, #f5f5f5 60%)'
             }}
           />
 
-          {/* Woman Image Container - extends beyond container */}
+          {/* Mobile Background - Full teal */}
+          <div
+            className="lg:hidden absolute inset-0 rounded-3xl z-[1]"
+            style={{
+              background: '#3AA6B9'
+            }}
+          />
+
+          {/* Woman Image Container - Hidden on mobile */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="absolute z-[2]"
+            className="hidden lg:block absolute z-[2]"
             style={{
               scale: imageScale,
               transformOrigin: 'bottom center',
@@ -112,49 +120,24 @@ export default function CaseStudy() {
             </div>
           </motion.div>
 
-          {/* Text and Cards Container - on top */}
-          <div className="absolute inset-0 z-[3]">
-
-          {/* Case Study - Top Left */}
-          <div className="absolute left-0 top-0 w-[60%] p-8 lg:p-12 text-white z-[3] pointer-events-none">
-            <div className="pointer-events-auto">
+          {/* MOBILE LAYOUT - Stack everything */}
+          <div className="lg:hidden space-y-6">
+            {/* Top Info */}
+            <div className="text-white">
               <p className="text-sm mb-2 opacity-90 font-bold">Case study (SEO)</p>
-              <p className="text-xs opacity-70">
-                ERP Customization,<br />
-                Frontend Optimization,
+              <p className="text-xs opacity-70 mb-4">
+                ERP Customization, Frontend Optimization
               </p>
+              <h2 className="text-[32px] font-semibold leading-[1.2] text-white mb-4" style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
+                asightsolutions®
+              </h2>
+              <a href="https://re-automation.net" target="_blank" rel="noopener noreferrer" className="text-sm opacity-80 hover:opacity-100 transition-opacity underline inline-block mb-6">
+                RE Automation Website →
+              </a>
             </div>
-          </div>
 
-          {/* Plus Button - Top Right */}
-          <div className="absolute right-[40%] top-8 lg:top-12 text-white z-[3]">
-            <button className="text-2xl hover:opacity-80 transition-opacity pointer-events-auto">
-              +
-            </button>
-          </div>
-
-          {/* asightsolutions - Center */}
-          <div className="absolute left-0 top-0 w-[60%] h-full p-8 lg:p-12 text-white z-[3] pointer-events-none flex flex-col justify-center">
-            <h2 className="text-[48px] md:text-[56px] font-semibold leading-[1.2] text-white" style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
-              asightsolutions®
-            </h2>
-          </div>
-
-          {/* Description - Bottom Right in Teal Box */}
-          <div className="absolute left-0 bottom-0 w-[60%] p-8 lg:p-12 text-white z-[3] pointer-events-none flex justify-between items-end">
-            <a href="https://re-automation.net" target="_blank" rel="noopener noreferrer" className="text-sm opacity-80 hover:opacity-100 transition-opacity pointer-events-auto underline">
-              RE Automation Website →
-            </a>
-            <div className="flex flex-col items-end text-right">
-              <p className="text-base mb-2 opacity-90">
-                <span className="font-semibold">From Site Audits, Keyword Strategy and Backlink Analytics...</span>
-              </p>
-              <p className="text-sm opacity-80">...we do it all</p>
-            </div>
-          </div>
-
-          {/* FLOATING CARDS - Right Side (Contained within 600px height) */}
-          <div className="absolute right-4 lg:right-8 w-[50%] lg:w-[45%] top-6 lg:top-8 bottom-6 overflow-hidden pr-2 space-y-3">
+            {/* Stats Cards - Mobile */}
+            <div className="space-y-3">
 
             {/* Performance Boost Card with Testimonial */}
             <motion.div

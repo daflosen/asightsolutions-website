@@ -12,7 +12,7 @@ export default function Stats() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <div className="flex items-start gap-24 mb-12">
+          <div className="flex flex-col md:flex-row items-start gap-6 md:gap-24 mb-12">
             <div className="flex items-center gap-3">
               <span className="w-6 h-6 bg-gray-900 rounded-full inline-flex items-center justify-center text-white text-sm font-bold">
                 +
@@ -20,9 +20,9 @@ export default function Stats() {
               <span className="text-sm font-bold">Why choose us</span>
             </div>
 
-            <h2 className="leading-[1.2]" style={{ fontSize: '60px', fontWeight: 600, fontFamily: 'Inter, sans-serif', color: '#2d3436' }}>
-              Proven results for every project,<br />
-              <span style={{ color: '#B3B4B5' }}>with a focus on precision and<br />
+            <h2 className="leading-[1.2]" style={{ fontSize: 'clamp(28px, 7vw, 60px)', fontWeight: 600, fontFamily: 'Inter, sans-serif', color: '#2d3436' }}>
+              Proven results for every project,<br className="hidden md:block" />
+              <span style={{ color: '#B3B4B5' }}>with a focus on precision and<br className="hidden md:block" />
               functionality.</span>
             </h2>
           </div>
