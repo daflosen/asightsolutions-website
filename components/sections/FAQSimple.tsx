@@ -46,7 +46,7 @@ export default function FAQSimple() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-[144px] mb-4 leading-[0.85]" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 600, color: '#000' }}>FAQ.</h2>
+            <h2 className="text-[48px] md:text-[80px] lg:text-[120px] xl:text-[144px] mb-4 leading-[0.85]" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 600, color: '#000' }}>FAQ.</h2>
             <p className="text-sm text-gray-500 leading-relaxed" style={{ fontWeight: 400 }}>
               Got questions? We&apos;ve got answers. Here&apos;s everything you need to know about working with us.
             </p>
@@ -64,14 +64,14 @@ export default function FAQSimple() {
               >
                 <button
                   onClick={() => toggleFaq(index)}
-                  className="w-full flex justify-between items-center text-left cursor-pointer group"
+                  className="w-full flex justify-between items-center text-left cursor-pointer group min-h-[48px] py-2"
                 >
                   <span className="text-base pr-6" style={{ fontWeight: 600 }}>
                     {faq.question}
                   </span>
                   <div className="flex-shrink-0">
                     <div
-                      className={`w-6 h-6 bg-black rounded-full flex items-center justify-center text-white text-sm font-bold transition-transform ${
+                      className={`w-10 h-10 bg-black rounded-full flex items-center justify-center text-white text-base font-bold transition-transform ${
                         activeIndex === index ? 'rotate-45' : ''
                       }`}
                     >

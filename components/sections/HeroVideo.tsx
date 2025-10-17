@@ -74,19 +74,19 @@ export default function HeroVideo() {
         {/* Grain Overlay */}
         <div className="absolute inset-0 z-[3] opacity-5 mix-blend-overlay pointer-events-none grain-overlay" />
 
-        {/* Main Logo "asight" */}
-        <h1 className="absolute left-[3.5%] z-10 text-white text-left m-0 p-0" style={{ fontSize: '18vw', letterSpacing: '-0.06em', fontWeight: 600, fontFamily: 'Inter, sans-serif', top: '64px', lineHeight: '0.9', width: 'fit-content' }}>
+        {/* Main Logo "asight" - Responsive */}
+        <h1 className="absolute left-[5%] md:left-[3.5%] z-10 text-white text-left m-0 p-0" style={{ fontSize: 'clamp(48px, 14vw, 18vw)', letterSpacing: '-0.06em', fontWeight: 600, fontFamily: 'Inter, sans-serif', top: '64px', lineHeight: '0.9', width: 'fit-content' }}>
           asight<sup className="align-super ml-[0.1em]" style={{ fontSize: '33%', fontWeight: 600 }}>®</sup>
         </h1>
 
-        {/* "solutions" Unterzeile - rechtsbündig mit "asight" Ende */}
-        <p className="absolute z-10 font-semibold text-white leading-[1.2] opacity-0 animate-fade-in" style={{ fontSize: '2.4vw', letterSpacing: '-0.06em', fontFamily: 'Inter, sans-serif', fontWeight: 600, top: 'calc(64px + 16vw)', left: '3.5%', width: '18vw', textAlign: 'right', animationDelay: '0.2s' }}>
+        {/* "solutions" Unterzeile - rechtsbündig mit "asight" Ende - Responsive */}
+        <p className="absolute z-10 font-semibold text-white leading-[1.2] opacity-0 animate-fade-in" style={{ fontSize: 'clamp(16px, 2.4vw, 2.4vw)', letterSpacing: '-0.06em', fontFamily: 'Inter, sans-serif', fontWeight: 600, top: 'calc(64px + clamp(48px, 14vw, 16vw))', left: '5%', width: 'clamp(80px, 18vw, 18vw)', textAlign: 'right', animationDelay: '0.2s' }}>
           solutions
         </p>
       </div>
 
-      {/* Services List Top Right */}
-      <div className="absolute top-24 right-24 z-10 text-right opacity-0 animate-fade-in" style={{ animationDelay: '0.5s' }}>
+      {/* Services List Top Right - Hidden on Mobile */}
+      <div className="hidden lg:block absolute top-24 right-24 z-10 text-right opacity-0 animate-fade-in" style={{ animationDelay: '0.5s' }}>
         <ul className="space-y-2 leading-relaxed text-white opacity-80" style={{ fontSize: '18px', fontWeight: 600, fontFamily: 'Inter, sans-serif' }}>
           <li>Process Digitalization & Tooling</li>
           <li>Web Design and SEO</li>
@@ -94,9 +94,9 @@ export default function HeroVideo() {
         </ul>
       </div>
 
-      {/* Static Plus Symbols */}
+      {/* Static Plus Symbols - Hidden on Mobile */}
       <div
-        className="absolute z-10 opacity-0 animate-fade-in"
+        className="hidden md:block absolute z-10 opacity-0 animate-fade-in"
         style={{
           top: '60%',
           transform: 'translateY(-50%)',
@@ -114,31 +114,31 @@ export default function HeroVideo() {
         </div>
       </div>
 
-      {/* Tagline links unten */}
+      {/* Tagline links unten - Responsive */}
       <div
-        className="absolute z-10 max-w-[490px] opacity-0 animate-fade-in"
+        className="absolute z-10 px-4 md:px-0 opacity-0 animate-fade-in"
         style={{
           bottom: '60px',
-          left: '10%',
+          left: '5%',
+          right: '5%',
+          maxWidth: '490px',
           animationDelay: '0.4s'
         }}
       >
-        <h1 className="text-white leading-[1.4]" style={{ fontSize: '22px', fontWeight: 600, fontFamily: 'Inter, sans-serif', textIndent: '2em' }}>
+        <h1 className="text-white leading-[1.4]" style={{ fontSize: 'clamp(16px, 4vw, 22px)', fontWeight: 600, fontFamily: 'Inter, sans-serif', textIndent: '2em' }}>
           Digital solutions and strategies that help<br />
           your processes thrive and your business grow.
         </h1>
       </div>
 
-      {/* Contact Card */}
+      {/* Contact Card - Responsive */}
       <div
-        className="absolute z-[15] w-[25%] h-[186px] flex items-stretch gap-0 p-0 bg-white rounded-[20px] shadow-[0_12px_40px_rgba(0,0,0,0.12)] overflow-hidden opacity-0 animate-fade-in"
+        className="absolute bottom-[20px] left-[5%] right-[5%] md:bottom-[80px] md:left-auto md:right-[100px] z-[15] w-[90%] md:w-[70%] lg:w-[25%] max-w-[600px] lg:max-w-none h-auto md:h-[186px] flex flex-col md:flex-row items-stretch gap-0 p-0 bg-white rounded-[20px] shadow-[0_12px_40px_rgba(0,0,0,0.12)] overflow-hidden opacity-0 animate-fade-in"
         style={{
-          bottom: '80px',
-          right: '100px',
           animationDelay: '0.5s'
         }}
       >
-        <div className="w-[186px] h-[186px] rounded-l-[20px] overflow-hidden flex-shrink-0" style={{ backgroundColor: '#F5F5F5' }}>
+        <div className="w-full md:w-[186px] h-[186px] md:rounded-l-[20px] rounded-t-[20px] md:rounded-t-none overflow-hidden flex-shrink-0" style={{ backgroundColor: '#F5F5F5' }}>
           <Image
             src="/images/Florian_Bartsch_20250925_FBA.png"
             alt="Florian Bartsch"
