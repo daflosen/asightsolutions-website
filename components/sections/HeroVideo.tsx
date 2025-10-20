@@ -216,21 +216,45 @@ export default function HeroVideo() {
         </div>
       )}
 
-      {/* Option 4: 3D Carousel - Animated Stacked Cards */}
+      {/* Option 4: 3D Carousel - DRAMATIC Horizontal Stacked Cards */}
       {mobileLayout === 'carousel' && (
         <div className="lg:hidden absolute top-1/2 -translate-y-1/2 left-0 right-0 z-[15] px-[5%] opacity-0 animate-fade-in" style={{ animationDelay: '0.5s' }}>
-          <div className="relative h-[280px] w-full">
+          <div className="relative h-[300px] w-full" style={{ perspective: '1000px' }}>
             {services.map((service, index) => {
               const position = (index - currentCardIndex + services.length) % services.length
+
+              // Dramatic positioning based on position in stack
+              let transform = ''
+              let opacity = 1
+              let zIndex = services.length - position
+
+              if (position === 0) {
+                // Front card - full size, center
+                transform = 'translateX(0) translateZ(0) scale(1) rotateY(0deg)'
+                opacity = 1
+              } else if (position === 1) {
+                // Second card - slightly smaller, behind, shifted left
+                transform = 'translateX(-30px) translateZ(-50px) scale(0.92) rotateY(8deg)'
+                opacity = 0.7
+              } else if (position === 2) {
+                // Third card - even smaller, more behind, more shifted
+                transform = 'translateX(-50px) translateZ(-100px) scale(0.84) rotateY(12deg)'
+                opacity = 0.4
+              } else {
+                // Hidden cards - far left, tiny, barely visible
+                transform = 'translateX(-80px) translateZ(-150px) scale(0.76) rotateY(16deg)'
+                opacity = 0.15
+              }
 
               return (
                 <div
                   key={index}
-                  className="absolute w-full bg-white/15 backdrop-blur-md rounded-[24px] p-8 border border-white/20 transition-all duration-700 ease-out"
+                  className="absolute inset-0 bg-white/15 backdrop-blur-md rounded-[24px] p-8 border border-white/20 transition-all duration-700 ease-out"
                   style={{
-                    zIndex: services.length - position,
-                    transform: `translateY(${position * 12}px) scale(${1 - position * 0.05}) translateX(${position * 2}px)`,
-                    opacity: position === 0 ? 1 : position === 1 ? 0.8 : position === 2 ? 0.5 : 0.2,
+                    zIndex,
+                    transform,
+                    opacity,
+                    transformStyle: 'preserve-3d',
                     pointerEvents: position === 0 ? 'auto' : 'none'
                   }}
                 >
@@ -240,7 +264,7 @@ export default function HeroVideo() {
               )
             })}
           </div>
-          <p className="text-center text-white/60 text-xs mt-6">Automatically rotating every 3.5s</p>
+          <p className="text-center text-white/60 text-xs mt-6">✨ Auto-rotating every 3.5s</p>
         </div>
       )}
 
