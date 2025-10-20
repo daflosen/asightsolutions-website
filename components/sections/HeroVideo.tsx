@@ -24,10 +24,21 @@ export default function HeroVideo() {
 
     const interval = setInterval(() => {
       setCurrentCardIndex((prev) => (prev + 1) % services.length)
-    }, 3500)
+    }, 4000)
 
     return () => clearInterval(interval)
   }, [mobileLayout, services.length])
+
+  // Touch swipe handler for carousel
+  const handleCarouselSwipe = (direction: 'left' | 'right') => {
+    if (direction === 'left') {
+      // Swipe left = next card
+      setCurrentCardIndex((prev) => (prev + 1) % services.length)
+    } else {
+      // Swipe right = previous card
+      setCurrentCardIndex((prev) => (prev - 1 + services.length) % services.length)
+    }
+  }
 
   // Wait for loading screen to finish (approx 3.9 seconds total)
   useEffect(() => {
@@ -216,40 +227,66 @@ export default function HeroVideo() {
         </div>
       )}
 
-      {/* Option 4: 3D Carousel - DRAMATIC Horizontal Stacked Cards */}
+      {/* Option 4: 3D Carousel - DRAMATIC Horizontal Stacked Cards with Swipe */}
       {mobileLayout === 'carousel' && (
         <div className="lg:hidden absolute top-1/2 -translate-y-1/2 left-0 right-0 z-[15] px-[5%] opacity-0 animate-fade-in" style={{ animationDelay: '0.5s' }}>
-          <div className="relative h-[300px] w-full" style={{ perspective: '1000px' }}>
+          <div
+            className="relative h-[240px] w-full"
+            style={{ perspective: '1200px' }}
+            onTouchStart={(e) => {
+              const touch = e.touches[0]
+              const startX = touch.clientX
+
+              const handleTouchMove = (moveEvent: TouchEvent) => {
+                const currentX = moveEvent.touches[0].clientX
+                const diff = startX - currentX
+
+                if (Math.abs(diff) > 50) {
+                  handleCarouselSwipe(diff > 0 ? 'left' : 'right')
+                  document.removeEventListener('touchmove', handleTouchMove)
+                  document.removeEventListener('touchend', handleTouchEnd)
+                }
+              }
+
+              const handleTouchEnd = () => {
+                document.removeEventListener('touchmove', handleTouchMove)
+                document.removeEventListener('touchend', handleTouchEnd)
+              }
+
+              document.addEventListener('touchmove', handleTouchMove)
+              document.addEventListener('touchend', handleTouchEnd)
+            }}
+          >
             {services.map((service, index) => {
               const position = (index - currentCardIndex + services.length) % services.length
 
-              // Dramatic positioning based on position in stack
+              // Smaller cards with MORE dramatic background depth
               let transform = ''
               let opacity = 1
               let zIndex = services.length - position
 
               if (position === 0) {
-                // Front card - full size, center
-                transform = 'translateX(0) translateZ(0) scale(1) rotateY(0deg)'
+                // Front card - smaller, centered
+                transform = 'translateX(0) translateZ(0) scale(0.95) rotateY(0deg)'
                 opacity = 1
               } else if (position === 1) {
-                // Second card - slightly smaller, behind, shifted left
-                transform = 'translateX(-30px) translateZ(-50px) scale(0.92) rotateY(8deg)'
-                opacity = 0.7
+                // Second card - much further back with subtle rotation
+                transform = 'translateX(-20px) translateZ(-80px) scale(0.85) rotateY(3deg)'
+                opacity = 0.6
               } else if (position === 2) {
-                // Third card - even smaller, more behind, more shifted
-                transform = 'translateX(-50px) translateZ(-100px) scale(0.84) rotateY(12deg)'
-                opacity = 0.4
+                // Third card - very far back
+                transform = 'translateX(-35px) translateZ(-160px) scale(0.75) rotateY(4deg)'
+                opacity = 0.35
               } else {
-                // Hidden cards - far left, tiny, barely visible
-                transform = 'translateX(-80px) translateZ(-150px) scale(0.76) rotateY(16deg)'
+                // Hidden cards - extremely far back
+                transform = 'translateX(-45px) translateZ(-240px) scale(0.65) rotateY(5deg)'
                 opacity = 0.15
               }
 
               return (
                 <div
                   key={index}
-                  className="absolute inset-0 bg-white/15 backdrop-blur-md rounded-[24px] p-8 border border-white/20 transition-all duration-700 ease-out"
+                  className="absolute inset-0 bg-white/15 backdrop-blur-md rounded-[20px] p-6 border border-white/20 transition-all duration-600 ease-out"
                   style={{
                     zIndex,
                     transform,
@@ -258,13 +295,13 @@ export default function HeroVideo() {
                     pointerEvents: position === 0 ? 'auto' : 'none'
                   }}
                 >
-                  <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
-                  <p className="text-sm text-white/90 leading-relaxed">{service.desc}</p>
+                  <h3 className="text-lg font-bold text-white mb-2">{service.title}</h3>
+                  <p className="text-sm text-white/90 leading-snug">{service.desc}</p>
                 </div>
               )
             })}
           </div>
-          <p className="text-center text-white/60 text-xs mt-6">✨ Auto-rotating every 3.5s</p>
+          <p className="text-center text-white/60 text-xs mt-5">← Swipe or wait for auto-rotation →</p>
         </div>
       )}
 
