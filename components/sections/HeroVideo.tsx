@@ -7,8 +7,27 @@ export default function HeroVideo() {
   const videoContainerRef = useRef<HTMLDivElement>(null)
   const videoRef = useRef<HTMLVideoElement>(null)
   const [shouldPlayVideo, setShouldPlayVideo] = useState(false)
-  // Toggle between layouts: 'centered' (Option 1) or 'stacked' (Option 3)
-  const [mobileLayout, setMobileLayout] = useState<'centered' | 'stacked'>('centered')
+  // Toggle between layouts: 'centered', 'stacked', or 'carousel' (Option 4)
+  const [mobileLayout, setMobileLayout] = useState<'centered' | 'stacked' | 'carousel'>('carousel')
+  const [currentCardIndex, setCurrentCardIndex] = useState(0)
+
+  const services = [
+    { title: 'Process Digitalization', desc: 'Transform manual processes into efficient digital workflows' },
+    { title: 'Business Optimization', desc: 'Streamline operations and maximize efficiency' },
+    { title: 'Web Design & SEO', desc: 'Beautiful websites that rank and convert' },
+    { title: 'Full Stack Development', desc: 'From concept to deployment' }
+  ]
+
+  // Carousel rotation effect
+  useEffect(() => {
+    if (mobileLayout !== 'carousel') return
+
+    const interval = setInterval(() => {
+      setCurrentCardIndex((prev) => (prev + 1) % services.length)
+    }, 3500)
+
+    return () => clearInterval(interval)
+  }, [mobileLayout, services.length])
 
   // Wait for loading screen to finish (approx 3.9 seconds total)
   useEffect(() => {
@@ -135,10 +154,14 @@ export default function HeroVideo() {
 
       {/* Toggle Button - Only visible on mobile for testing */}
       <button
-        onClick={() => setMobileLayout(prev => prev === 'centered' ? 'stacked' : 'centered')}
+        onClick={() => {
+          if (mobileLayout === 'centered') setMobileLayout('stacked')
+          else if (mobileLayout === 'stacked') setMobileLayout('carousel')
+          else setMobileLayout('centered')
+        }}
         className="lg:hidden fixed top-4 right-4 z-[100] bg-white/20 backdrop-blur-md text-white text-xs px-3 py-2 rounded-full border border-white/30"
       >
-        {mobileLayout === 'centered' ? 'Switch to Stacked' : 'Switch to Centered'}
+        {mobileLayout === 'centered' ? '→ Stacked' : mobileLayout === 'stacked' ? '→ Carousel' : '→ Centered'}
       </button>
 
       {/* Option 1: Centered Horizontal Cards */}
@@ -190,6 +213,34 @@ export default function HeroVideo() {
             </div>
           </div>
           <p className="text-center text-white/60 text-xs mt-4">↑ Scroll to explore ↓</p>
+        </div>
+      )}
+
+      {/* Option 4: 3D Carousel - Animated Stacked Cards */}
+      {mobileLayout === 'carousel' && (
+        <div className="lg:hidden absolute top-1/2 -translate-y-1/2 left-0 right-0 z-[15] px-[5%] opacity-0 animate-fade-in" style={{ animationDelay: '0.5s' }}>
+          <div className="relative h-[280px] w-full">
+            {services.map((service, index) => {
+              const position = (index - currentCardIndex + services.length) % services.length
+
+              return (
+                <div
+                  key={index}
+                  className="absolute w-full bg-white/15 backdrop-blur-md rounded-[24px] p-8 border border-white/20 transition-all duration-700 ease-out"
+                  style={{
+                    zIndex: services.length - position,
+                    transform: `translateY(${position * 12}px) scale(${1 - position * 0.05}) translateX(${position * 2}px)`,
+                    opacity: position === 0 ? 1 : position === 1 ? 0.8 : position === 2 ? 0.5 : 0.2,
+                    pointerEvents: position === 0 ? 'auto' : 'none'
+                  }}
+                >
+                  <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
+                  <p className="text-sm text-white/90 leading-relaxed">{service.desc}</p>
+                </div>
+              )
+            })}
+          </div>
+          <p className="text-center text-white/60 text-xs mt-6">Automatically rotating every 3.5s</p>
         </div>
       )}
 
