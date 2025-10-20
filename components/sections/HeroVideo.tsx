@@ -7,6 +7,8 @@ export default function HeroVideo() {
   const videoContainerRef = useRef<HTMLDivElement>(null)
   const videoRef = useRef<HTMLVideoElement>(null)
   const [shouldPlayVideo, setShouldPlayVideo] = useState(false)
+  // Toggle between layouts: 'centered' (Option 1) or 'stacked' (Option 3)
+  const [mobileLayout, setMobileLayout] = useState<'centered' | 'stacked'>('centered')
 
   // Wait for loading screen to finish (approx 3.9 seconds total)
   useEffect(() => {
@@ -131,30 +133,65 @@ export default function HeroVideo() {
         </h1>
       </div>
 
-      {/* Mobile - Swipeable Service Cards */}
-      <div className="lg:hidden absolute bottom-[20px] left-0 right-0 z-[15] opacity-0 animate-fade-in" style={{ animationDelay: '0.5s' }}>
-        <div className="overflow-x-auto overflow-y-hidden pb-3 px-[5%] scrollbar-hide">
-          <div className="flex gap-3 min-w-max">
-            <div className="min-w-[75vw] max-w-[280px] bg-white/15 backdrop-blur-md rounded-[18px] p-5 border border-white/20">
-              <h3 className="text-base font-bold text-white mb-1.5">Process Digitalization</h3>
-              <p className="text-xs text-white/90 leading-snug">Transform manual processes into efficient digital workflows</p>
-            </div>
-            <div className="min-w-[75vw] max-w-[280px] bg-white/15 backdrop-blur-md rounded-[18px] p-5 border border-white/20">
-              <h3 className="text-base font-bold text-white mb-1.5">Business Optimization</h3>
-              <p className="text-xs text-white/90 leading-snug">Streamline operations and maximize efficiency</p>
-            </div>
-            <div className="min-w-[75vw] max-w-[280px] bg-white/15 backdrop-blur-md rounded-[18px] p-5 border border-white/20">
-              <h3 className="text-base font-bold text-white mb-1.5">Web Design & SEO</h3>
-              <p className="text-xs text-white/90 leading-snug">Beautiful websites that rank and convert</p>
-            </div>
-            <div className="min-w-[75vw] max-w-[280px] bg-white/15 backdrop-blur-md rounded-[18px] p-5 border border-white/20">
-              <h3 className="text-base font-bold text-white mb-1.5">Full Stack Development</h3>
-              <p className="text-xs text-white/90 leading-snug">From concept to deployment</p>
+      {/* Toggle Button - Only visible on mobile for testing */}
+      <button
+        onClick={() => setMobileLayout(prev => prev === 'centered' ? 'stacked' : 'centered')}
+        className="lg:hidden fixed top-4 right-4 z-[100] bg-white/20 backdrop-blur-md text-white text-xs px-3 py-2 rounded-full border border-white/30"
+      >
+        {mobileLayout === 'centered' ? 'Switch to Stacked' : 'Switch to Centered'}
+      </button>
+
+      {/* Option 1: Centered Horizontal Cards */}
+      {mobileLayout === 'centered' && (
+        <div className="lg:hidden absolute top-1/2 -translate-y-1/2 left-0 right-0 z-[15] opacity-0 animate-fade-in" style={{ animationDelay: '0.5s' }}>
+          <div className="overflow-x-auto overflow-y-hidden pb-4 px-[5%] scrollbar-hide">
+            <div className="flex gap-4 min-w-max">
+              <div className="min-w-[85vw] max-w-[320px] bg-white/15 backdrop-blur-md rounded-[24px] p-7 border border-white/20">
+                <h3 className="text-xl font-bold text-white mb-3">Process Digitalization</h3>
+                <p className="text-sm text-white/90 leading-relaxed">Transform manual processes into efficient digital workflows</p>
+              </div>
+              <div className="min-w-[85vw] max-w-[320px] bg-white/15 backdrop-blur-md rounded-[24px] p-7 border border-white/20">
+                <h3 className="text-xl font-bold text-white mb-3">Business Optimization</h3>
+                <p className="text-sm text-white/90 leading-relaxed">Streamline operations and maximize efficiency</p>
+              </div>
+              <div className="min-w-[85vw] max-w-[320px] bg-white/15 backdrop-blur-md rounded-[24px] p-7 border border-white/20">
+                <h3 className="text-xl font-bold text-white mb-3">Web Design & SEO</h3>
+                <p className="text-sm text-white/90 leading-relaxed">Beautiful websites that rank and convert</p>
+              </div>
+              <div className="min-w-[85vw] max-w-[320px] bg-white/15 backdrop-blur-md rounded-[24px] p-7 border border-white/20">
+                <h3 className="text-xl font-bold text-white mb-3">Full Stack Development</h3>
+                <p className="text-sm text-white/90 leading-relaxed">From concept to deployment</p>
+              </div>
             </div>
           </div>
+          <p className="text-center text-white/60 text-xs mt-3">← Swipe to explore →</p>
         </div>
-        <p className="text-center text-white/50 text-[10px] mt-1.5">← Swipe to explore →</p>
-      </div>
+      )}
+
+      {/* Option 3: Stacked Vertical Cards */}
+      {mobileLayout === 'stacked' && (
+        <div className="lg:hidden absolute top-1/2 -translate-y-1/2 left-0 right-0 z-[15] px-[5%] opacity-0 animate-fade-in" style={{ animationDelay: '0.5s' }}>
+          <div className="space-y-3 max-h-[60vh] overflow-y-auto scrollbar-hide">
+            <div className="bg-white/15 backdrop-blur-md rounded-[20px] p-6 border border-white/20">
+              <h3 className="text-lg font-bold text-white mb-2">Process Digitalization</h3>
+              <p className="text-sm text-white/90 leading-relaxed">Transform manual processes into efficient digital workflows</p>
+            </div>
+            <div className="bg-white/15 backdrop-blur-md rounded-[20px] p-6 border border-white/20">
+              <h3 className="text-lg font-bold text-white mb-2">Business Optimization</h3>
+              <p className="text-sm text-white/90 leading-relaxed">Streamline operations and maximize efficiency</p>
+            </div>
+            <div className="bg-white/15 backdrop-blur-md rounded-[20px] p-6 border border-white/20">
+              <h3 className="text-lg font-bold text-white mb-2">Web Design & SEO</h3>
+              <p className="text-sm text-white/90 leading-relaxed">Beautiful websites that rank and convert</p>
+            </div>
+            <div className="bg-white/15 backdrop-blur-md rounded-[20px] p-6 border border-white/20">
+              <h3 className="text-lg font-bold text-white mb-2">Full Stack Development</h3>
+              <p className="text-sm text-white/90 leading-relaxed">From concept to deployment</p>
+            </div>
+          </div>
+          <p className="text-center text-white/60 text-xs mt-4">↑ Scroll to explore ↓</p>
+        </div>
+      )}
 
       {/* Desktop - Contact Card (original) */}
       <div
