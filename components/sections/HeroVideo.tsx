@@ -74,13 +74,13 @@ export default function HeroVideo() {
         {/* Grain Overlay */}
         <div className="absolute inset-0 z-[3] opacity-5 mix-blend-overlay pointer-events-none grain-overlay" />
 
-        {/* Main Logo "asight" - Responsive */}
-        <h1 className="absolute left-[5%] md:left-[3.5%] z-10 text-white text-left m-0 p-0" style={{ fontSize: 'clamp(48px, 14vw, 18vw)', letterSpacing: '-0.06em', fontWeight: 600, fontFamily: 'Inter, sans-serif', top: '64px', lineHeight: '0.9', width: 'fit-content' }}>
+        {/* Main Logo "asight" - Responsive, larger on mobile */}
+        <h1 className="absolute left-[5%] md:left-[3.5%] z-10 text-white text-left m-0 p-0" style={{ fontSize: 'clamp(80px, 20vw, 18vw)', letterSpacing: '-0.06em', fontWeight: 600, fontFamily: 'Inter, sans-serif', top: '64px', lineHeight: '0.9', width: 'fit-content' }}>
           asight<sup className="align-super ml-[0.1em]" style={{ fontSize: '33%', fontWeight: 600 }}>®</sup>
         </h1>
 
-        {/* "solutions" Unterzeile - rechtsbündig mit "asight" Ende - Responsive */}
-        <p className="absolute z-10 font-semibold text-white leading-[1.2] opacity-0 animate-fade-in" style={{ fontSize: 'clamp(16px, 2.4vw, 2.4vw)', letterSpacing: '-0.06em', fontFamily: 'Inter, sans-serif', fontWeight: 600, top: 'calc(64px + clamp(48px, 14vw, 16vw))', left: '5%', width: 'clamp(80px, 18vw, 18vw)', textAlign: 'right', animationDelay: '0.2s' }}>
+        {/* "solutions" Unterzeile - rechtsbündig mit "asight" Ende - Responsive, larger on mobile */}
+        <p className="absolute z-10 font-semibold text-white leading-[1.2] opacity-0 animate-fade-in" style={{ fontSize: 'clamp(22px, 4vw, 2.4vw)', letterSpacing: '-0.06em', fontFamily: 'Inter, sans-serif', fontWeight: 600, top: 'calc(64px + clamp(80px, 20vw, 16vw))', left: '5%', width: 'clamp(110px, 25vw, 18vw)', textAlign: 'right', animationDelay: '0.2s' }}>
           solutions
         </p>
       </div>
@@ -188,14 +188,6 @@ export default function HeroVideo() {
         </div>
       </div>
 
-      {/* Partner Logos */}
-      <div className="absolute bottom-20 right-24 flex items-center gap-4 z-10">
-        <span className="text-white text-xs opacity-50">powered by</span>
-        <div className="flex gap-3">
-          <div className="bg-white/20 rounded px-3 py-1 text-white text-xs">Azure</div>
-          <div className="bg-white/20 rounded px-3 py-1 text-white text-xs">OpenAI</div>
-        </div>
-      </div>
     </section>
   )
 }
