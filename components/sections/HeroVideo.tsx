@@ -266,27 +266,27 @@ export default function HeroVideo() {
               let zIndex = services.length - position
 
               if (position === 0) {
-                // Front card - smaller, centered
+                // Front card - smaller, centered, solid
                 transform = 'translateX(0) translateZ(0) scale(0.95) rotateY(0deg)'
                 opacity = 1
               } else if (position === 1) {
                 // Second card - much further back with subtle rotation
                 transform = 'translateX(-20px) translateZ(-80px) scale(0.85) rotateY(3deg)'
-                opacity = 0.6
+                opacity = 0.3
               } else if (position === 2) {
                 // Third card - very far back
                 transform = 'translateX(-35px) translateZ(-160px) scale(0.75) rotateY(4deg)'
-                opacity = 0.35
+                opacity = 0.15
               } else {
                 // Hidden cards - extremely far back
                 transform = 'translateX(-45px) translateZ(-240px) scale(0.65) rotateY(5deg)'
-                opacity = 0.15
+                opacity = 0.05
               }
 
               return (
                 <div
                   key={index}
-                  className="absolute inset-0 bg-white/15 backdrop-blur-md rounded-[20px] p-6 border border-white/20 transition-all duration-600 ease-out"
+                  className="absolute inset-0 bg-white/20 backdrop-blur-lg rounded-[20px] p-6 border border-white/30 transition-all duration-600 ease-out"
                   style={{
                     zIndex,
                     transform,
