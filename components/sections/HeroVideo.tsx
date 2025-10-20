@@ -74,13 +74,13 @@ export default function HeroVideo() {
         {/* Grain Overlay */}
         <div className="absolute inset-0 z-[3] opacity-5 mix-blend-overlay pointer-events-none grain-overlay" />
 
-        {/* Main Logo "asight" - Responsive, larger on mobile */}
-        <h1 className="absolute left-[5%] md:left-[3.5%] z-10 text-white text-left m-0 p-0" style={{ fontSize: 'clamp(80px, 20vw, 18vw)', letterSpacing: '-0.06em', fontWeight: 600, fontFamily: 'Inter, sans-serif', top: '64px', lineHeight: '0.9', width: 'fit-content' }}>
+        {/* Main Logo "asight" - Responsive, prominent on mobile */}
+        <h1 className="absolute left-[5%] md:left-[3.5%] z-10 text-white text-left m-0 p-0" style={{ fontSize: 'clamp(100px, 22vw, 18vw)', letterSpacing: '-0.06em', fontWeight: 600, fontFamily: 'Inter, sans-serif', top: 'clamp(48px, 8vh, 64px)', lineHeight: '0.9', width: 'fit-content' }}>
           asight<sup className="align-super ml-[0.1em]" style={{ fontSize: '33%', fontWeight: 600 }}>®</sup>
         </h1>
 
-        {/* "solutions" Unterzeile - rechtsbündig mit "asight" Ende - Responsive, larger on mobile */}
-        <p className="absolute z-10 font-semibold text-white leading-[1.2] opacity-0 animate-fade-in" style={{ fontSize: 'clamp(22px, 4vw, 2.4vw)', letterSpacing: '-0.06em', fontFamily: 'Inter, sans-serif', fontWeight: 600, top: 'calc(64px + clamp(80px, 20vw, 16vw))', left: '5%', width: 'clamp(110px, 25vw, 18vw)', textAlign: 'right', animationDelay: '0.2s' }}>
+        {/* "solutions" Unterzeile - rechtsbündig mit "asight" Ende - Responsive, prominent on mobile */}
+        <p className="absolute z-10 font-semibold text-white leading-[1.2] opacity-0 animate-fade-in" style={{ fontSize: 'clamp(26px, 5vw, 2.4vw)', letterSpacing: '-0.06em', fontFamily: 'Inter, sans-serif', fontWeight: 600, top: 'calc(clamp(48px, 8vh, 64px) + clamp(100px, 22vw, 16vw))', left: '5%', width: 'clamp(125px, 28vw, 18vw)', textAlign: 'right', animationDelay: '0.2s' }}>
           solutions
         </p>
       </div>
@@ -133,27 +133,27 @@ export default function HeroVideo() {
 
       {/* Mobile - Swipeable Service Cards */}
       <div className="lg:hidden absolute bottom-[20px] left-0 right-0 z-[15] opacity-0 animate-fade-in" style={{ animationDelay: '0.5s' }}>
-        <div className="overflow-x-auto overflow-y-hidden pb-4 px-[5%] scrollbar-hide">
-          <div className="flex gap-4 min-w-max">
-            <div className="min-w-[280px] bg-white/15 backdrop-blur-md rounded-[20px] p-6 border border-white/20">
-              <h3 className="text-lg font-bold text-white mb-2">Process Digitalization</h3>
-              <p className="text-sm text-white/90 leading-relaxed">Transform manual processes into efficient digital workflows</p>
+        <div className="overflow-x-auto overflow-y-hidden pb-3 px-[5%] scrollbar-hide">
+          <div className="flex gap-3 min-w-max">
+            <div className="min-w-[75vw] max-w-[280px] bg-white/15 backdrop-blur-md rounded-[18px] p-5 border border-white/20">
+              <h3 className="text-base font-bold text-white mb-1.5">Process Digitalization</h3>
+              <p className="text-xs text-white/90 leading-snug">Transform manual processes into efficient digital workflows</p>
             </div>
-            <div className="min-w-[280px] bg-white/15 backdrop-blur-md rounded-[20px] p-6 border border-white/20">
-              <h3 className="text-lg font-bold text-white mb-2">Business Optimization</h3>
-              <p className="text-sm text-white/90 leading-relaxed">Streamline operations and maximize efficiency</p>
+            <div className="min-w-[75vw] max-w-[280px] bg-white/15 backdrop-blur-md rounded-[18px] p-5 border border-white/20">
+              <h3 className="text-base font-bold text-white mb-1.5">Business Optimization</h3>
+              <p className="text-xs text-white/90 leading-snug">Streamline operations and maximize efficiency</p>
             </div>
-            <div className="min-w-[280px] bg-white/15 backdrop-blur-md rounded-[20px] p-6 border border-white/20">
-              <h3 className="text-lg font-bold text-white mb-2">Web Design & SEO</h3>
-              <p className="text-sm text-white/90 leading-relaxed">Beautiful websites that rank and convert</p>
+            <div className="min-w-[75vw] max-w-[280px] bg-white/15 backdrop-blur-md rounded-[18px] p-5 border border-white/20">
+              <h3 className="text-base font-bold text-white mb-1.5">Web Design & SEO</h3>
+              <p className="text-xs text-white/90 leading-snug">Beautiful websites that rank and convert</p>
             </div>
-            <div className="min-w-[280px] bg-white/15 backdrop-blur-md rounded-[20px] p-6 border border-white/20">
-              <h3 className="text-lg font-bold text-white mb-2">Full Stack Development</h3>
-              <p className="text-sm text-white/90 leading-relaxed">From concept to deployment</p>
+            <div className="min-w-[75vw] max-w-[280px] bg-white/15 backdrop-blur-md rounded-[18px] p-5 border border-white/20">
+              <h3 className="text-base font-bold text-white mb-1.5">Full Stack Development</h3>
+              <p className="text-xs text-white/90 leading-snug">From concept to deployment</p>
             </div>
           </div>
         </div>
-        <p className="text-center text-white/50 text-xs mt-2">← Swipe to explore →</p>
+        <p className="text-center text-white/50 text-[10px] mt-1.5">← Swipe to explore →</p>
       </div>
 
       {/* Desktop - Contact Card (original) */}
