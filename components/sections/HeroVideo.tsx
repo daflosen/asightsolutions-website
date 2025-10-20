@@ -131,23 +131,29 @@ export default function HeroVideo() {
         </h1>
       </div>
 
-      {/* Mobile - Services List (replaces contact card) */}
-      <div className="lg:hidden absolute bottom-[20px] left-[5%] right-[5%] z-[15] bg-white/95 backdrop-blur-sm rounded-[20px] shadow-[0_12px_40px_rgba(0,0,0,0.12)] p-6 opacity-0 animate-fade-in" style={{ animationDelay: '0.5s' }}>
-        <p className="text-xs font-bold mb-3 text-gray-900">Our Services</p>
-        <ul className="space-y-2.5">
-          <li className="flex items-center gap-3 text-gray-900">
-            <span className="w-1.5 h-1.5 bg-[#3AA6B9] rounded-full flex-shrink-0"></span>
-            <span className="text-sm font-semibold">Process Digitalization & Tooling</span>
-          </li>
-          <li className="flex items-center gap-3 text-gray-900">
-            <span className="w-1.5 h-1.5 bg-[#3AA6B9] rounded-full flex-shrink-0"></span>
-            <span className="text-sm font-semibold">Web Design and SEO</span>
-          </li>
-          <li className="flex items-center gap-3 text-gray-900">
-            <span className="w-1.5 h-1.5 bg-[#3AA6B9] rounded-full flex-shrink-0"></span>
-            <span className="text-sm font-semibold">Full Stack & Low Code Development</span>
-          </li>
-        </ul>
+      {/* Mobile - Swipeable Service Cards */}
+      <div className="lg:hidden absolute bottom-[20px] left-0 right-0 z-[15] opacity-0 animate-fade-in" style={{ animationDelay: '0.5s' }}>
+        <div className="overflow-x-auto overflow-y-hidden pb-4 px-[5%] scrollbar-hide">
+          <div className="flex gap-4 min-w-max">
+            <div className="min-w-[280px] bg-white/15 backdrop-blur-md rounded-[20px] p-6 border border-white/20">
+              <h3 className="text-lg font-bold text-white mb-2">Process Digitalization</h3>
+              <p className="text-sm text-white/90 leading-relaxed">Transform manual processes into efficient digital workflows</p>
+            </div>
+            <div className="min-w-[280px] bg-white/15 backdrop-blur-md rounded-[20px] p-6 border border-white/20">
+              <h3 className="text-lg font-bold text-white mb-2">Business Optimization</h3>
+              <p className="text-sm text-white/90 leading-relaxed">Streamline operations and maximize efficiency</p>
+            </div>
+            <div className="min-w-[280px] bg-white/15 backdrop-blur-md rounded-[20px] p-6 border border-white/20">
+              <h3 className="text-lg font-bold text-white mb-2">Web Design & SEO</h3>
+              <p className="text-sm text-white/90 leading-relaxed">Beautiful websites that rank and convert</p>
+            </div>
+            <div className="min-w-[280px] bg-white/15 backdrop-blur-md rounded-[20px] p-6 border border-white/20">
+              <h3 className="text-lg font-bold text-white mb-2">Full Stack Development</h3>
+              <p className="text-sm text-white/90 leading-relaxed">From concept to deployment</p>
+            </div>
+          </div>
+        </div>
+        <p className="text-center text-white/50 text-xs mt-2">← Swipe to explore →</p>
       </div>
 
       {/* Desktop - Contact Card (original) */}
