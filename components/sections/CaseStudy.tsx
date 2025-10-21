@@ -156,7 +156,7 @@ export default function CaseStudy() {
             </motion.div>
 
             {/* Scrollable Content Above Photo */}
-            <div className="relative z-[3] space-y-6 pb-[50px]">
+            <div className="relative z-[3] space-y-3 pb-[50px]">
 
               {/* Top Info */}
               <motion.div
