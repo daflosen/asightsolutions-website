@@ -129,7 +129,7 @@ export default function CaseStudy() {
 
             {/* Sticky Photo at Bottom - Scales up as you scroll */}
             <motion.div
-              className="sticky bottom-0 z-[2] h-[350px] pointer-events-none"
+              className="sticky bottom-0 z-[2] h-[500px] pointer-events-none"
               style={{
                 scale: mobilePhotoScale,
                 opacity: mobilePhotoOpacity
@@ -155,7 +155,7 @@ export default function CaseStudy() {
             </motion.div>
 
             {/* Scrollable Content Above Photo */}
-            <div className="relative z-[3] space-y-6 pb-[100px]">
+            <div className="relative z-[3] space-y-6 pb-[50px]">
 
               {/* Top Info */}
               <motion.div
