@@ -86,21 +86,11 @@ export default function DigitalSolution() {
                 transition={{ delay: 0.2 }}
                 className="flex-1 pt-0 md:pt-8"
               >
-                <p className="text-gray-500 leading-relaxed mb-6" style={{ fontSize: '16px', fontWeight: 600, fontFamily: 'Inter, sans-serif' }}>
+                <p className="text-gray-500 leading-relaxed" style={{ fontSize: '16px', fontWeight: 600, fontFamily: 'Inter, sans-serif' }}>
                   We've helped businesses across<br className="hidden md:block" />
                   industries achieve their digitalization<br className="hidden md:block" />
                   goals. Here are some of our recent tools.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-3 text-xs">
-                  <div className="flex items-center gap-2">
-                    <span className="w-2 h-2 bg-[#3AA6B9] rounded-full"></span>
-                    <span className="text-gray-600 font-medium">Innovation Series - Next-gen tools for modern challenges</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <span className="w-2 h-2 bg-gray-400 rounded-full"></span>
-                    <span className="text-gray-600 font-medium">Enterprise - Proven, scalable solutions</span>
-                  </div>
-                </div>
               </motion.div>
             </div>
           </div>
