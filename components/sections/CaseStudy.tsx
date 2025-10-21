@@ -125,7 +125,7 @@ export default function CaseStudy() {
           </motion.div>
 
           {/* MOBILE LAYOUT - Vertical Scroll Story with Sticky Photo */}
-          <div className="lg:hidden relative" style={{ minHeight: 'calc(100vh + 200px)' }}>
+          <div className="lg:hidden relative" style={{ minHeight: 'calc(100vh + 100px)' }}>
 
             {/* Sticky Photo at Bottom - Scales up as you scroll */}
             <motion.div
