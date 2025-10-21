@@ -12,7 +12,7 @@ const projects = [
     description: 'ApeLedger',
     bgColor: 'bg-white',
     logo: '🦍',
-    image: '/images/ApeLedger_New.png',
+    image: '/images/ApeLedger_New_Free.png',
     category: 'ape', // Ape Series - Innovation Line
     badge: 'Innovation Series'
   },
