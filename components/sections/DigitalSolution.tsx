@@ -11,7 +11,7 @@ const projects = [
     year: '(2023)',
     description: 'ApeLedger',
     bgColor: 'bg-white',
-    logo: '₿',
+    logo: '🦍',
     image: '/images/ApeLedger_Free.png',
     category: 'ape', // Ape Series - Innovation Line
     badge: 'Innovation Series'
@@ -23,7 +23,7 @@ const projects = [
     year: '(2024)',
     description: 'R',
     bgColor: 'bg-white',
-    logo: '⚡',
+    logo: '🦧',
     image: '/images/RisKApe_Free_Tuerkis.png',
     category: 'ape', // Ape Series - Innovation Line
     badge: 'Innovation Series'
@@ -146,8 +146,8 @@ export default function DigitalSolution() {
                     {/* Logo + Name Layout for Ape products */}
                     {project.category === 'ape' ? (
                       <div className="flex items-center gap-4 mb-4">
-                        <div className="w-16 h-16 rounded-xl bg-white/80 backdrop-blur-sm flex items-center justify-center shadow-md">
-                          <span className="text-2xl font-bold text-[#3AA6B9]">{project.logo}</span>
+                        <div className="w-20 h-20 rounded-2xl bg-white/90 backdrop-blur-sm flex items-center justify-center shadow-lg border-2 border-white/50">
+                          <span className="text-5xl">{project.logo}</span>
                         </div>
                         <div>
                           <h3 className="text-2xl font-bold">{project.title}</h3>
