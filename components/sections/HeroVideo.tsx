@@ -163,18 +163,6 @@ export default function HeroVideo() {
         </h1>
       </div>
 
-      {/* Toggle Button - Only visible on mobile for testing */}
-      <button
-        onClick={() => {
-          if (mobileLayout === 'centered') setMobileLayout('stacked')
-          else if (mobileLayout === 'stacked') setMobileLayout('carousel')
-          else setMobileLayout('centered')
-        }}
-        className="lg:hidden fixed top-4 right-4 z-[100] bg-white/20 backdrop-blur-md text-white text-xs px-3 py-2 rounded-full border border-white/30"
-      >
-        {mobileLayout === 'centered' ? '→ Stacked' : mobileLayout === 'stacked' ? '→ Carousel' : '→ Centered'}
-      </button>
-
       {/* Option 1: Centered Horizontal Cards */}
       {mobileLayout === 'centered' && (
         <div className="lg:hidden absolute top-1/2 -translate-y-1/2 left-0 right-0 z-[15] opacity-0 animate-fade-in" style={{ animationDelay: '0.5s' }}>
