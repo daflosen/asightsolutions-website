@@ -18,6 +18,10 @@ export default function CaseStudy() {
   // Scale image down by 15% as user scrolls (1 to 0.85) - transform from bottom
   const imageScale = useTransform(scrollYProgress, [0, 1], [1, 0.85])
 
+  // Mobile sticky photo transforms
+  const mobilePhotoScale = useTransform(scrollYProgress, [0, 0.5], [0.7, 1])
+  const mobilePhotoOpacity = useTransform(scrollYProgress, [0, 0.3], [0.5, 1])
+
   // Counter animation
   useEffect(() => {
     if (isCounterInView) {
@@ -127,8 +131,8 @@ export default function CaseStudy() {
             <motion.div
               className="sticky bottom-0 z-[2] h-[400px] pointer-events-none"
               style={{
-                scale: useTransform(scrollYProgress, [0, 0.5], [0.7, 1]),
-                opacity: useTransform(scrollYProgress, [0, 0.3], [0.5, 1])
+                scale: mobilePhotoScale,
+                opacity: mobilePhotoOpacity
               }}
             >
               <div className="relative w-full h-full">
@@ -292,6 +296,8 @@ export default function CaseStudy() {
                 </div>
               </motion.div>
             </div>
+
+          </div>
 
           </div>
 
