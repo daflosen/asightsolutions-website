@@ -11,7 +11,7 @@ const projects = [
     year: '(2023)',
     description: 'ApeLedger',
     bgColor: 'bg-white',
-    logo: '>>>',
+    logo: '₿',
     image: '/images/ApeLedger_Free.png',
     category: 'ape', // Ape Series - Innovation Line
     badge: 'Innovation Series'
@@ -23,7 +23,7 @@ const projects = [
     year: '(2024)',
     description: 'R',
     bgColor: 'bg-white',
-    logo: 'R',
+    logo: '⚡',
     image: '/images/RisKApe_Free_Tuerkis.png',
     category: 'ape', // Ape Series - Innovation Line
     badge: 'Innovation Series'
@@ -143,13 +143,23 @@ export default function DigitalSolution() {
                       </span>
                     </div>
 
-                    <div className="flex justify-between items-start mb-8">
-                      <div>
+                    {/* Logo + Name Layout for Ape products */}
+                    {project.category === 'ape' ? (
+                      <div className="flex items-center gap-4 mb-4">
+                        <div className="w-16 h-16 rounded-xl bg-white/80 backdrop-blur-sm flex items-center justify-center shadow-md">
+                          <span className="text-2xl font-bold text-[#3AA6B9]">{project.logo}</span>
+                        </div>
+                        <div>
+                          <h3 className="text-2xl font-bold">{project.title}</h3>
+                          <p className="text-sm text-gray-600">{project.subtitle}</p>
+                        </div>
+                      </div>
+                    ) : (
+                      <div className="mb-4">
                         <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
                         <p className="text-sm text-gray-600">{project.subtitle}</p>
                       </div>
-                      <span className="text-sm text-gray-500">{project.year}</span>
-                    </div>
+                    )}
                   </div>
                 </>
               ) : (
