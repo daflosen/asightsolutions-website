@@ -10,7 +10,7 @@ const projects = [
     subtitle: 'Tax Software for Crypto Currencies',
     year: '(2023)',
     description: 'ApeLedger',
-    bgColor: 'bg-gray-100',
+    bgColor: 'bg-white',
     logo: '>>>',
     image: '/images/ApeLedger_Free.png'
   },
@@ -20,7 +20,7 @@ const projects = [
     subtitle: 'Risk Management for Projects',
     year: '(2024)',
     description: 'R',
-    bgColor: 'bg-gray-100',
+    bgColor: 'bg-white',
     logo: 'R',
     image: '/images/RisKApe_Free_Tuerkis.png'
   },
@@ -30,7 +30,7 @@ const projects = [
     subtitle: 'Microsoft Power Platform Processes and Tools',
     year: '(2023)',
     description: 'ERP 365',
-    bgColor: 'bg-gray-100',
+    bgColor: 'bg-white',
     logo: '>>>',
     style: 'transform: rotate(45deg)',
     image: '/images/ERP_365_Logo.png'
@@ -41,7 +41,7 @@ const projects = [
     subtitle: '',
     year: '(2024)',
     description: '✓',
-    bgColor: 'bg-gray-100',
+    bgColor: 'bg-white',
     logo: '✓',
     image: '/images/VAULT_Logo_2.svg'
   }
