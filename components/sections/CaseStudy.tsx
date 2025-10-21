@@ -125,11 +125,11 @@ export default function CaseStudy() {
           </motion.div>
 
           {/* MOBILE LAYOUT - Vertical Scroll Story with Sticky Photo */}
-          <div className="lg:hidden relative" style={{ minHeight: 'calc(100vh + 100px)' }}>
+          <div className="lg:hidden relative" style={{ minHeight: '100vh' }}>
 
             {/* Sticky Photo at Bottom - Scales up as you scroll */}
             <motion.div
-              className="sticky bottom-0 z-[2] h-[400px] pointer-events-none"
+              className="sticky bottom-0 z-[2] h-[350px] pointer-events-none"
               style={{
                 scale: mobilePhotoScale,
                 opacity: mobilePhotoOpacity
@@ -155,7 +155,7 @@ export default function CaseStudy() {
             </motion.div>
 
             {/* Scrollable Content Above Photo */}
-            <div className="relative z-[3] space-y-6 pb-[400px]">
+            <div className="relative z-[3] space-y-6 pb-[300px]">
 
               {/* Top Info */}
               <motion.div
