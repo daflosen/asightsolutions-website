@@ -12,7 +12,7 @@ const projects = [
     description: 'ApeLedger',
     bgColor: 'bg-white',
     logo: '🦍',
-    image: '/images/ApeLedger_Free.png',
+    image: '/images/ApeLedger_New.png',
     category: 'ape', // Ape Series - Innovation Line
     badge: 'Innovation Series'
   },
@@ -132,9 +132,9 @@ export default function DigitalSolution() {
                     />
                   </div>
                   <div className="relative z-10 p-12">
-                    {/* Category Badge */}
+                    {/* Category Badge - Larger & More Prominent */}
                     <div className="absolute top-6 right-6">
-                      <span className={`text-[10px] font-semibold px-3 py-1.5 rounded-full ${
+                      <span className={`text-xs font-bold px-4 py-2 rounded-full shadow-md ${
                         project.category === 'ape'
                           ? 'bg-[#3AA6B9] text-white'
                           : 'bg-gray-200 text-gray-700'
@@ -143,23 +143,11 @@ export default function DigitalSolution() {
                       </span>
                     </div>
 
-                    {/* Logo + Name Layout for Ape products */}
-                    {project.category === 'ape' ? (
-                      <div className="flex items-center gap-4 mb-4">
-                        <div className="w-20 h-20 rounded-2xl bg-white/90 backdrop-blur-sm flex items-center justify-center shadow-lg border-2 border-white/50">
-                          <span className="text-5xl">{project.logo}</span>
-                        </div>
-                        <div>
-                          <h3 className="text-2xl font-bold">{project.title}</h3>
-                          <p className="text-sm text-gray-600">{project.subtitle}</p>
-                        </div>
-                      </div>
-                    ) : (
-                      <div className="mb-4">
-                        <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
-                        <p className="text-sm text-gray-600">{project.subtitle}</p>
-                      </div>
-                    )}
+                    {/* Simple Title + Subtitle Layout */}
+                    <div className="mb-4">
+                      <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
+                      <p className="text-sm text-gray-600">{project.subtitle}</p>
+                    </div>
                   </div>
                 </>
               ) : (
