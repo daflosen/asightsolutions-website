@@ -12,7 +12,9 @@ const projects = [
     description: 'ApeLedger',
     bgColor: 'bg-white',
     logo: '>>>',
-    image: '/images/ApeLedger_Free.png'
+    image: '/images/ApeLedger_Free.png',
+    category: 'ape', // Ape Series - Innovation Line
+    badge: 'Innovation Series'
   },
   {
     id: 2,
@@ -22,7 +24,9 @@ const projects = [
     description: 'R',
     bgColor: 'bg-white',
     logo: 'R',
-    image: '/images/RisKApe_Free_Tuerkis.png'
+    image: '/images/RisKApe_Free_Tuerkis.png',
+    category: 'ape', // Ape Series - Innovation Line
+    badge: 'Innovation Series'
   },
   {
     id: 3,
@@ -33,7 +37,9 @@ const projects = [
     bgColor: 'bg-white',
     logo: '>>>',
     style: 'transform: rotate(45deg)',
-    image: '/images/ERP_365_Logo.png'
+    image: '/images/ERP_365_Logo.png',
+    category: 'enterprise', // Enterprise Solutions
+    badge: 'Enterprise'
   },
   {
     id: 4,
@@ -43,7 +49,9 @@ const projects = [
     description: '✓',
     bgColor: 'bg-white',
     logo: '✓',
-    image: '/images/VAULT_Logo_2.svg'
+    image: '/images/VAULT_Logo_2.svg',
+    category: 'enterprise', // Enterprise Solutions
+    badge: 'Enterprise'
   }
 ]
 
@@ -78,11 +86,21 @@ export default function DigitalSolution() {
                 transition={{ delay: 0.2 }}
                 className="flex-1 pt-0 md:pt-8"
               >
-                <p className="text-gray-500 leading-relaxed" style={{ fontSize: '16px', fontWeight: 600, fontFamily: 'Inter, sans-serif' }}>
+                <p className="text-gray-500 leading-relaxed mb-6" style={{ fontSize: '16px', fontWeight: 600, fontFamily: 'Inter, sans-serif' }}>
                   We've helped businesses across<br className="hidden md:block" />
                   industries achieve their digitalization<br className="hidden md:block" />
                   goals. Here are some of our recent tools.
                 </p>
+                <div className="flex flex-col sm:flex-row gap-3 text-xs">
+                  <div className="flex items-center gap-2">
+                    <span className="w-2 h-2 bg-[#3AA6B9] rounded-full"></span>
+                    <span className="text-gray-600 font-medium">Innovation Series - Next-gen tools for modern challenges</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="w-2 h-2 bg-gray-400 rounded-full"></span>
+                    <span className="text-gray-600 font-medium">Enterprise - Proven, scalable solutions</span>
+                  </div>
+                </div>
               </motion.div>
             </div>
           </div>
@@ -114,6 +132,17 @@ export default function DigitalSolution() {
                     />
                   </div>
                   <div className="relative z-10 p-12">
+                    {/* Category Badge */}
+                    <div className="absolute top-6 right-6">
+                      <span className={`text-[10px] font-semibold px-3 py-1.5 rounded-full ${
+                        project.category === 'ape'
+                          ? 'bg-[#3AA6B9] text-white'
+                          : 'bg-gray-200 text-gray-700'
+                      }`}>
+                        {project.badge}
+                      </span>
+                    </div>
+
                     <div className="flex justify-between items-start mb-8">
                       <div>
                         <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
