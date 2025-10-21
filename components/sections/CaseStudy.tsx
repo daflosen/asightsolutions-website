@@ -120,31 +120,68 @@ export default function CaseStudy() {
             </div>
           </motion.div>
 
-          {/* MOBILE LAYOUT - Stack everything */}
-          <div className="lg:hidden space-y-6">
-            {/* Top Info */}
-            <div className="text-white">
-              <p className="text-sm mb-2 opacity-90 font-bold">Case study (SEO)</p>
-              <p className="text-xs opacity-70 mb-4">
-                ERP Customization, Frontend Optimization
-              </p>
-              <h2 className="text-[32px] font-semibold leading-[1.2] text-white mb-4" style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
-                asightsolutions®
-              </h2>
-              <a href="https://re-automation.net" target="_blank" rel="noopener noreferrer" className="text-sm opacity-80 hover:opacity-100 transition-opacity underline inline-block mb-6">
-                RE Automation Website →
-              </a>
-            </div>
+          {/* MOBILE LAYOUT - Vertical Scroll Story with Sticky Photo */}
+          <div className="lg:hidden relative min-h-[800px]">
 
-            {/* Stats Cards - Mobile */}
-            <div className="space-y-3">
+            {/* Sticky Photo at Bottom - Scales up as you scroll */}
+            <motion.div
+              className="sticky bottom-0 z-[2] h-[400px] pointer-events-none"
+              style={{
+                scale: useTransform(scrollYProgress, [0, 0.5], [0.7, 1]),
+                opacity: useTransform(scrollYProgress, [0, 0.3], [0.5, 1])
+              }}
+            >
+              <div className="relative w-full h-full">
+                <div
+                  className="absolute inset-0"
+                  style={{
+                    maskImage: 'linear-gradient(to top, transparent 0%, rgba(0, 0, 0, 0.3) 10%, rgba(0, 0, 0, 0.7) 25%, black 40%)',
+                    WebkitMaskImage: 'linear-gradient(to top, transparent 0%, rgba(0, 0, 0, 0.3) 10%, rgba(0, 0, 0, 0.7) 25%, black 40%)'
+                  }}
+                >
+                  <Image
+                    src="/images/Sophie_Gehlert_asightsolutions_WOBG.png"
+                    alt="Sophie Gehlert"
+                    fill
+                    className="object-contain object-bottom"
+                    priority
+                  />
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Scrollable Content Above Photo */}
+            <div className="relative z-[3] space-y-6 pb-[400px]">
+
+              {/* Top Info */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="text-white bg-gradient-to-b from-[#3AA6B9]/90 to-transparent backdrop-blur-sm rounded-2xl p-6"
+              >
+                <p className="text-sm mb-2 opacity-90 font-bold">Case study (SEO)</p>
+                <p className="text-xs opacity-70 mb-4">
+                  ERP Customization, Frontend Optimization
+                </p>
+                <h2 className="text-[32px] font-semibold leading-[1.2] text-white mb-4" style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
+                  asightsolutions®
+                </h2>
+                <a href="https://re-automation.net" target="_blank" rel="noopener noreferrer" className="text-sm opacity-80 hover:opacity-100 transition-opacity underline inline-block">
+                  RE Automation Website →
+                </a>
+              </motion.div>
+
+            {/* Stats Cards - Animated on Scroll */}
+            <div className="space-y-4">
 
             {/* Performance Boost Card with Testimonial */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="bg-white rounded-2xl p-3 lg:p-4 shadow-xl flex gap-3"
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              className="bg-white/95 backdrop-blur-md rounded-2xl p-4 shadow-xl flex gap-3"
             >
               {/* Left Side - Performance Data (2/3) */}
               <div className="flex-[2]">
@@ -180,14 +217,14 @@ export default function CaseStudy() {
             </motion.div>
 
             {/* Stats Grid */}
-            <div className="grid grid-cols-2 gap-2 lg:gap-3">
+            <div className="grid grid-cols-2 gap-3">
               {/* Pagehealth Score */}
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.1 }}
-                className="bg-white rounded-2xl p-4 shadow-lg flex flex-col items-center justify-center"
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                className="bg-white/95 backdrop-blur-md rounded-2xl p-4 shadow-lg flex flex-col items-center justify-center"
               >
                 <div className="text-center mb-3">
                   <div className="w-16 h-16 lg:w-20 lg:h-20 rounded-full border-8 border-gray-200 flex items-center justify-center mx-auto mb-2">
@@ -203,11 +240,11 @@ export default function CaseStudy() {
               {/* Chart */}
               <motion.div
                 ref={counterRef}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.2 }}
-                className="bg-white rounded-2xl p-4 shadow-lg flex flex-col"
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                className="bg-white/95 backdrop-blur-md rounded-2xl p-4 shadow-lg flex flex-col"
               >
                 {/* Header */}
                 <div className="mb-3">
