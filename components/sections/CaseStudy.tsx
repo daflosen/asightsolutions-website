@@ -131,7 +131,7 @@ export default function CaseStudy() {
             <motion.div
               className="sticky z-[2] h-[500px] pointer-events-none"
               style={{
-                bottom: '-80px',
+                bottom: '-150px',
                 scale: mobilePhotoScale,
                 opacity: mobilePhotoOpacity
               }}
