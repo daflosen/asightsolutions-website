@@ -146,7 +146,7 @@ export default function CaseStudy() {
                   className="font-semibold leading-[0.85] text-white"
                   style={{
                     fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
-                    fontSize: 'clamp(40px, 6vw, 90px)'
+                    fontSize: 'clamp(27px, 4vw, 60px)'
                   }}
                 >
                   asightsolutions®
@@ -161,9 +161,9 @@ export default function CaseStudy() {
 
                 {/* Right aligned multi-line text */}
                 <div className="text-right text-white">
-                  <p className="text-base leading-tight mb-1">From Site Audits,</p>
-                  <p className="text-base leading-tight mb-1">Keyword Strategy</p>
-                  <p className="text-base leading-tight mb-2">and Backlink Analytics…</p>
+                  <p className="text-[22px] leading-tight mb-1">From Site Audits,</p>
+                  <p className="text-[22px] leading-tight mb-1">Keyword Strategy</p>
+                  <p className="text-[22px] leading-tight mb-2">and Backlink Analytics…</p>
                   <p className="text-sm opacity-80">...we do it all.</p>
                 </div>
               </div>
