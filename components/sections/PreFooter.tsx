@@ -8,8 +8,8 @@ export default function PreFooter() {
     <section className="py-20 relative" style={{ backgroundColor: '#F5F5F5' }}>
       <div className="container mx-auto px-6">
 
-        {/* Plus Signs Row - All on same vertical height */}
-        <div className="flex justify-between mb-12 relative">
+        {/* Plus Signs Row - Desktop only */}
+        <div className="hidden md:flex justify-between mb-12 relative">
           <span className="text-[32px] font-thin opacity-30 text-black">+</span>
           <div className="flex gap-20 absolute right-0">
             <span className="text-[32px] font-thin opacity-30 text-black">+</span>
@@ -17,8 +17,8 @@ export default function PreFooter() {
           </div>
         </div>
 
-        {/* Main Content - Contact on left, Nav/Social on right aligned with logo */}
-        <div className="flex justify-between mb-20">
+        {/* Main Content - Responsive Layout */}
+        <div className="flex flex-col md:flex-row md:justify-between mb-20 space-y-12 md:space-y-0">
 
           {/* Column 1: Contact Info */}
           <motion.div
@@ -29,22 +29,22 @@ export default function PreFooter() {
             <p className="text-sm text-black mb-4">tel: +49 151 571 65 903</p>
             <a
               href="mailto:hello@asightsolutions.com"
-              className="inline-flex items-center gap-2 text-2xl font-semibold text-black hover:opacity-70 transition-opacity"
+              className="inline-flex items-center gap-2 text-xl md:text-2xl font-semibold text-black hover:opacity-70 transition-opacity break-all"
               style={{
                 textDecoration: 'underline',
                 textDecorationThickness: '2px',
                 textUnderlineOffset: '4px'
               }}
             >
-              <span className="w-6 h-6 rounded-full bg-black flex items-center justify-center text-white text-xs">
+              <span className="w-6 h-6 rounded-full bg-black flex items-center justify-center text-white text-xs flex-shrink-0">
                 ✉
               </span>
               hello@asightsolutions.com
             </a>
           </motion.div>
 
-          {/* Navigation and Social - Aligned with logo (right side) */}
-          <div className="flex gap-20">
+          {/* Navigation and Social - Stacked on mobile, side by side on desktop */}
+          <div className="flex flex-col md:flex-row gap-12 md:gap-20">
             {/* Navigation */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -53,17 +53,17 @@ export default function PreFooter() {
               transition={{ delay: 0.1 }}
             >
               <p className="text-sm text-black mb-6">Navigation</p>
-              <nav className="space-y-4">
-                <Link href="#home" className="block text-2xl font-medium text-black hover:opacity-70 transition-opacity">
+              <nav className="space-y-3 md:space-y-4">
+                <Link href="#home" className="block text-xl md:text-2xl font-medium text-black hover:opacity-70 transition-opacity">
                   Home
                 </Link>
-                <Link href="#about" className="block text-2xl font-medium text-black hover:opacity-70 transition-opacity">
+                <Link href="#about" className="block text-xl md:text-2xl font-medium text-black hover:opacity-70 transition-opacity">
                   This is us
                 </Link>
-                <Link href="#projects" className="block text-2xl font-medium text-black hover:opacity-70 transition-opacity">
+                <Link href="#projects" className="block text-xl md:text-2xl font-medium text-black hover:opacity-70 transition-opacity">
                   Projects
                 </Link>
-                <Link href="#blog" className="block text-2xl font-medium text-black hover:opacity-70 transition-opacity">
+                <Link href="#blog" className="block text-xl md:text-2xl font-medium text-black hover:opacity-70 transition-opacity">
                   Blog
                 </Link>
               </nav>
@@ -77,30 +77,30 @@ export default function PreFooter() {
               transition={{ delay: 0.2 }}
             >
               <p className="text-sm text-black mb-6">Social</p>
-              <nav className="space-y-4">
+              <nav className="space-y-3 md:space-y-4">
                 <a
                   href="https://twitter.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-2xl font-medium text-black hover:opacity-70 transition-opacity"
+                  className="flex items-center gap-2 text-xl md:text-2xl font-medium text-black hover:opacity-70 transition-opacity"
                 >
-                  Twitter <span className="text-lg">↗</span>
+                  Twitter <span className="text-base md:text-lg">↗</span>
                 </a>
                 <a
                   href="https://instagram.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-2xl font-medium text-black hover:opacity-70 transition-opacity"
+                  className="flex items-center gap-2 text-xl md:text-2xl font-medium text-black hover:opacity-70 transition-opacity"
                 >
-                  Instagram <span className="text-lg">↗</span>
+                  Instagram <span className="text-base md:text-lg">↗</span>
                 </a>
                 <a
                   href="https://dribbble.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-2xl font-medium text-black hover:opacity-70 transition-opacity"
+                  className="flex items-center gap-2 text-xl md:text-2xl font-medium text-black hover:opacity-70 transition-opacity"
                 >
-                  Dribbble <span className="text-lg">↗</span>
+                  Dribbble <span className="text-base md:text-lg">↗</span>
                 </a>
               </nav>
             </motion.div>
