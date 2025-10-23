@@ -18,8 +18,8 @@ export default function PreFooter() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            {/* Plus Sign above content */}
-            <span className="absolute left-0 -top-12 text-2xl text-gray-400">+</span>
+            {/* Plus Sign above content - matching Hero style */}
+            <span className="absolute left-0 -top-12 text-[32px] font-thin opacity-30 text-black">+</span>
 
             <p className="text-sm text-black mb-4">tel: +49 151 571 65 903</p>
             <a
@@ -38,10 +38,10 @@ export default function PreFooter() {
             </a>
           </motion.div>
 
-          {/* Spacer to push nav/social to align with logo */}
-          <div className="flex-1"></div>
+        </div>
 
-          {/* Column 2 & 3: Navigation and Social - Grouped closer together, aligned with logo */}
+        {/* Navigation and Social - New row, aligned with logo */}
+        <div className="flex justify-end mb-20">
           <div className="flex gap-20">
             {/* Navigation */}
             <motion.div
@@ -51,8 +51,8 @@ export default function PreFooter() {
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
             >
-              {/* Plus Sign above content */}
-              <span className="absolute left-0 -top-12 text-2xl text-gray-400">+</span>
+              {/* Plus Sign above content - matching Hero style */}
+              <span className="absolute left-0 -top-12 text-[32px] font-thin opacity-30 text-black">+</span>
 
               <p className="text-sm text-black mb-6">Navigation</p>
               <nav className="space-y-4">
@@ -79,8 +79,8 @@ export default function PreFooter() {
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
             >
-              {/* Plus Sign above content */}
-              <span className="absolute left-0 -top-12 text-2xl text-gray-400">+</span>
+              {/* Plus Sign above content - matching Hero style */}
+              <span className="absolute left-0 -top-12 text-[32px] font-thin opacity-30 text-black">+</span>
 
               <p className="text-sm text-black mb-6">Social</p>
               <nav className="space-y-4">
