@@ -124,6 +124,155 @@ export default function CaseStudy() {
             </div>
           </motion.div>
 
+          {/* DESKTOP LAYOUT - Right Content Panel */}
+          <div className="hidden lg:block absolute z-[3] right-0 top-0 w-[40%] h-full px-12 py-12">
+            <div className="h-full flex flex-col justify-between">
+
+              {/* Top Info */}
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+              >
+                <p className="text-sm mb-2 text-gray-700 font-bold">Case study (SEO)</p>
+                <p className="text-xs text-gray-600 mb-6">
+                  ERP Customization, Frontend Optimization
+                </p>
+                <h2 className="text-[48px] font-semibold leading-[1.2] mb-6" style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif', color: '#2d3436' }}>
+                  asightsolutions®
+                </h2>
+                <a href="https://re-automation.net" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-600 hover:text-gray-900 transition-colors underline inline-block">
+                  RE Automation Website →
+                </a>
+              </motion.div>
+
+              {/* Stats Section */}
+              <div className="space-y-6 mt-8">
+
+                {/* Performance Boost Card with Testimonial */}
+                <motion.div
+                  initial={{ opacity: 0, x: 30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.6, delay: 0.1 }}
+                  className="bg-white rounded-2xl p-6 shadow-xl flex gap-6"
+                >
+                  {/* Left Side - Performance Data (2/3) */}
+                  <div className="flex-[2]">
+                    <p className="text-xs text-gray-500 mb-2">Performance Boost:</p>
+                    <h4 className="text-xl font-bold mb-2">Top Ten Keyword Positionings</h4>
+                    <p className="text-3xl font-bold mb-2">+20,</p>
+                    <p className="text-xl font-bold mb-4">Bounce rate -23%</p>
+
+                    <div className="mt-4">
+                      <p className="text-xs text-gray-500 mb-2">Conversion Rate Improvement:</p>
+                      <p className="text-xl font-bold">2.2% → 5.9%</p>
+                    </div>
+                  </div>
+
+                  {/* Vertical Divider */}
+                  <div className="border-l border-gray-200"></div>
+
+                  {/* Right Side - Testimonial (1/3) */}
+                  <div className="flex-1 flex flex-col justify-center">
+                    <div className="flex items-start gap-1 mb-3">
+                      {[...Array(5)].map((_, i) => (
+                        <span key={i} className="text-yellow-400 text-sm">★</span>
+                      ))}
+                    </div>
+                    <p className="text-sm text-gray-700 mb-3 leading-relaxed">
+                      "Thanks to the strong methodological approach we were able to increase our e-commerce return by 230%"
+                    </p>
+                    <div className="flex items-center gap-3">
+                      <div className="w-8 h-8 rounded-full bg-gray-300" />
+                      <p className="text-xs text-gray-600">Jürgen Rentscher</p>
+                    </div>
+                  </div>
+                </motion.div>
+
+                {/* Stats Grid */}
+                <div className="grid grid-cols-2 gap-6">
+                  {/* Pagehealth Score */}
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true, amount: 0.3 }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                    className="bg-white rounded-2xl p-6 shadow-lg flex flex-col items-center justify-center"
+                  >
+                    <div className="text-center">
+                      <div className="w-24 h-24 rounded-full border-8 border-gray-200 flex items-center justify-center mx-auto mb-3">
+                        <span className="text-3xl font-bold">99</span>
+                      </div>
+                      <p className="text-xs text-gray-500 text-center mb-3">Pagehealth score</p>
+                      <p className="text-xs text-gray-600 text-center leading-tight px-2">
+                        We prioritize performance without sacrificing visual appeal or functionality.
+                      </p>
+                    </div>
+                  </motion.div>
+
+                  {/* Chart */}
+                  <motion.div
+                    ref={counterRef}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true, amount: 0.3 }}
+                    transition={{ duration: 0.5, delay: 0.3 }}
+                    className="bg-white rounded-2xl p-6 shadow-lg flex flex-col"
+                  >
+                    {/* Header */}
+                    <div className="mb-4">
+                      <div className="flex items-center gap-2">
+                        <p className="text-4xl font-bold">
+                          {displayValue}K
+                        </p>
+                        <span className="bg-[#3AA6B9] text-white text-xs px-3 py-1 rounded-full font-semibold">+30%</span>
+                      </div>
+                      <p className="text-xs text-gray-500">quarterly visits</p>
+                    </div>
+
+                    {/* Chart Bars */}
+                    <div className="flex items-end justify-between gap-1.5" style={{ height: '120px' }}>
+                      <div className="flex flex-col justify-end items-center flex-1 relative h-full">
+                        <div className="bg-gray-200 w-full rounded-t flex items-end justify-center pb-1" style={{ height: '13.2%' }}>
+                          <span className="text-[10px] text-gray-600 font-medium">+5k</span>
+                        </div>
+                      </div>
+                      <div className="flex flex-col justify-end items-center flex-1 relative h-full">
+                        <div className="bg-gray-200 w-full rounded-t flex items-end justify-center pb-1" style={{ height: '18.4%' }}>
+                          <span className="text-[10px] text-gray-600 font-medium">+7k</span>
+                        </div>
+                      </div>
+                      <div className="flex flex-col justify-end items-center flex-1 relative h-full">
+                        <div className="bg-gray-200 w-full rounded-t flex items-end justify-center pb-1" style={{ height: '31.6%' }}>
+                          <span className="text-[10px] text-gray-600 font-medium">+12k</span>
+                        </div>
+                      </div>
+                      <div className="flex flex-col justify-end items-center flex-1 relative h-full">
+                        <div className="bg-gray-200 w-full rounded-t flex items-end justify-center pb-1" style={{ height: '47.4%' }}>
+                          <span className="text-[10px] text-gray-600 font-medium">+18k</span>
+                        </div>
+                      </div>
+                      <div className="flex flex-col justify-end items-center flex-1 relative h-full">
+                        <div className="bg-gray-200 w-full rounded-t flex items-end justify-center pb-1" style={{ height: '73.7%' }}>
+                          <span className="text-[10px] text-gray-600 font-medium">+28k</span>
+                        </div>
+                      </div>
+                      <div className="flex flex-col justify-end items-center flex-1 relative h-full">
+                        <div className="bg-[#3AA6B9] w-full rounded-t flex items-end justify-center pb-1" style={{ height: '100%' }}>
+                          <span className="text-[10px] text-white font-semibold">+38k</span>
+                        </div>
+                      </div>
+                    </div>
+                  </motion.div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
           {/* MOBILE LAYOUT - Vertical Scroll Story with Sticky Photo */}
           <div className="lg:hidden relative" style={{ minHeight: '100vh' }}>
 
