@@ -38,11 +38,11 @@ export default function PreFooter() {
             </a>
           </motion.div>
 
-          {/* Spacer to push nav/social to right of center */}
+          {/* Spacer to push nav/social to align with logo */}
           <div className="flex-1"></div>
 
-          {/* Column 2 & 3: Navigation and Social - Grouped closer together */}
-          <div className="flex gap-16">
+          {/* Column 2 & 3: Navigation and Social - Grouped closer together, aligned with logo */}
+          <div className="flex gap-20">
             {/* Navigation */}
             <motion.div
               className="relative"
@@ -54,18 +54,18 @@ export default function PreFooter() {
               {/* Plus Sign above content */}
               <span className="absolute left-0 -top-12 text-2xl text-gray-400">+</span>
 
-              <p className="text-sm text-black mb-4">Navigation</p>
-              <nav className="space-y-3">
-                <Link href="#home" className="block text-xl font-medium text-black hover:opacity-70 transition-opacity">
+              <p className="text-sm text-black mb-6">Navigation</p>
+              <nav className="space-y-4">
+                <Link href="#home" className="block text-2xl font-medium text-black hover:opacity-70 transition-opacity">
                   Home
                 </Link>
-                <Link href="#about" className="block text-xl font-medium text-black hover:opacity-70 transition-opacity">
+                <Link href="#about" className="block text-2xl font-medium text-black hover:opacity-70 transition-opacity">
                   This is us
                 </Link>
-                <Link href="#projects" className="block text-xl font-medium text-black hover:opacity-70 transition-opacity">
+                <Link href="#projects" className="block text-2xl font-medium text-black hover:opacity-70 transition-opacity">
                   Projects
                 </Link>
-                <Link href="#blog" className="block text-xl font-medium text-black hover:opacity-70 transition-opacity">
+                <Link href="#blog" className="block text-2xl font-medium text-black hover:opacity-70 transition-opacity">
                   Blog
                 </Link>
               </nav>
@@ -82,31 +82,31 @@ export default function PreFooter() {
               {/* Plus Sign above content */}
               <span className="absolute left-0 -top-12 text-2xl text-gray-400">+</span>
 
-              <p className="text-sm text-black mb-4">Social</p>
-              <nav className="space-y-3">
+              <p className="text-sm text-black mb-6">Social</p>
+              <nav className="space-y-4">
                 <a
                   href="https://twitter.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-xl font-medium text-black hover:opacity-70 transition-opacity"
+                  className="flex items-center gap-2 text-2xl font-medium text-black hover:opacity-70 transition-opacity"
                 >
-                  Twitter <span className="text-base">↗</span>
+                  Twitter <span className="text-lg">↗</span>
                 </a>
                 <a
                   href="https://instagram.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-xl font-medium text-black hover:opacity-70 transition-opacity"
+                  className="flex items-center gap-2 text-2xl font-medium text-black hover:opacity-70 transition-opacity"
                 >
-                  Instagram <span className="text-base">↗</span>
+                  Instagram <span className="text-lg">↗</span>
                 </a>
                 <a
                   href="https://dribbble.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-xl font-medium text-black hover:opacity-70 transition-opacity"
+                  className="flex items-center gap-2 text-2xl font-medium text-black hover:opacity-70 transition-opacity"
                 >
-                  Dribbble <span className="text-base">↗</span>
+                  Dribbble <span className="text-lg">↗</span>
                 </a>
               </nav>
             </motion.div>
@@ -122,14 +122,14 @@ export default function PreFooter() {
           viewport={{ once: true }}
           transition={{ delay: 0.3 }}
         >
-          <div className="text-right">
+          <div>
             <h2
-              className="font-bold leading-[0.85]"
+              className="font-bold leading-[0.85] text-black"
               style={{
                 fontFamily: 'Inter, sans-serif'
               }}
             >
-              <span style={{ fontSize: 'clamp(80px, 12vw, 160px)' }}>
+              <span style={{ fontSize: 'clamp(100px, 14vw, 200px)' }}>
                 asight<span style={{ fontSize: '0.6em', verticalAlign: 'super' }}>®</span>
               </span>
               <br />
