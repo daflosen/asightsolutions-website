@@ -133,8 +133,8 @@ export default function PreFooter() {
                 asight<span style={{ fontSize: '0.6em', verticalAlign: 'super' }}>®</span>
               </span>
               <br />
-              <span style={{ fontSize: 'clamp(50px, 7vw, 100px)' }}>
-                Solutions
+              <span style={{ fontSize: 'clamp(30px, 4vw, 60px)' }}>
+                solutions
               </span>
             </h2>
           </div>
