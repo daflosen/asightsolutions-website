@@ -90,12 +90,33 @@ export default function CaseStudy() {
             }}
           />
 
+          {/* Left Content - Text on Teal Background - Desktop Only */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="hidden lg:block absolute z-[2] left-0 top-0 w-[60%] h-full px-12 py-12"
+          >
+            <div className="text-white">
+              <p className="text-sm mb-2 font-bold">Case study (SEO)</p>
+              <p className="text-xs mb-6 opacity-80">
+                ERP Customization, Frontend Optimization
+              </p>
+              <h2 className="text-[48px] font-semibold leading-[1.2] mb-6" style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
+                asightsolutions®
+              </h2>
+              <a href="https://re-automation.net" target="_blank" rel="noopener noreferrer" className="text-sm opacity-80 hover:opacity-100 transition-opacity underline inline-block">
+                RE Automation Website →
+              </a>
+            </div>
+          </motion.div>
+
           {/* Woman Image Container - Hidden on mobile */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="hidden lg:block absolute z-[2]"
+            className="hidden lg:block absolute z-[3]"
             style={{
               scale: imageScale,
               transformOrigin: 'bottom center',
