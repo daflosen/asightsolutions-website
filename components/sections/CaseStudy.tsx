@@ -72,7 +72,7 @@ export default function CaseStudy() {
         </div>
 
         {/* Main Container - Responsive height */}
-        <div className="relative h-auto md:h-[500px] lg:h-[800px] rounded-3xl mt-16 lg:mt-32">
+        <div className="relative h-auto md:h-[500px] lg:h-[650px] rounded-3xl mt-16 lg:mt-32">
 
           {/* Background - Full Size with gradient - Hidden on mobile, show on lg */}
           <div
@@ -126,7 +126,7 @@ export default function CaseStudy() {
 
           {/* DESKTOP LAYOUT - Right Content Panel */}
           <div className="hidden lg:block absolute z-[3] right-0 top-0 w-[40%] h-full px-12 py-12">
-            <div className="h-full flex flex-col justify-between">
+            <div className="flex flex-col">
 
               {/* Top Info */}
               <motion.div
@@ -148,7 +148,7 @@ export default function CaseStudy() {
               </motion.div>
 
               {/* Stats Section */}
-              <div className="space-y-4 mt-6">
+              <div className="space-y-4 mt-8">
 
                 {/* Performance Boost Card with Testimonial */}
                 <motion.div
