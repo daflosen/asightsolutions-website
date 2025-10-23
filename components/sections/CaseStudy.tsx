@@ -90,33 +90,12 @@ export default function CaseStudy() {
             }}
           />
 
-          {/* Left Content - Text on Teal Background - Desktop Only - Matching Mobile Style */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="hidden lg:block absolute z-[2] left-0 top-0 w-[60%] h-full px-12 py-12"
-          >
-            <div className="text-white bg-gradient-to-b from-[#3AA6B9]/90 to-transparent backdrop-blur-sm rounded-2xl p-6">
-              <p className="text-sm mb-2 opacity-90 font-bold">Case study (SEO)</p>
-              <p className="text-xs opacity-70 mb-4">
-                ERP Customization, Frontend Optimization
-              </p>
-              <h2 className="text-[48px] font-semibold leading-[1.2] text-white mb-4" style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
-                asightsolutions®
-              </h2>
-              <a href="https://re-automation.net" target="_blank" rel="noopener noreferrer" className="text-sm opacity-80 hover:opacity-100 transition-opacity underline inline-block">
-                RE Automation Website →
-              </a>
-            </div>
-          </motion.div>
-
-          {/* Woman Image Container - Hidden on mobile */}
+          {/* Woman Image Container - Hidden on mobile - Behind text */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="hidden lg:block absolute z-[3]"
+            className="hidden lg:block absolute z-[2]"
             style={{
               scale: imageScale,
               transformOrigin: 'bottom center',
@@ -141,6 +120,42 @@ export default function CaseStudy() {
                   className="object-contain object-bottom"
                   priority
                 />
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Left Content - Large centered text - Desktop Only - In front of Sophie */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="hidden lg:block absolute z-[4] left-0 top-0 w-[60%] h-full px-12 py-12"
+          >
+            <div className="h-full flex flex-col justify-center">
+              {/* Top Info - Small */}
+              <div className="mb-8">
+                <p className="text-sm mb-2 text-white opacity-90 font-bold">Case study (SEO)</p>
+                <p className="text-xs text-white opacity-70 mb-4">
+                  ERP Customization, Frontend Optimization
+                </p>
+              </div>
+
+              {/* Large Centered Heading - Takes up half of teal box */}
+              <h2
+                className="font-semibold leading-[0.95] text-white"
+                style={{
+                  fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
+                  fontSize: 'clamp(60px, 8vw, 120px)'
+                }}
+              >
+                asightsolutions®
+              </h2>
+
+              {/* Bottom Link */}
+              <div className="mt-8">
+                <a href="https://re-automation.net" target="_blank" rel="noopener noreferrer" className="text-sm text-white opacity-80 hover:opacity-100 transition-opacity underline inline-block">
+                  RE Automation Website →
+                </a>
               </div>
             </div>
           </motion.div>
