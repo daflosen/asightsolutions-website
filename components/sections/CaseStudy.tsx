@@ -102,7 +102,7 @@ export default function CaseStudy() {
               width: '50%',
               left: '15%',
               bottom: 0,
-              height: '1100px'
+              height: '900px'
             }}
           >
             <div className="relative w-full h-full">
