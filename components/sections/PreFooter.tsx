@@ -5,25 +5,22 @@ import Link from 'next/link'
 
 export default function PreFooter() {
   return (
-    <section className="py-20" style={{ backgroundColor: '#F5F5F5' }}>
+    <section className="py-20 relative" style={{ backgroundColor: '#F5F5F5' }}>
       <div className="container mx-auto px-6">
 
-        {/* Plus Signs */}
-        <div className="flex justify-between mb-16">
-          <span className="text-2xl text-gray-400">+</span>
-          <span className="text-2xl text-gray-400">+</span>
-          <span className="text-2xl text-gray-400">+</span>
-        </div>
-
-        {/* Main Content - 3 Columns */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-20">
+        {/* Main Content - Flex Layout */}
+        <div className="flex flex-col md:flex-row gap-12 mb-20 relative">
 
           {/* Column 1: Contact Info */}
           <motion.div
+            className="relative"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
+            {/* Plus Sign aligned with "t" of "tel" */}
+            <span className="absolute -left-8 top-0 text-2xl text-gray-400">+</span>
+
             <p className="text-sm text-gray-600 mb-4">tel: +49 151 571 65 903</p>
             <a
               href="mailto:hello@asightsolutions.com"
@@ -41,65 +38,79 @@ export default function PreFooter() {
             </a>
           </motion.div>
 
-          {/* Column 2: Navigation */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-          >
-            <p className="text-sm text-gray-500 mb-4">Navigation</p>
-            <nav className="space-y-3">
-              <Link href="#home" className="block text-xl font-medium hover:opacity-70 transition-opacity">
-                Home
-              </Link>
-              <Link href="#about" className="block text-xl font-medium hover:opacity-70 transition-opacity">
-                This is us
-              </Link>
-              <Link href="#projects" className="block text-xl font-medium hover:opacity-70 transition-opacity">
-                Projects
-              </Link>
-              <Link href="#blog" className="block text-xl font-medium hover:opacity-70 transition-opacity">
-                Blog
-              </Link>
-            </nav>
-          </motion.div>
+          {/* Spacer to push nav/social to right of center */}
+          <div className="flex-1"></div>
 
-          {/* Column 3: Social */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-          >
-            <p className="text-sm text-gray-500 mb-4">Social</p>
-            <nav className="space-y-3">
-              <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-xl font-medium hover:opacity-70 transition-opacity"
-              >
-                Twitter <span className="text-base">↗</span>
-              </a>
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-xl font-medium hover:opacity-70 transition-opacity"
-              >
-                Instagram <span className="text-base">↗</span>
-              </a>
-              <a
-                href="https://dribbble.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-xl font-medium hover:opacity-70 transition-opacity"
-              >
-                Dribbble <span className="text-base">↗</span>
-              </a>
-            </nav>
-          </motion.div>
+          {/* Column 2 & 3: Navigation and Social - Grouped closer together */}
+          <div className="flex gap-16">
+            {/* Navigation */}
+            <motion.div
+              className="relative"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+            >
+              {/* Plus Sign aligned with "N" of "Navigation" */}
+              <span className="absolute -left-8 top-0 text-2xl text-gray-400">+</span>
+
+              <p className="text-sm text-gray-500 mb-4">Navigation</p>
+              <nav className="space-y-3">
+                <Link href="#home" className="block text-xl font-medium hover:opacity-70 transition-opacity">
+                  Home
+                </Link>
+                <Link href="#about" className="block text-xl font-medium hover:opacity-70 transition-opacity">
+                  This is us
+                </Link>
+                <Link href="#projects" className="block text-xl font-medium hover:opacity-70 transition-opacity">
+                  Projects
+                </Link>
+                <Link href="#blog" className="block text-xl font-medium hover:opacity-70 transition-opacity">
+                  Blog
+                </Link>
+              </nav>
+            </motion.div>
+
+            {/* Social */}
+            <motion.div
+              className="relative"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+            >
+              {/* Plus Sign aligned with "S" of "Social" */}
+              <span className="absolute -left-8 top-0 text-2xl text-gray-400">+</span>
+
+              <p className="text-sm text-gray-500 mb-4">Social</p>
+              <nav className="space-y-3">
+                <a
+                  href="https://twitter.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-xl font-medium hover:opacity-70 transition-opacity"
+                >
+                  Twitter <span className="text-base">↗</span>
+                </a>
+                <a
+                  href="https://instagram.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-xl font-medium hover:opacity-70 transition-opacity"
+                >
+                  Instagram <span className="text-base">↗</span>
+                </a>
+                <a
+                  href="https://dribbble.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-xl font-medium hover:opacity-70 transition-opacity"
+                >
+                  Dribbble <span className="text-base">↗</span>
+                </a>
+              </nav>
+            </motion.div>
+          </div>
 
         </div>
 
@@ -113,15 +124,18 @@ export default function PreFooter() {
         >
           <div className="text-right">
             <h2
-              className="font-bold leading-[0.9]"
+              className="font-bold leading-[0.85]"
               style={{
-                fontSize: 'clamp(60px, 10vw, 120px)',
                 fontFamily: 'Inter, sans-serif'
               }}
             >
-              asight<span style={{ fontSize: '0.6em', verticalAlign: 'super' }}>®</span>
+              <span style={{ fontSize: 'clamp(80px, 12vw, 160px)' }}>
+                asight<span style={{ fontSize: '0.6em', verticalAlign: 'super' }}>®</span>
+              </span>
               <br />
-              Solutions
+              <span style={{ fontSize: 'clamp(50px, 7vw, 100px)' }}>
+                Solutions
+              </span>
             </h2>
           </div>
         </motion.div>
