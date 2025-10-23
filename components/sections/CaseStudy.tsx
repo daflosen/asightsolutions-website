@@ -131,28 +131,30 @@ export default function CaseStudy() {
             viewport={{ once: true }}
             className="hidden lg:block absolute z-[4] left-0 top-0 w-[60%] h-full px-12 py-12"
           >
-            <div className="h-full flex flex-col justify-center">
-              {/* Top Info - Small */}
-              <div className="mb-8">
+            <div className="h-full flex flex-col justify-between">
+              {/* Top Info - Small - Top Left */}
+              <div>
                 <p className="text-sm mb-2 text-white opacity-90 font-bold">Case study (SEO)</p>
-                <p className="text-xs text-white opacity-70 mb-4">
+                <p className="text-xs text-white opacity-70">
                   ERP Customization, Frontend Optimization
                 </p>
               </div>
 
-              {/* Large Centered Heading - Takes up half of teal box */}
-              <h2
-                className="font-semibold leading-[0.95] text-white"
-                style={{
-                  fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
-                  fontSize: 'clamp(60px, 8vw, 120px)'
-                }}
-              >
-                asightsolutions®
-              </h2>
+              {/* Large Heading - Half of container height */}
+              <div className="flex-1 flex items-center">
+                <h2
+                  className="font-semibold leading-[0.85] text-white"
+                  style={{
+                    fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
+                    fontSize: 'clamp(80px, 12vw, 180px)'
+                  }}
+                >
+                  asightsolutions®
+                </h2>
+              </div>
 
               {/* Bottom Link */}
-              <div className="mt-8">
+              <div>
                 <a href="https://re-automation.net" target="_blank" rel="noopener noreferrer" className="text-sm text-white opacity-80 hover:opacity-100 transition-opacity underline inline-block">
                   RE Automation Website →
                 </a>
