@@ -140,24 +140,32 @@ export default function CaseStudy() {
                 </p>
               </div>
 
-              {/* Large Heading - Half of container height */}
+              {/* Large Heading - Quarter of container height */}
               <div className="flex-1 flex items-center">
                 <h2
                   className="font-semibold leading-[0.85] text-white"
                   style={{
                     fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
-                    fontSize: 'clamp(80px, 12vw, 180px)'
+                    fontSize: 'clamp(40px, 6vw, 90px)'
                   }}
                 >
                   asightsolutions®
                 </h2>
               </div>
 
-              {/* Bottom Link */}
-              <div>
+              {/* Bottom Section - Link left, Text right */}
+              <div className="flex justify-between items-end">
                 <a href="https://re-automation.net" target="_blank" rel="noopener noreferrer" className="text-sm text-white opacity-80 hover:opacity-100 transition-opacity underline inline-block">
                   RE Automation Website →
                 </a>
+
+                {/* Right aligned multi-line text */}
+                <div className="text-right text-white">
+                  <p className="text-base leading-tight mb-1">From Site Audits,</p>
+                  <p className="text-base leading-tight mb-1">Keyword Strategy</p>
+                  <p className="text-base leading-tight mb-2">and Backlink Analytics…</p>
+                  <p className="text-sm opacity-80">...we do it all.</p>
+                </div>
               </div>
             </div>
           </motion.div>
