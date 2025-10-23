@@ -18,13 +18,13 @@ export default function PreFooter() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            {/* Plus Sign aligned with "t" of "tel" */}
-            <span className="absolute -left-8 top-0 text-2xl text-gray-400">+</span>
+            {/* Plus Sign above content */}
+            <span className="absolute left-0 -top-12 text-2xl text-gray-400">+</span>
 
-            <p className="text-sm text-gray-600 mb-4">tel: +49 151 571 65 903</p>
+            <p className="text-sm text-black mb-4">tel: +49 151 571 65 903</p>
             <a
               href="mailto:hello@asightsolutions.com"
-              className="inline-flex items-center gap-2 text-2xl font-semibold hover:opacity-70 transition-opacity"
+              className="inline-flex items-center gap-2 text-2xl font-semibold text-black hover:opacity-70 transition-opacity"
               style={{
                 textDecoration: 'underline',
                 textDecorationThickness: '2px',
@@ -51,21 +51,21 @@ export default function PreFooter() {
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
             >
-              {/* Plus Sign aligned with "N" of "Navigation" */}
-              <span className="absolute -left-8 top-0 text-2xl text-gray-400">+</span>
+              {/* Plus Sign above content */}
+              <span className="absolute left-0 -top-12 text-2xl text-gray-400">+</span>
 
-              <p className="text-sm text-gray-500 mb-4">Navigation</p>
+              <p className="text-sm text-black mb-4">Navigation</p>
               <nav className="space-y-3">
-                <Link href="#home" className="block text-xl font-medium hover:opacity-70 transition-opacity">
+                <Link href="#home" className="block text-xl font-medium text-black hover:opacity-70 transition-opacity">
                   Home
                 </Link>
-                <Link href="#about" className="block text-xl font-medium hover:opacity-70 transition-opacity">
+                <Link href="#about" className="block text-xl font-medium text-black hover:opacity-70 transition-opacity">
                   This is us
                 </Link>
-                <Link href="#projects" className="block text-xl font-medium hover:opacity-70 transition-opacity">
+                <Link href="#projects" className="block text-xl font-medium text-black hover:opacity-70 transition-opacity">
                   Projects
                 </Link>
-                <Link href="#blog" className="block text-xl font-medium hover:opacity-70 transition-opacity">
+                <Link href="#blog" className="block text-xl font-medium text-black hover:opacity-70 transition-opacity">
                   Blog
                 </Link>
               </nav>
@@ -79,16 +79,16 @@ export default function PreFooter() {
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
             >
-              {/* Plus Sign aligned with "S" of "Social" */}
-              <span className="absolute -left-8 top-0 text-2xl text-gray-400">+</span>
+              {/* Plus Sign above content */}
+              <span className="absolute left-0 -top-12 text-2xl text-gray-400">+</span>
 
-              <p className="text-sm text-gray-500 mb-4">Social</p>
+              <p className="text-sm text-black mb-4">Social</p>
               <nav className="space-y-3">
                 <a
                   href="https://twitter.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-xl font-medium hover:opacity-70 transition-opacity"
+                  className="flex items-center gap-2 text-xl font-medium text-black hover:opacity-70 transition-opacity"
                 >
                   Twitter <span className="text-base">↗</span>
                 </a>
@@ -96,7 +96,7 @@ export default function PreFooter() {
                   href="https://instagram.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-xl font-medium hover:opacity-70 transition-opacity"
+                  className="flex items-center gap-2 text-xl font-medium text-black hover:opacity-70 transition-opacity"
                 >
                   Instagram <span className="text-base">↗</span>
                 </a>
@@ -104,7 +104,7 @@ export default function PreFooter() {
                   href="https://dribbble.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-xl font-medium hover:opacity-70 transition-opacity"
+                  className="flex items-center gap-2 text-xl font-medium text-black hover:opacity-70 transition-opacity"
                 >
                   Dribbble <span className="text-base">↗</span>
                 </a>
