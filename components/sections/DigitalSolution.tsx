@@ -133,10 +133,7 @@ export default function DigitalSolution() {
                       </span>
                     </div>
 
-                    {/* Simple Title Layout */}
-                    <div className="mb-4">
-                      <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
-                    </div>
+                    {/* Removed Title - Only Badge visible */}
                   </div>
                 </>
               ) : (
