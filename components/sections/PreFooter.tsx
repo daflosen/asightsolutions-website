@@ -8,19 +8,24 @@ export default function PreFooter() {
     <section className="py-20 relative" style={{ backgroundColor: '#F5F5F5' }}>
       <div className="container mx-auto px-6">
 
-        {/* Main Content - Flex Layout */}
-        <div className="flex flex-col md:flex-row gap-12 mb-20 relative">
+        {/* Plus Signs Row - All on same vertical height */}
+        <div className="flex justify-between mb-12 relative">
+          <span className="text-[32px] font-thin opacity-30 text-black">+</span>
+          <div className="flex gap-20 absolute right-0">
+            <span className="text-[32px] font-thin opacity-30 text-black">+</span>
+            <span className="text-[32px] font-thin opacity-30 text-black">+</span>
+          </div>
+        </div>
+
+        {/* Main Content - Contact on left, Nav/Social on right aligned with logo */}
+        <div className="flex justify-between mb-20">
 
           {/* Column 1: Contact Info */}
           <motion.div
-            className="relative"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            {/* Plus Sign above content - matching Hero style */}
-            <span className="absolute left-0 -top-12 text-[32px] font-thin opacity-30 text-black">+</span>
-
             <p className="text-sm text-black mb-4">tel: +49 151 571 65 903</p>
             <a
               href="mailto:hello@asightsolutions.com"
@@ -38,22 +43,15 @@ export default function PreFooter() {
             </a>
           </motion.div>
 
-        </div>
-
-        {/* Navigation and Social - New row, aligned with logo */}
-        <div className="flex justify-end mb-20">
+          {/* Navigation and Social - Aligned with logo (right side) */}
           <div className="flex gap-20">
             {/* Navigation */}
             <motion.div
-              className="relative"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
             >
-              {/* Plus Sign above content - matching Hero style */}
-              <span className="absolute left-0 -top-12 text-[32px] font-thin opacity-30 text-black">+</span>
-
               <p className="text-sm text-black mb-6">Navigation</p>
               <nav className="space-y-4">
                 <Link href="#home" className="block text-2xl font-medium text-black hover:opacity-70 transition-opacity">
@@ -73,15 +71,11 @@ export default function PreFooter() {
 
             {/* Social */}
             <motion.div
-              className="relative"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
             >
-              {/* Plus Sign above content - matching Hero style */}
-              <span className="absolute left-0 -top-12 text-[32px] font-thin opacity-30 text-black">+</span>
-
               <p className="text-sm text-black mb-6">Social</p>
               <nav className="space-y-4">
                 <a
