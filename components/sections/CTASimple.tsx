@@ -156,7 +156,7 @@ export default function CTASimple() {
                 />
               </div>
               <div className="text-gray-900">
-                <p className="text-xs md:text-sm text-gray-600">Team Lead Acquisition</p>
+                <p className="text-xs md:text-sm text-gray-600">Founder Acquisition</p>
                 <p className="text-[10px] md:text-xs text-gray-500">at asight®</p>
                 <p className="font-bold text-base md:text-lg mt-1">Alex Eyb</p>
               </div>

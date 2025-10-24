@@ -310,7 +310,7 @@ export default function HeroVideo() {
           />
         </div>
         <div className="flex-1 flex flex-col gap-[6px] p-5 justify-center">
-          <p className="text-[13px] font-medium text-gray-600 m-0">Team Lead</p>
+          <p className="text-[13px] font-medium text-gray-600 m-0">Founder</p>
           <p className="text-[12px] text-gray-500 m-0">at asight®</p>
           <h3 className="text-[20px] font-bold text-gray-900 my-2 leading-[1.1]">
             Florian Bartsch
