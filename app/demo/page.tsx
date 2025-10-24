@@ -1,16 +1,14 @@
 'use client'
 
-import {
-  DigitalSolution,
-  Services,
-  Stats,
-  About,
-  Testimonials,
-  Team,
-  FAQ,
-  CTA,
-  Footer
-} from '../../components'
+import DigitalSolution from '@/components/sections/DigitalSolution'
+import Services from '@/components/sections/Services'
+import Stats from '@/components/sections/Stats'
+import AboutUs from '@/components/sections/AboutUs'
+import Testimonials from '@/components/sections/Testimonials'
+import Team from '@/components/sections/Team'
+import FAQSimple from '@/components/sections/FAQSimple'
+import CTASimple from '@/components/sections/CTASimple'
+import FooterSimple from '@/components/sections/FooterSimple'
 
 export default function DemoPage() {
   return (
@@ -27,12 +25,12 @@ export default function DemoPage() {
       <DigitalSolution />
       <Services />
       <Stats />
-      <About />
+      <AboutUs />
       <Testimonials />
       <Team />
-      <FAQ />
-      <CTA />
-      <Footer />
+      <FAQSimple />
+      <CTASimple />
+      <FooterSimple />
     </main>
   )
 }
