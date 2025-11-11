@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import LanguageToggle from '@/components/ui/LanguageToggle'
 
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -77,6 +78,8 @@ export default function Navigation() {
               fontSize: '0.9rem',
               padding: '0.5rem 0.75rem'
             }}>Contact</a>
+
+            <LanguageToggle />
 
             <button style={{
               background: '#111',
@@ -283,6 +286,15 @@ export default function Navigation() {
                 >
                   Contact
                 </a>
+
+                <div style={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  marginTop: '1rem',
+                  marginBottom: '1rem'
+                }}>
+                  <LanguageToggle />
+                </div>
 
                 <button
                   onClick={() => setMobileMenuOpen(false)}

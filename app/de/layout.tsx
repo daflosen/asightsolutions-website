@@ -1,14 +1,5 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
 import LoadingScreen from '@/components/LoadingScreen'
-import Navigation from '@/components/common/Navigation'
-
-const inter = Inter({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-  variable: '--font-inter',
-})
 
 export const metadata: Metadata = {
   title: 'Digitalisierung Unternehmensberatung Stuttgart | A Sight Solutions',
@@ -60,7 +51,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'de_DE',
-    url: 'https://asightsolutions.com',
+    url: 'https://asightsolutions.com/de',
     siteName: 'A Sight Solutions',
     title: 'Digitalisierung Unternehmensberatung Stuttgart | A Sight Solutions',
     description: 'Führende Unternehmensberatung für Digitalisierung in Stuttgart. BAFA-gefördert, 200+ Projekte, KI & Automatisierung für Mittelstand.',
@@ -83,83 +74,19 @@ export const metadata: Metadata = {
     google: 'your-google-verification-code', // TODO: Add actual verification code
   },
   alternates: {
-    canonical: 'https://asightsolutions.com',
+    canonical: 'https://asightsolutions.com/de',
     languages: {
-      'en': 'https://asightsolutions.com',
       'de-DE': 'https://asightsolutions.com/de',
+      'en': 'https://asightsolutions.com',
       'x-default': 'https://asightsolutions.com',
     },
   },
 }
 
-export default function RootLayout({
+export default function GermanLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
-  return (
-    <html lang="de">
-      <body className={inter.className}>
-        <LoadingScreen />
-        <Navigation />
-        {children}
-
-        {/* Structured Data for SEO */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'ProfessionalService',
-              name: 'A Sight Solutions',
-              alternateName: 'asightsolutions',
-              url: 'https://asightsolutions.com',
-              logo: 'https://asightsolutions.com/images/Asight_Trademark.png',
-              description: 'Führende Unternehmensberatung für Digitalisierung in Stuttgart. BAFA-gefördert, 200+ Projekte, KI & Automatisierung für Mittelstand.',
-              address: {
-                '@type': 'PostalAddress',
-                addressLocality: 'Stuttgart',
-                addressRegion: 'Baden-Württemberg',
-                addressCountry: 'DE',
-              },
-              areaServed: {
-                '@type': 'GeoCircle',
-                geoMidpoint: {
-                  '@type': 'GeoCoordinates',
-                  latitude: '48.7758',
-                  longitude: '9.1829',
-                },
-                geoRadius: '100000', // 100km radius
-              },
-              priceRange: '€€€',
-              serviceType: [
-                'Digitalisierung',
-                'Unternehmensberatung',
-                'KI Beratung',
-                'Prozessoptimierung',
-                'Web Design',
-                'SEO',
-                'Full Stack Development',
-                'Low-Code Development',
-              ],
-              aggregateRating: {
-                '@type': 'AggregateRating',
-                ratingValue: '4.9',
-                reviewCount: '50',
-              },
-              founder: {
-                '@type': 'Person',
-                name: 'Florian Bartsch',
-                jobTitle: 'Founder',
-              },
-              sameAs: [
-                'https://www.linkedin.com/company/asightsolutions',
-                'https://github.com/daflosen',
-              ],
-            }),
-          }}
-        />
-      </body>
-    </html>
-  )
+  return <>{children}</>
 }
