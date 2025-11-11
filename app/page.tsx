@@ -19,18 +19,46 @@ export const metadata: Metadata = {
   title: 'Digitalisierung Unternehmensberatung Stuttgart | A Sight Solutions',
   description: 'Spezialisierte Unternehmensberatung für Digitalisierung und digitale Transformation. BAFA-gefördert. Experten für KI & Automatisierung im Mittelstand.',
   keywords: [
+    // Hauptkeywords
     'digitalisierung unternehmensberatung',
+    'unternehmensberatung digitalisierung',
     'unternehmensberatung digitalisierung stuttgart',
+    'digitalisierung für den mittelstand',
+    'digitalisierung mittelstand',
+    // Digitale Transformation
+    'beratung digitale transformation',
+    'digitale transformation beratung',
     'digitale transformation',
-    'bafa förderung',
     'digitalisierungsberatung',
+    // Automatisierung & Prozesse
+    'prozessautomatisierung software',
+    'prozessautomatisierung',
+    'automation in business',
+    'business automation',
     'prozessdigitalisierung',
+    'digitale prozesse',
+    // ERP
+    'beratung erp',
+    'erp berater',
+    'erp beratung',
+    // Branchen-spezifisch
+    'digitalisierung arztpraxis',
+    'digitalisierung behörden',
+    // Web & SEO
+    'wordpress website erstellen lassen',
+    'website wordpress erstellen lassen',
+    'seo optimierung stuttgart',
+    'seo optimierung kosten',
+    'digitalagentur stuttgart',
+    // Lokale Keywords
+    'digitalisierung stuttgart',
+    'unternehmensberatung stuttgart',
+    'bafa förderung',
+    'bafa berater stuttgart',
+    // Services
     'ki beratung mittelstand',
     'automatisierung beratung',
-    'unternehmensberatung stuttgart',
     'digital transformation consulting',
-    'bafa berater stuttgart',
-    'digitalisierung mittelstand',
   ],
 }
 
