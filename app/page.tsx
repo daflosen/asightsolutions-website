@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import HeroVideo from '@/components/sections/HeroVideo'
 import OurClients from '@/components/sections/OurClients'
 import DigitalSolution from '@/components/sections/DigitalSolution'
@@ -12,6 +13,26 @@ import CTASimple from '@/components/sections/CTASimple'
 import PreFooter from '@/components/sections/PreFooter'
 import FooterSimple from '@/components/sections/FooterSimple'
 import LazySection from '@/components/ui/LazySection'
+
+// Page-specific metadata (overrides layout metadata for this page)
+export const metadata: Metadata = {
+  title: 'Digitalisierung Unternehmensberatung Stuttgart | A Sight Solutions',
+  description: 'Spezialisierte Unternehmensberatung für Digitalisierung und digitale Transformation. BAFA-gefördert. Experten für KI & Automatisierung im Mittelstand.',
+  keywords: [
+    'digitalisierung unternehmensberatung',
+    'unternehmensberatung digitalisierung stuttgart',
+    'digitale transformation',
+    'bafa förderung',
+    'digitalisierungsberatung',
+    'prozessdigitalisierung',
+    'ki beratung mittelstand',
+    'automatisierung beratung',
+    'unternehmensberatung stuttgart',
+    'digital transformation consulting',
+    'bafa berater stuttgart',
+    'digitalisierung mittelstand',
+  ],
+}
 
 export default function Home() {
   return (
