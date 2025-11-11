@@ -100,30 +100,34 @@ export default function Team() {
                 className="relative group cursor-pointer"
               >
                 <div className="aspect-[6/9] bg-white rounded-2xl overflow-hidden relative">
-                  {/* Use real photos for Florian, Sophie, and Alex, placeholder for others */}
+                  {/* Use optimized WebP images for better performance */}
                   {member.id === 1 ? (
                     <img
-                      src="/images/Florian_Bartsch_20250925_FBA-pica.png"
+                      src="/images/optimized/Florian_Bartsch_20250925_FBA-pica.webp"
                       alt={member.name}
                       className="w-full h-full object-cover transition-all duration-500 group-hover:scale-110 group-hover:blur-md"
+                      loading="lazy"
                     />
                   ) : member.id === 2 ? (
                     <img
-                      src="/images/Jürgen_Rentschler_3zu4_SW-pica.png"
+                      src="/images/optimized/Jürgen_Rentschler_3zu4_SW-pica.webp"
                       alt={member.name}
                       className="w-full h-full object-cover transition-all duration-500 group-hover:scale-110 group-hover:blur-md"
+                      loading="lazy"
                     />
                   ) : member.id === 3 ? (
                     <img
-                      src="/images/Sophie_Gehlert_asightsolutions_1_WOBG.png"
+                      src="/images/optimized/Sophie_Gehlert_asightsolutions_1_WOBG.webp"
                       alt={member.name}
                       className="w-full h-full object-cover grayscale transition-all duration-500 group-hover:scale-110 group-hover:blur-md"
+                      loading="lazy"
                     />
                   ) : member.id === 4 ? (
                     <img
-                      src="/images/Alex_Eyb_SW.png"
+                      src="/images/optimized/Alex_Eyb_SW.webp"
                       alt={member.name}
                       className="w-full h-full object-cover transition-all duration-500 group-hover:scale-110 group-hover:blur-md"
+                      loading="lazy"
                     />
                   ) : (
                     <div className="w-full h-full bg-gradient-to-br from-gray-300 to-gray-500 flex items-center justify-center text-6xl transition-all duration-500 group-hover:scale-110 group-hover:blur-md">

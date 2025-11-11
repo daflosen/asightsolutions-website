@@ -82,11 +82,12 @@ export default function ServicesSimple() {
           >
             <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src="/images/Laptop_Oben.jpg"
+                src="/images/optimized/Laptop_Oben.webp"
                 alt="Development workspace"
                 fill
                 className="object-cover"
                 priority
+                quality={85}
               />
             </div>
           </motion.div>

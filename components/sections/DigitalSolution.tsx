@@ -12,7 +12,7 @@ const projects = [
     description: 'ApeLedger',
     bgColor: 'bg-white',
     logo: '🦍',
-    image: '/images/ApeLedger_New_Free.png',
+    image: '/images/optimized/ApeLedger_New_Free.webp',
     category: 'ape', // Ape Series - Innovation Line
     badge: 'Innovation Series'
   },
@@ -24,7 +24,7 @@ const projects = [
     description: 'R',
     bgColor: 'bg-white',
     logo: '🦧',
-    image: '/images/RisKApe_Free_Tuerkis.png',
+    image: '/images/optimized/RisKApe_Free_Tuerkis.webp',
     category: 'ape', // Ape Series - Innovation Line
     badge: 'Innovation Series'
   },
@@ -37,7 +37,7 @@ const projects = [
     bgColor: 'bg-white',
     logo: '>>>',
     style: 'transform: rotate(45deg)',
-    image: '/images/ERP_365_Logo.png',
+    image: '/images/optimized/ERP_365_Logo.webp',
     category: 'enterprise', // Enterprise Solutions
     badge: 'Enterprise'
   },

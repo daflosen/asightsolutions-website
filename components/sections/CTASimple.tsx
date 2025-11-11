@@ -150,9 +150,10 @@ export default function CTASimple() {
             >
               <div className="w-14 h-14 md:w-16 md:h-16 rounded-full overflow-hidden flex-shrink-0">
                 <img
-                  src="/images/Alex_Eyb_SW.png"
-                  alt="Alex Eyb"
+                  src="/images/optimized/Alex_Eyb_SW.webp"
+                  alt="Alex Eyb - Founder Acquisition"
                   className="w-full h-full object-cover"
+                  loading="lazy"
                 />
               </div>
               <div className="text-gray-900">

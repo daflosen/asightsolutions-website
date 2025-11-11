@@ -36,11 +36,12 @@ export default function Stats() {
             className="relative rounded-2xl h-96 md:h-[500px] overflow-hidden shadow-2xl"
           >
             <Image
-              src="/images/Laptop_Oben.jpg"
+              src="/images/optimized/Laptop_Oben.webp"
               alt="Development workspace"
               fill
               className="object-cover"
               priority
+              quality={85}
             />
           </motion.div>
 
@@ -77,10 +78,11 @@ export default function Stats() {
             <div className="flex items-center gap-8 opacity-60">
               <div className="relative h-8 w-24">
                 <Image
-                  src="/images/RmentiX_Logo.jpg"
+                  src="/images/optimized/RmentiX_Logo.webp"
                   alt="RE Automation"
                   fill
                   className="object-contain filter grayscale"
+                  quality={85}
                 />
               </div>
               <div className="relative h-8 w-24">

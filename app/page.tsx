@@ -11,21 +11,53 @@ import FAQSimple from '@/components/sections/FAQSimple'
 import CTASimple from '@/components/sections/CTASimple'
 import PreFooter from '@/components/sections/PreFooter'
 import FooterSimple from '@/components/sections/FooterSimple'
+import LazySection from '@/components/ui/LazySection'
 
 export default function Home() {
   return (
     <main>
+      {/* Above the fold - load immediately */}
       <HeroVideo />
       <OurClients />
-      <DigitalSolution />
-      <Stats />
-      <Services />
-      <AboutUs />
-      <Testimonials />
-      <CaseStudy />
-      <Team />
-      <FAQSimple />
-      <CTASimple />
+
+      {/* Below the fold - lazy load for better performance */}
+      <LazySection threshold={0.1} rootMargin="200px">
+        <DigitalSolution />
+      </LazySection>
+
+      <LazySection threshold={0.1} rootMargin="200px">
+        <Stats />
+      </LazySection>
+
+      <LazySection threshold={0.1} rootMargin="200px">
+        <Services />
+      </LazySection>
+
+      <LazySection threshold={0.1} rootMargin="200px">
+        <AboutUs />
+      </LazySection>
+
+      <LazySection threshold={0.1} rootMargin="200px">
+        <Testimonials />
+      </LazySection>
+
+      <LazySection threshold={0.1} rootMargin="200px">
+        <CaseStudy />
+      </LazySection>
+
+      <LazySection threshold={0.1} rootMargin="200px">
+        <Team />
+      </LazySection>
+
+      <LazySection threshold={0.1} rootMargin="200px">
+        <FAQSimple />
+      </LazySection>
+
+      <LazySection threshold={0.1} rootMargin="200px">
+        <CTASimple />
+      </LazySection>
+
+      {/* Footer - always load */}
       <PreFooter />
       <FooterSimple />
     </main>

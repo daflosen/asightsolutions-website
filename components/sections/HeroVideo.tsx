@@ -302,11 +302,12 @@ export default function HeroVideo() {
       >
         <div className="w-full md:w-[186px] h-[186px] md:rounded-l-[20px] rounded-t-[20px] md:rounded-t-none overflow-hidden flex-shrink-0" style={{ backgroundColor: '#F5F5F5' }}>
           <Image
-            src="/images/Florian_Bartsch_20250925_FBA.png"
-            alt="Florian Bartsch"
+            src="/images/optimized/Florian_Bartsch_20250925_FBA.webp"
+            alt="Florian Bartsch - Founder at asight®"
             width={186}
             height={186}
             className="w-full h-full object-cover grayscale"
+            quality={85}
           />
         </div>
         <div className="flex-1 flex flex-col gap-[6px] p-5 justify-center">

@@ -114,11 +114,12 @@ export default function CaseStudy() {
                 }}
               >
                 <Image
-                  src="/images/Sophie_Gehlert_asightsolutions_WOBG.png"
-                  alt="Sophie Gehlert"
+                  src="/images/optimized/Sophie_Gehlert_asightsolutions_WOBG.webp"
+                  alt="Sophie Gehlert - Senior Frontend Engineer"
                   fill
                   className="object-contain object-bottom"
                   priority
+                  quality={85}
                 />
               </div>
             </div>
