@@ -106,10 +106,15 @@ export default function HeroVideo() {
         {/* Grain Overlay */}
         <div className="absolute inset-0 z-[3] opacity-5 mix-blend-overlay pointer-events-none grain-overlay" />
 
-        {/* Main Logo "asight" - Responsive, prominent on mobile */}
-        <h1 className="absolute left-[5%] md:left-[3.5%] z-10 text-white text-left m-0 p-0" style={{ fontSize: 'clamp(100px, 22vw, 18vw)', letterSpacing: '-0.06em', fontWeight: 600, fontFamily: 'Inter, sans-serif', top: 'clamp(48px, 8vh, 64px)', lineHeight: '0.9', width: 'fit-content' }}>
-          asight<sup className="align-super ml-[0.1em]" style={{ fontSize: '33%', fontWeight: 600 }}>®</sup>
+        {/* SEO H1 - Hidden visually but readable by search engines */}
+        <h1 className="sr-only">
+          Digitalisierung Unternehmensberatung Stuttgart - A Sight Solutions: KI, Automatisierung & Prozessoptimierung für den Mittelstand
         </h1>
+
+        {/* Main Logo "asight" - Responsive, prominent on mobile (visual H2) */}
+        <h2 className="absolute left-[5%] md:left-[3.5%] z-10 text-white text-left m-0 p-0" style={{ fontSize: 'clamp(100px, 22vw, 18vw)', letterSpacing: '-0.06em', fontWeight: 600, fontFamily: 'Inter, sans-serif', top: 'clamp(48px, 8vh, 64px)', lineHeight: '0.9', width: 'fit-content' }}>
+          asight<sup className="align-super ml-[0.1em]" style={{ fontSize: '33%', fontWeight: 600 }}>®</sup>
+        </h2>
 
         {/* "solutions" Unterzeile - rechtsbündig mit "asight" Ende - Responsive, prominent on mobile */}
         <p className="absolute z-10 font-semibold text-white leading-[1.2] opacity-0 animate-fade-in" style={{ fontSize: 'clamp(26px, 5vw, 2.4vw)', letterSpacing: '-0.06em', fontFamily: 'Inter, sans-serif', fontWeight: 600, top: 'calc(clamp(48px, 8vh, 64px) + clamp(100px, 22vw, 16vw))', left: '5%', width: 'clamp(125px, 28vw, 18vw)', textAlign: 'right', animationDelay: '0.2s' }}>

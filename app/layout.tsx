@@ -10,8 +10,63 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'asightsolutions® - Digital Growth',
-  description: 'Digital solutions and strategies that help your processes thrive and your business grow.',
+  title: 'Digitalisierung Unternehmensberatung Stuttgart | A Sight Solutions',
+  description: 'Führende Unternehmensberatung für Digitalisierung in Stuttgart. BAFA-gefördert, 200+ Projekte, KI & Automatisierung für Mittelstand.',
+  keywords: [
+    'Digitalisierung',
+    'Unternehmensberatung Stuttgart',
+    'BAFA-Förderung',
+    'KI Beratung',
+    'Automatisierung Mittelstand',
+    'Prozessoptimierung',
+    'Digital Transformation',
+    'Low-Code Entwicklung',
+    'Full Stack Development',
+    'SEO Stuttgart',
+    'Web Design Stuttgart'
+  ],
+  authors: [{ name: 'A Sight Solutions' }],
+  creator: 'A Sight Solutions',
+  publisher: 'A Sight Solutions',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'de_DE',
+    url: 'https://asightsolutions.com',
+    siteName: 'A Sight Solutions',
+    title: 'Digitalisierung Unternehmensberatung Stuttgart | A Sight Solutions',
+    description: 'Führende Unternehmensberatung für Digitalisierung in Stuttgart. BAFA-gefördert, 200+ Projekte, KI & Automatisierung für Mittelstand.',
+    images: [
+      {
+        url: 'https://asightsolutions.com/images/optimized/Laptop_Oben.webp',
+        width: 1200,
+        height: 630,
+        alt: 'A Sight Solutions - Digitalisierung Unternehmensberatung Stuttgart',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Digitalisierung Unternehmensberatung Stuttgart | A Sight Solutions',
+    description: 'Führende Unternehmensberatung für Digitalisierung in Stuttgart. BAFA-gefördert, 200+ Projekte, KI & Automatisierung.',
+    images: ['https://asightsolutions.com/images/optimized/Laptop_Oben.webp'],
+  },
+  verification: {
+    google: 'your-google-verification-code', // TODO: Add actual verification code
+  },
+  alternates: {
+    canonical: 'https://asightsolutions.com',
+  },
 }
 
 export default function RootLayout({
@@ -20,10 +75,66 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="de">
       <body className={inter.className}>
         <LoadingScreen />
         {children}
+
+        {/* Structured Data for SEO */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'ProfessionalService',
+              name: 'A Sight Solutions',
+              alternateName: 'asightsolutions',
+              url: 'https://asightsolutions.com',
+              logo: 'https://asightsolutions.com/images/Asight_Trademark.png',
+              description: 'Führende Unternehmensberatung für Digitalisierung in Stuttgart. BAFA-gefördert, 200+ Projekte, KI & Automatisierung für Mittelstand.',
+              address: {
+                '@type': 'PostalAddress',
+                addressLocality: 'Stuttgart',
+                addressRegion: 'Baden-Württemberg',
+                addressCountry: 'DE',
+              },
+              areaServed: {
+                '@type': 'GeoCircle',
+                geoMidpoint: {
+                  '@type': 'GeoCoordinates',
+                  latitude: '48.7758',
+                  longitude: '9.1829',
+                },
+                geoRadius: '100000', // 100km radius
+              },
+              priceRange: '€€€',
+              serviceType: [
+                'Digitalisierung',
+                'Unternehmensberatung',
+                'KI Beratung',
+                'Prozessoptimierung',
+                'Web Design',
+                'SEO',
+                'Full Stack Development',
+                'Low-Code Development',
+              ],
+              aggregateRating: {
+                '@type': 'AggregateRating',
+                ratingValue: '4.9',
+                reviewCount: '50',
+              },
+              founder: {
+                '@type': 'Person',
+                name: 'Florian Bartsch',
+                jobTitle: 'Founder',
+              },
+              sameAs: [
+                'https://www.linkedin.com/company/asightsolutions',
+                'https://github.com/daflosen',
+              ],
+            }),
+          }}
+        />
       </body>
     </html>
   )
