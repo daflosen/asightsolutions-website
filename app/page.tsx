@@ -84,10 +84,6 @@ export default function Home() {
       </LazySection>
 
       <LazySection threshold={0.1} rootMargin="200px">
-        <BAFAFunding />
-      </LazySection>
-
-      <LazySection threshold={0.1} rootMargin="200px">
         <AboutUs />
       </LazySection>
 
@@ -105,6 +101,10 @@ export default function Home() {
 
       <LazySection threshold={0.1} rootMargin="200px">
         <FAQSimple />
+      </LazySection>
+
+      <LazySection threshold={0.1} rootMargin="200px">
+        <BAFAFunding />
       </LazySection>
 
       <LazySection threshold={0.1} rootMargin="200px">

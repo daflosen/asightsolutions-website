@@ -93,11 +93,6 @@ export default function Services() {
                     <div className="pb-8 pl-20 pr-8">
                       {/* Detailed Content */}
                       <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 md:p-8">
-                        {servicesDetailed[index]?.detailedTitle && (
-                          <h3 className="text-2xl font-semibold text-white mb-4">
-                            {servicesDetailed[index].detailedTitle}
-                          </h3>
-                        )}
                         <div className="prose prose-invert max-w-none">
                           {servicesDetailed[index]?.detailedContent ? (
                             <div

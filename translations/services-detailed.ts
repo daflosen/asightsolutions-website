@@ -5,9 +5,8 @@ export const servicesDetailed = {
       items: [
         {
           number: '001',
-          name: 'Prozessdigitalisierung & Automatisierung',
+          name: 'Prozessdigitalisierung für den Mittelstand – Effizienz steigern, Kosten senken',
           description: 'Transformieren Sie Ihre analogen Prozesse in effiziente digitale Workflows mit bewährten Technologien.',
-          detailedTitle: 'Prozessdigitalisierung für den Mittelstand – Effizienz steigern, Kosten senken',
           detailedContent: `<p>Als führende Unternehmensberatung für Digitalisierung in Stuttgart transformieren wir Ihre analogen Geschäftsprozesse in hocheffiziente digitale Workflows. Mit über 200 erfolgreichen Digitalisierungsprojekten im Mittelstand kennen wir die Herausforderungen traditioneller Unternehmen genau.</p>
 
 <p>Unsere Prozessdigitalisierung beginnt mit einer detaillierten Analyse Ihrer bestehenden Abläufe. Wir identifizieren Automatisierungspotenziale, eliminieren Medienbrüche und reduzieren manuelle Tätigkeiten auf ein Minimum. Dabei setzen wir auf bewährte Technologien wie Robotic Process Automation (RPA), intelligente Dokumentenverarbeitung und Cloud-basierte Workflow-Management-Systeme.</p>
@@ -20,9 +19,8 @@ export const servicesDetailed = {
         },
         {
           number: '002',
-          name: 'Unternehmensberatung Digitalisierung',
+          name: 'Unternehmensberatung Digitalisierung Stuttgart – Ihr Partner für digitale Transformation',
           description: 'Ganzheitliche Digitalisierungsstrategie für Ihre digitale Transformation im Mittelstand.',
-          detailedTitle: 'Unternehmensberatung Digitalisierung Stuttgart – Ihr Partner für digitale Transformation',
           detailedContent: `<p>Die digitale Transformation ist mehr als nur Technologie – sie erfordert eine ganzheitliche Neuausrichtung Ihres Unternehmens. Als erfahrene Digitalisierungsberatung in Stuttgart entwickeln wir mit Ihnen eine maßgeschneiderte Digitalisierungsstrategie, die zu Ihrer Branche, Ihrer Unternehmensgröße und Ihrer Vision passt.</p>
 
 <p>Unsere Unternehmensberatung für Digitalisierung umfasst alle Aspekte der digitalen Transformation: Von der Digital-Readiness-Analyse über die Entwicklung digitaler Geschäftsmodelle bis zur Implementierung neuer Technologien. Wir analysieren Ihre Wertschöpfungskette, identifizieren digitale Chancen und entwickeln einen klaren Fahrplan für Ihre Transformation.</p>
@@ -35,9 +33,8 @@ export const servicesDetailed = {
         },
         {
           number: '003',
-          name: 'KI-Beratung & Machine Learning',
+          name: 'KI-Beratung Mittelstand – Künstliche Intelligenz praktisch einsetzen',
           description: 'Praktische KI-Lösungen für den Mittelstand – von Chatbots bis Predictive Maintenance.',
-          detailedTitle: 'KI-Beratung Mittelstand – Künstliche Intelligenz praktisch einsetzen',
           detailedContent: `<p>Künstliche Intelligenz ist keine Zukunftsmusik mehr – sie ist heute schon der Schlüssel zu Wettbewerbsvorteilen. Als spezialisierte KI-Beratung für den Mittelstand in Stuttgart machen wir künstliche Intelligenz für Ihr Unternehmen nutzbar, praktisch und profitabel.</p>
 
 <p>Viele mittelständische Unternehmen scheuen den Einsatz von KI aus Angst vor Komplexität und hohen Kosten. Wir zeigen Ihnen: KI muss weder kompliziert noch teuer sein. Mit unserer KI-Beratung identifizieren wir konkrete Anwendungsfälle in Ihrem Unternehmen – von der automatisierten Qualitätskontrolle über intelligente Preisoptimierung bis zur vorausschauenden Wartung (Predictive Maintenance).</p>
@@ -50,9 +47,8 @@ export const servicesDetailed = {
         },
         {
           number: '004',
-          name: 'Website & SEO-Optimierung',
+          name: 'Website erstellen lassen Stuttgart – SEO-optimiert für Top-Rankings',
           description: 'SEO-optimierte Websites mit modernem Design für Top-Rankings bei Google.',
-          detailedTitle: 'Website erstellen lassen Stuttgart – SEO-optimiert für Top-Rankings',
           detailedContent: `<p>Ihre Website ist Ihr wichtigster digitaler Vertriebskanal. Als Full-Service Digitalagentur in Stuttgart entwickeln wir nicht nur optisch ansprechende Websites, sondern digitale Vertriebsmaschinen, die nachweisbar mehr Kunden generieren.</p>
 
 <p>Unsere WordPress-Websites vereinen modernes Design mit technischer Exzellenz. Wir entwickeln responsive Webseiten, die auf allen Geräten perfekt funktionieren, blitzschnell laden und bei Google ganz oben ranken. Dabei setzen wir auf bewährte Content-Management-Systeme wie WordPress oder moderne Frameworks wie Next.js für maximale Performance.</p>
@@ -169,9 +165,8 @@ export const servicesDetailed = {
       items: [
         {
           number: '001',
-          name: 'Process Digitalization & Automation',
+          name: 'Process Digitalization for SMEs – Increase Efficiency, Reduce Costs',
           description: 'Transform your analog processes into efficient digital workflows with proven technologies.',
-          detailedTitle: 'Process Digitalization for SMEs – Increase Efficiency, Reduce Costs',
           detailedContent: `<p>As a leading consulting firm for digitalization in Stuttgart, we transform your analog business processes into highly efficient digital workflows. With over 200 successful digitalization projects in the SME sector, we understand the challenges faced by traditional companies.</p>
 
 <p>Our process digitalization begins with a detailed analysis of your existing workflows. We identify automation potential, eliminate media breaks, and minimize manual tasks. We utilize proven technologies such as Robotic Process Automation (RPA), intelligent document processing, and cloud-based workflow management systems.</p>
@@ -184,9 +179,8 @@ export const servicesDetailed = {
         },
         {
           number: '002',
-          name: 'Digital Transformation Consulting',
+          name: 'Digital Transformation Consulting Stuttgart – Your Partner for Digital Change',
           description: 'Holistic digitalization strategy for your digital transformation in the SME sector.',
-          detailedTitle: 'Digital Transformation Consulting Stuttgart – Your Partner for Digital Change',
           detailedContent: `<p>Digital transformation is more than just technology – it requires a holistic realignment of your company. As an experienced digitalization consultancy in Stuttgart, we develop a customized digitalization strategy with you that fits your industry, company size, and vision.</p>
 
 <p>Our consulting for digitalization encompasses all aspects of digital transformation: From digital readiness analysis through the development of digital business models to the implementation of new technologies. We analyze your value chain, identify digital opportunities, and develop a clear roadmap for your transformation.</p>
@@ -199,9 +193,8 @@ export const servicesDetailed = {
         },
         {
           number: '003',
-          name: 'AI Consulting & Machine Learning',
+          name: 'AI Consulting for SMEs – Implementing Artificial Intelligence Practically',
           description: 'Practical AI solutions for SMEs – from chatbots to predictive maintenance.',
-          detailedTitle: 'AI Consulting for SMEs – Implementing Artificial Intelligence Practically',
           detailedContent: `<p>Artificial intelligence is no longer future music – it's already the key to competitive advantages today. As a specialized AI consultancy for SMEs in Stuttgart, we make artificial intelligence usable, practical, and profitable for your company.</p>
 
 <p>Many mid-sized companies shy away from using AI out of fear of complexity and high costs. We show you: AI doesn't have to be complicated or expensive. With our AI consulting, we identify concrete use cases in your company – from automated quality control through intelligent price optimization to predictive maintenance.</p>
@@ -214,9 +207,8 @@ export const servicesDetailed = {
         },
         {
           number: '004',
-          name: 'Website & SEO Optimization',
+          name: 'Website Development Stuttgart – SEO-Optimized for Top Rankings',
           description: 'SEO-optimized websites with modern design for top Google rankings.',
-          detailedTitle: 'Website Development Stuttgart – SEO-Optimized for Top Rankings',
           detailedContent: `<p>Your website is your most important digital sales channel. As a full-service digital agency in Stuttgart, we develop not just visually appealing websites, but digital sales machines that demonstrably generate more customers.</p>
 
 <p>Our WordPress websites combine modern design with technical excellence. We develop responsive websites that work perfectly on all devices, load lightning-fast, and rank at the top of Google. We rely on proven content management systems like WordPress or modern frameworks like Next.js for maximum performance.</p>
