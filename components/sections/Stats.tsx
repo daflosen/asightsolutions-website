@@ -2,8 +2,11 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import { useTranslations } from '@/hooks/useTranslations'
 
 export default function Stats() {
+  const t = useTranslations()
+
   return (
     <section className="py-20" style={{ backgroundColor: '#F5F5F5' }}>
       <div className="max-w-7xl mx-auto px-8">
@@ -17,13 +20,12 @@ export default function Stats() {
               <span className="w-6 h-6 bg-gray-900 rounded-full inline-flex items-center justify-center text-white text-sm font-bold">
                 +
               </span>
-              <span className="text-sm font-bold">Why choose us</span>
+              <span className="text-sm font-bold">{t.stats.badge}</span>
             </div>
 
             <h2 className="leading-[1.2]" style={{ fontSize: 'clamp(28px, 7vw, 60px)', fontWeight: 600, fontFamily: 'Inter, sans-serif', color: '#2d3436' }}>
-              Proven results for every project,<br className="hidden md:block" />
-              <span style={{ color: '#B3B4B5' }}>with a focus on precision and<br className="hidden md:block" />
-              functionality.</span>
+              {t.stats.mainTitle}<br className="hidden md:block" />
+              <span style={{ color: '#B3B4B5' }}>{t.stats.mainTitleGray}</span>
             </h2>
           </div>
         </motion.div>
@@ -51,25 +53,23 @@ export default function Stats() {
             viewport={{ once: true }}
           >
             <p className="text-2xl mb-12" style={{ color: '#2d3436' }}>
-              No overhead, just tools precisely targeting your<br />
-              very individual processual needs. <span style={{ color: '#B3B4B5' }}>Thoughtful, powerful and user centered tools that make your work easier.</span>
+              {t.stats.description}<br />
+              {t.stats.descriptionBr} <span style={{ color: '#B3B4B5' }}>{t.stats.descriptionGray}</span>
             </p>
 
             <div className="grid grid-cols-2 gap-8 mb-12">
               <div>
                 <span className="text-sm text-gray-500">01</span>
-                <h3 className="text-6xl font-bold my-4">50+</h3>
+                <h3 className="text-6xl font-bold my-4">{t.stats.stat1Value}</h3>
                 <p>
-                  Successful projects<br />
-                  completed
+                  {t.stats.stat1Label}
                 </p>
               </div>
               <div>
                 <span className="text-sm text-gray-500">02</span>
-                <h3 className="text-6xl font-bold my-4">98%</h3>
+                <h3 className="text-6xl font-bold my-4">{t.stats.stat2Value}</h3>
                 <p>
-                  Customer<br />
-                  satisfaction rate
+                  {t.stats.stat2Label}
                 </p>
               </div>
             </div>

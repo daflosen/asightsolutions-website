@@ -52,6 +52,32 @@ export const translations = {
       title: 'About Us',
       subtitle: 'Your partner for digital transformation',
       description: 'We are a digital consulting agency based in Stuttgart, specializing in digitalization for medium-sized businesses. With BAFA funding and over 200 completed projects, we help companies successfully navigate their digital transformation.',
+      brandName: 'asightsolutions®',
+      mainTitle: 'How we launch',
+      mainTitleGray: 'process optimizations projects and tool integrations.',
+      introText: 'See how our team combines creativity, technology, and strategy to build powerful digital solutions.',
+      processSteps: [
+        {
+          number: '01',
+          title: 'With a team that has proven experience in the industrial fields',
+          description: 'Deep industry knowledge combined with technical expertise'
+        },
+        {
+          number: '02',
+          title: 'User centricity with a deep, experienced but pragmatic methodological approach to problems',
+          description: 'Human-centered design meets practical problem-solving'
+        },
+        {
+          number: '03',
+          title: 'Full Stack and Low Code developers which understand your needs',
+          description: 'Technical solutions tailored to your specific requirements'
+        },
+        {
+          number: '04',
+          title: 'Make results measurable for your perceived success feeling',
+          description: 'Transparent metrics and clear success indicators'
+        }
+      ],
       stats: [
         { value: '200+', label: 'Projects' },
         { value: '10+', label: 'Years Experience' },
@@ -60,6 +86,16 @@ export const translations = {
       ]
     },
     stats: {
+      badge: 'Why choose us',
+      mainTitle: 'Proven results for every project,',
+      mainTitleGray: 'with a focus on precision and functionality.',
+      description: 'No overhead, just tools precisely targeting your',
+      descriptionBr: 'very individual processual needs.',
+      descriptionGray: 'Thoughtful, powerful and user centered tools that make your work easier.',
+      stat1Value: '50+',
+      stat1Label: 'Successful projects completed',
+      stat2Value: '98%',
+      stat2Label: 'Customer satisfaction rate',
       items: [
         { value: '200+', label: 'Successful Projects' },
         { value: '50+', label: 'Happy Clients' },
@@ -69,7 +105,7 @@ export const translations = {
     },
     testimonials: {
       badge: 'Client Success Stories',
-      title: 'What Our Clients Say',
+      title: 'Experiences.',
       items: [
         {
           text: 'Working with A Sight Solutions transformed our business. Their expertise in process automation saved us countless hours.',
@@ -208,6 +244,32 @@ export const translations = {
       title: 'Über Uns',
       subtitle: 'Ihr Partner für Digitalisierung Stuttgart',
       description: 'Wir sind eine spezialisierte Unternehmensberatung für Digitalisierung in Stuttgart. Mit BAFA-Förderung und über 200 erfolgreich abgeschlossenen Projekten begleiten wir Unternehmen bei der digitalen Transformation. Als BAFA Berater Stuttgart unterstützen wir besonders den Mittelstand.',
+      brandName: 'asightsolutions®',
+      mainTitle: 'Wie wir',
+      mainTitleGray: 'Prozessoptimierungs-Projekte und Tool-Integrationen umsetzen.',
+      introText: 'Sehen Sie, wie unser Team Kreativität, Technologie und Strategie kombiniert, um leistungsstarke digitale Lösungen zu entwickeln.',
+      processSteps: [
+        {
+          number: '01',
+          title: 'Mit einem Team mit nachgewiesener Erfahrung in industriellen Bereichen',
+          description: 'Tiefes Branchenwissen kombiniert mit technischer Expertise'
+        },
+        {
+          number: '02',
+          title: 'Nutzerzentriert mit einem tiefen, erfahrenen aber pragmatischen methodischen Ansatz',
+          description: 'Human-Centered Design trifft auf praktische Problemlösung'
+        },
+        {
+          number: '03',
+          title: 'Full Stack und Low-Code Entwickler, die Ihre Bedürfnisse verstehen',
+          description: 'Technische Lösungen, die auf Ihre spezifischen Anforderungen zugeschnitten sind'
+        },
+        {
+          number: '04',
+          title: 'Ergebnisse messbar machen für Ihr Erfolgsgefühl',
+          description: 'Transparente Metriken und klare Erfolgsindikatoren'
+        }
+      ],
       stats: [
         { value: '200+', label: 'Projekte' },
         { value: '10+', label: 'Jahre Erfahrung' },
@@ -216,6 +278,16 @@ export const translations = {
       ]
     },
     stats: {
+      badge: 'Warum uns wählen',
+      mainTitle: 'Nachweisbare Ergebnisse für jedes Projekt,',
+      mainTitleGray: 'mit Fokus auf Präzision und Funktionalität.',
+      description: 'Kein Overhead, nur Tools die präzise auf Ihre',
+      descriptionBr: 'individuellen prozessualen Bedürfnisse abzielen.',
+      descriptionGray: 'Durchdachte, leistungsstarke und nutzerzentrierte Tools, die Ihre Arbeit erleichtern.',
+      stat1Value: '50+',
+      stat1Label: 'Erfolgreich abgeschlossene Projekte',
+      stat2Value: '98%',
+      stat2Label: 'Kundenzufriedenheit',
       items: [
         { value: '200+', label: 'Erfolgreiche Projekte' },
         { value: '50+', label: 'Zufriedene Kunden' },
@@ -225,7 +297,7 @@ export const translations = {
     },
     testimonials: {
       badge: 'Kundenstimmen',
-      title: 'Das sagen unsere Kunden',
+      title: 'Erfahrungen.',
       items: [
         {
           text: 'Die Zusammenarbeit mit A Sight Solutions hat unser Geschäft transformiert. Ihre Expertise in Prozessautomatisierung hat uns unzählige Stunden gespart.',

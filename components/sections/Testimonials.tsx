@@ -2,34 +2,17 @@
 
 import { useRef, useEffect, useState } from 'react'
 import { useInView, animate } from 'framer-motion'
+import { useTranslations } from '@/hooks/useTranslations'
 
 export default function Testimonials() {
+  const t = useTranslations()
+  const testimonials = t.testimonials.items
+
   const statsRef = useRef<HTMLDivElement>(null)
   const isStatsInView = useInView(statsRef, { once: true, amount: 0.5 })
   const [toolsCount, setToolsCount] = useState(0)
   const [projectsCount, setProjectsCount] = useState(0)
   const [satisfactionCount, setSatisfactionCount] = useState(0)
-
-  const testimonials = [
-    {
-      name: 'Janine Carter',
-      role: 'Head of PMO',
-      rating: 5,
-      text: 'Incredible team! They delivered exactly what we needed, on time and beyond expectations.'
-    },
-    {
-      name: 'Anna Schönbühl',
-      role: 'Marketing Director',
-      rating: 5,
-      text: 'A smooth process from start to finish. It\' crazy what you can achieve these days!'
-    },
-    {
-      name: 'Viola Frederiksen',
-      role: 'Startup Hub',
-      rating: 5,
-      text: 'Impressive methodological approach. The solution from asight is exactly what we envisioned—clean, modern, and unique.'
-    }
-  ]
 
   // Counter animations
   useEffect(() => {
@@ -76,13 +59,13 @@ export default function Testimonials() {
         <div className="mb-16 relative flex items-start">
           <div className="flex items-center gap-2 absolute left-0 top-0">
             <span className="w-2 h-2 bg-black rounded-full" />
-            <span className="text-sm font-medium">Testimonials</span>
+            <span className="text-sm font-medium">{t.testimonials.badge}</span>
           </div>
 
           <div className="flex-1 flex justify-center">
             <div>
               <h2 className="text-[48px] md:text-[80px] lg:text-[120px] font-bold leading-none mb-2">
-                Experiences.
+                {t.testimonials.title}
               </h2>
               <p className="text-base">©2025</p>
             </div>
@@ -142,11 +125,11 @@ export default function Testimonials() {
               <div className="flex items-center gap-3 mb-4">
                 <img
                   src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&h=200&fit=crop&crop=face"
-                  alt={testimonials[0].name}
+                  alt={testimonials[0].author}
                   className="w-12 h-12 rounded-full object-cover bg-gray-300"
                 />
                 <div>
-                  <h3 className="text-base font-semibold">{testimonials[0].name}</h3>
+                  <h3 className="text-base font-semibold">{testimonials[0].author}</h3>
                   <p className="text-sm text-gray-600">{testimonials[0].role}</p>
                 </div>
               </div>
@@ -171,11 +154,11 @@ export default function Testimonials() {
               <div className="flex items-center gap-3">
                 <img
                   src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&h=200&fit=crop&crop=face"
-                  alt={testimonials[1].name}
+                  alt={testimonials[1].author}
                   className="w-12 h-12 rounded-full object-cover bg-gray-300"
                 />
                 <div>
-                  <h3 className="text-base font-semibold">{testimonials[1].name}</h3>
+                  <h3 className="text-base font-semibold">{testimonials[1].author}</h3>
                   <p className="text-sm text-gray-600">{testimonials[1].role}</p>
                 </div>
               </div>
@@ -188,11 +171,11 @@ export default function Testimonials() {
               <div className="flex items-center gap-3 mb-4">
                 <img
                   src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop&crop=face"
-                  alt={testimonials[2].name}
+                  alt={testimonials[2].author}
                   className="w-12 h-12 rounded-full object-cover bg-gray-300"
                 />
                 <div>
-                  <h3 className="text-base font-semibold">{testimonials[2].name}</h3>
+                  <h3 className="text-base font-semibold">{testimonials[2].author}</h3>
                   <p className="text-sm text-gray-600">{testimonials[2].role}</p>
                 </div>
               </div>
