@@ -1,43 +1,45 @@
 'use client'
 
 import { motion } from 'framer-motion'
-
-const teamMembers = [
-  {
-    id: 1,
-    name: 'Florian Bartsch',
-    position: 'CEO',
-    company: 'at asightsolutions®',
-    avatar: '👨‍💼',
-    photo: '/images/team/florian.jpg'
-  },
-  {
-    id: 2,
-    name: 'Jürgen Rentschler',
-    position: 'Full Stack Developer',
-    company: 'at asightsolutions®',
-    avatar: '👨‍💻',
-    photo: '/images/team/jurgen.jpg'
-  },
-  {
-    id: 3,
-    name: 'Sophie Gehlert',
-    position: 'Creative Director',
-    company: 'at asightsolutions®',
-    avatar: '👩‍🎨',
-    photo: '/images/team/sophie.jpg'
-  },
-  {
-    id: 4,
-    name: 'Alex Eyb',
-    position: 'UX/UI Designer',
-    company: 'at asightsolutions®',
-    avatar: '👨‍🎨',
-    photo: '/images/AlexEyb-pica.png'
-  }
-]
+import { useTranslations } from '@/hooks/useTranslations'
 
 export default function Team() {
+  const t = useTranslations()
+
+  const teamMembers = [
+    {
+      id: 1,
+      name: t.teamSection.members[0].name,
+      position: t.teamSection.members[0].position,
+      company: t.teamSection.members[0].company,
+      avatar: '👨‍💼',
+      photo: '/images/team/florian.jpg'
+    },
+    {
+      id: 2,
+      name: t.teamSection.members[1].name,
+      position: t.teamSection.members[1].position,
+      company: t.teamSection.members[1].company,
+      avatar: '👨‍💻',
+      photo: '/images/team/jurgen.jpg'
+    },
+    {
+      id: 3,
+      name: t.teamSection.members[2].name,
+      position: t.teamSection.members[2].position,
+      company: t.teamSection.members[2].company,
+      avatar: '👩‍🎨',
+      photo: '/images/team/sophie.jpg'
+    },
+    {
+      id: 4,
+      name: t.teamSection.members[3].name,
+      position: t.teamSection.members[3].position,
+      company: t.teamSection.members[3].company,
+      avatar: '👨‍🎨',
+      photo: '/images/AlexEyb-pica.png'
+    }
+  ]
   return (
     <section className="py-20" style={{ backgroundColor: '#F5F5F5' }}>
       <div className="container mx-auto px-6">
@@ -53,12 +55,12 @@ export default function Team() {
             <div className="flex flex-col justify-between p-8 lg:p-12 py-12 lg:py-16">
               {/* Top - Company name and title */}
               <div className="mb-16">
-                <p className="text-xs font-bold mb-4">asightsolutions®</p>
+                <p className="text-xs font-bold mb-4">{t.teamSection.brandName}</p>
                 <h3 className="text-3xl lg:text-4xl font-bold leading-tight">
-                  <span className="text-black">The faces </span>
-                  <span className="text-gray-400">behind</span>
+                  <span className="text-black">{t.teamSection.heading}</span>
+                  <span className="text-gray-400">{t.teamSection.headingGray}</span>
                   <br />
-                  <span className="text-gray-400">the projects.</span>
+                  <span className="text-gray-400">{t.teamSection.headingGray2}</span>
                 </h3>
               </div>
 
@@ -71,18 +73,18 @@ export default function Team() {
               {/* Bottom - Call to action and additional text */}
               <div className="flex flex-col lg:flex-row gap-8 items-start justify-between">
                 <div className="flex-shrink-0">
-                  <h4 className="text-base font-bold text-black mb-2">Be part of our mission</h4>
+                  <h4 className="text-base font-bold text-black mb-2">{t.teamSection.missionTitle}</h4>
                   <p className="text-gray-600 mb-4 leading-relaxed text-sm max-w-[180px]">
-                    If you're ready to create and collaborate, we'd love to hear from you.
+                    {t.teamSection.missionText}
                   </p>
                   <button className="bg-black text-white px-5 py-2.5 rounded-full text-xs font-medium hover:scale-105 transition-transform">
-                    Apply now
+                    {t.teamSection.applyButton}
                   </button>
                 </div>
                 <div className="max-w-md lg:ml-auto lg:pl-20 pl-0">
                   <p className="text-base lg:text-xl xl:text-2xl font-bold leading-relaxed indent-8 lg:indent-12">
-                    <span className="text-black">We believe great work comes from collaboration.</span>{' '}
-                    <span className="text-gray-600">That's why we work closely with each other to ensure every project meets your goals and exceeds expectations.</span>
+                    <span className="text-black">{t.teamSection.collaborationHeading}</span>{' '}
+                    <span className="text-gray-600">{t.teamSection.collaborationText}</span>
                   </p>
                 </div>
               </div>

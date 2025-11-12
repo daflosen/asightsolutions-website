@@ -2,8 +2,10 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import { useTranslations } from '@/hooks/useTranslations'
 
 export default function PreFooter() {
+  const t = useTranslations()
   return (
     <section className="py-20 relative" style={{ backgroundColor: '#F5F5F5' }}>
       <div className="container mx-auto px-6">
@@ -26,9 +28,9 @@ export default function PreFooter() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <p className="text-sm text-black mb-4">tel: +49 151 571 65 903</p>
+            <p className="text-sm text-black mb-4">{t.preFooterSection.phone}</p>
             <a
-              href="mailto:hello@asightsolutions.com"
+              href={`mailto:${t.preFooterSection.email}`}
               className="inline-flex items-center gap-2 text-xl md:text-2xl font-semibold text-black hover:opacity-70 transition-opacity break-all"
               style={{
                 textDecoration: 'underline',
@@ -39,7 +41,7 @@ export default function PreFooter() {
               <span className="w-6 h-6 rounded-full bg-black flex items-center justify-center text-white text-xs flex-shrink-0">
                 ✉
               </span>
-              hello@asightsolutions.com
+              {t.preFooterSection.email}
             </a>
           </motion.div>
 
@@ -52,19 +54,19 @@ export default function PreFooter() {
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
             >
-              <p className="text-sm text-black mb-6">Navigation</p>
+              <p className="text-sm text-black mb-6">{t.preFooterSection.navigationTitle}</p>
               <nav className="space-y-3 md:space-y-4">
                 <Link href="#home" className="block text-xl md:text-2xl font-medium text-black hover:opacity-70 transition-opacity">
-                  Home
+                  {t.preFooterSection.navHome}
                 </Link>
                 <Link href="#about" className="block text-xl md:text-2xl font-medium text-black hover:opacity-70 transition-opacity">
-                  This is us
+                  {t.preFooterSection.navAbout}
                 </Link>
                 <Link href="#projects" className="block text-xl md:text-2xl font-medium text-black hover:opacity-70 transition-opacity">
-                  Projects
+                  {t.preFooterSection.navProjects}
                 </Link>
                 <Link href="#blog" className="block text-xl md:text-2xl font-medium text-black hover:opacity-70 transition-opacity">
-                  Blog
+                  {t.preFooterSection.navBlog}
                 </Link>
               </nav>
             </motion.div>
@@ -76,7 +78,7 @@ export default function PreFooter() {
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
             >
-              <p className="text-sm text-black mb-6">Social</p>
+              <p className="text-sm text-black mb-6">{t.preFooterSection.socialTitle}</p>
               <nav className="space-y-3 md:space-y-4">
                 <a
                   href="https://twitter.com"
@@ -84,7 +86,7 @@ export default function PreFooter() {
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-xl md:text-2xl font-medium text-black hover:opacity-70 transition-opacity"
                 >
-                  Twitter <span className="text-base md:text-lg">↗</span>
+                  {t.preFooterSection.socialTwitter} <span className="text-base md:text-lg">↗</span>
                 </a>
                 <a
                   href="https://instagram.com"
@@ -92,7 +94,7 @@ export default function PreFooter() {
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-xl md:text-2xl font-medium text-black hover:opacity-70 transition-opacity"
                 >
-                  Instagram <span className="text-base md:text-lg">↗</span>
+                  {t.preFooterSection.socialInstagram} <span className="text-base md:text-lg">↗</span>
                 </a>
                 <a
                   href="https://dribbble.com"
@@ -100,7 +102,7 @@ export default function PreFooter() {
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-xl md:text-2xl font-medium text-black hover:opacity-70 transition-opacity"
                 >
-                  Dribbble <span className="text-base md:text-lg">↗</span>
+                  {t.preFooterSection.socialDribbble} <span className="text-base md:text-lg">↗</span>
                 </a>
               </nav>
             </motion.div>
@@ -124,11 +126,11 @@ export default function PreFooter() {
               }}
             >
               <span style={{ fontSize: 'clamp(100px, 14vw, 200px)' }}>
-                asight<span style={{ fontSize: '0.6em', verticalAlign: 'super' }}>®</span>
+                {t.preFooterSection.brandName}<span style={{ fontSize: '0.6em', verticalAlign: 'super' }}>®</span>
               </span>
               <br />
               <span style={{ fontSize: 'clamp(30px, 4vw, 60px)' }}>
-                solutions
+                {t.preFooterSection.brandSuffix}
               </span>
             </h2>
           </div>

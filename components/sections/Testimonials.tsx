@@ -82,7 +82,7 @@ export default function Testimonials() {
                   4.9<span className="text-2xl text-gray-500">/5</span>
                 </div>
                 <p className="text-sm text-gray-600 leading-relaxed flex-1 pt-2">
-                  We've delivered 50+ projects that help companies generate results.
+                  {t.testimonials.ratingText}
                 </p>
               </div>
             </div>
@@ -193,15 +193,15 @@ export default function Testimonials() {
         <div ref={statsRef} className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
           <div>
             <h3 className="text-6xl font-bold mb-2">{toolsCount}+</h3>
-            <p className="text-gray-600">Tools designed</p>
+            <p className="text-gray-600 whitespace-pre-line">{t.testimonials.statsLabels.toolsDesigned}</p>
           </div>
           <div>
             <h3 className="text-6xl font-bold mb-2">{projectsCount}+</h3>
-            <p className="text-gray-600">Successful<br />projects launched</p>
+            <p className="text-gray-600 whitespace-pre-line">{t.testimonials.statsLabels.successfulProjects}</p>
           </div>
           <div>
             <h3 className="text-6xl font-bold mb-2">{satisfactionCount}%</h3>
-            <p className="text-gray-600">Client<br />satisfaction rate</p>
+            <p className="text-gray-600 whitespace-pre-line">{t.testimonials.statsLabels.clientSatisfaction}</p>
           </div>
         </div>
       </div>

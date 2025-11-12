@@ -3,8 +3,10 @@
 import { motion, useScroll, useTransform, useInView, animate } from 'framer-motion'
 import { useRef, useEffect, useState } from 'react'
 import Image from 'next/image'
+import { useTranslations } from '@/hooks/useTranslations'
 
 export default function CaseStudy() {
+  const t = useTranslations()
   const sectionRef = useRef<HTMLElement>(null)
   const counterRef = useRef<HTMLDivElement>(null)
   const isCounterInView = useInView(counterRef, { once: true, amount: 0.5 })
@@ -48,9 +50,9 @@ export default function CaseStudy() {
             className="flex-shrink-0"
           >
             <p className="text-sm text-gray-500">
-              <span className="font-bold">asightsolutions®</span><br />
-              Every project we take on is<br />
-              designed for long-term success.
+              <span className="font-bold">{t.caseStudy.badge}</span><br />
+              {t.caseStudy.tagline.split('. ')[0]}.<br />
+              {t.caseStudy.tagline.split('. ')[1] || 'designed for long-term success.'}
             </p>
           </motion.div>
 
@@ -62,10 +64,10 @@ export default function CaseStudy() {
           >
             <div className="max-w-4xl">
               <h2 className="text-[24px] md:text-[32px] lg:text-[40px] font-semibold mb-6 lg:mb-8 leading-[1.2]" style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
-                <span className="text-gray-400">Our approach is straight forward: </span><span style={{ color: '#2d3436' }}>we focus on precisely targeting functionality ensuring that every digital solution serves a clear purpose without unnecessary complexity and overhead.</span>
+                <span className="text-gray-400">{t.caseStudy.mainHeadingGray}</span><span style={{ color: '#2d3436' }}>{t.caseStudy.mainHeadingBlack}</span>
               </h2>
               <p className="text-base lg:text-lg text-gray-600 leading-relaxed">
-                We don't overpromise or use flashy marketing language. We simply build well-designed, functional tools and strategies that help businesses succeed.
+                {t.caseStudy.description}
               </p>
             </div>
           </motion.div>
@@ -135,9 +137,9 @@ export default function CaseStudy() {
             <div className="h-full flex flex-col justify-between">
               {/* Top Info - Small - Top Left */}
               <div>
-                <p className="text-sm mb-2 text-white opacity-90 font-bold">Case study (SEO)</p>
+                <p className="text-sm mb-2 text-white opacity-90 font-bold">{t.caseStudy.caseTitle}</p>
                 <p className="text-xs text-white opacity-70">
-                  ERP Customization, Frontend Optimization
+                  {t.caseStudy.caseSubtitle}
                 </p>
               </div>
 
@@ -150,22 +152,22 @@ export default function CaseStudy() {
                     fontSize: 'clamp(27px, 4vw, 60px)'
                   }}
                 >
-                  asightsolutions®
+                  {t.caseStudy.brandName}
                 </h2>
               </div>
 
               {/* Bottom Section - Link left, Text right */}
               <div className="flex justify-between items-end">
                 <a href="https://re-automation.net" target="_blank" rel="noopener noreferrer" className="text-sm text-white opacity-80 hover:opacity-100 transition-opacity underline inline-block">
-                  RE Automation Website →
+                  {t.caseStudy.websiteLink}
                 </a>
 
                 {/* Right aligned multi-line text */}
                 <div className="text-right text-white">
-                  <p className="text-[22px] leading-tight mb-1">From Site Audits,</p>
-                  <p className="text-[22px] leading-tight mb-1">Keyword Strategy</p>
-                  <p className="text-[22px] leading-tight mb-2">and Backlink Analytics…</p>
-                  <p className="text-sm opacity-80">...we do it all.</p>
+                  <p className="text-[22px] leading-tight mb-1">{t.caseStudy.performanceTitle}</p>
+                  <p className="text-[22px] leading-tight mb-1">{t.caseStudy.performanceSubtitle1}</p>
+                  <p className="text-[22px] leading-tight mb-2">{t.caseStudy.performanceSubtitle2}</p>
+                  <p className="text-sm opacity-80">{t.caseStudy.performanceNote}</p>
                 </div>
               </div>
             </div>
@@ -188,14 +190,14 @@ export default function CaseStudy() {
                 >
                   {/* Left Side - Performance Data (2/3) */}
                   <div className="flex-[2]">
-                    <p className="text-xs text-gray-500 mb-2">Performance Boost:</p>
-                    <h4 className="text-xl font-bold mb-2">Top Ten Keyword Positionings</h4>
-                    <p className="text-3xl font-bold mb-2">+20,</p>
-                    <p className="text-xl font-bold mb-4">Bounce rate -23%</p>
+                    <p className="text-xs text-gray-500 mb-2">{t.caseStudy.boostLabel}</p>
+                    <h4 className="text-xl font-bold mb-2">{t.caseStudy.boostTitle}</h4>
+                    <p className="text-3xl font-bold mb-2">{t.caseStudy.boostKeywords}</p>
+                    <p className="text-xl font-bold mb-4">{t.caseStudy.boostBounce}</p>
 
                     <div className="mt-4">
-                      <p className="text-xs text-gray-500 mb-2">Conversion Rate Improvement:</p>
-                      <p className="text-xl font-bold">2.2% → 5.9%</p>
+                      <p className="text-xs text-gray-500 mb-2">{t.caseStudy.conversionLabel}</p>
+                      <p className="text-xl font-bold">{t.caseStudy.conversionValue}</p>
                     </div>
                   </div>
 
@@ -210,11 +212,11 @@ export default function CaseStudy() {
                       ))}
                     </div>
                     <p className="text-sm text-gray-700 mb-3 leading-relaxed">
-                      "Thanks to the strong methodological approach we were able to increase our e-commerce return by 230%"
+                      {t.caseStudy.testimonialText}
                     </p>
                     <div className="flex items-center gap-3">
                       <div className="w-8 h-8 rounded-full bg-gray-300" />
-                      <p className="text-xs text-gray-600">Jürgen Rentscher</p>
+                      <p className="text-xs text-gray-600">{t.caseStudy.testimonialAuthor}</p>
                     </div>
                   </div>
                 </motion.div>
@@ -233,9 +235,9 @@ export default function CaseStudy() {
                       <div className="w-24 h-24 rounded-full border-8 border-gray-200 flex items-center justify-center mx-auto mb-3">
                         <span className="text-3xl font-bold">99</span>
                       </div>
-                      <p className="text-xs text-gray-500 text-center mb-3">Pagehealth score</p>
+                      <p className="text-xs text-gray-500 text-center mb-3">{t.caseStudy.pagehealthLabel}</p>
                       <p className="text-xs text-gray-600 text-center leading-tight px-2">
-                        We prioritize performance without sacrificing visual appeal or functionality.
+                        {t.caseStudy.pagehealthDescription}
                       </p>
                     </div>
                   </motion.div>
@@ -257,7 +259,7 @@ export default function CaseStudy() {
                         </p>
                         <span className="bg-[#3AA6B9] text-white text-xs px-3 py-1 rounded-full font-semibold">+30%</span>
                       </div>
-                      <p className="text-xs text-gray-500">quarterly visits</p>
+                      <p className="text-xs text-gray-500">{t.caseStudy.visitsLabel}</p>
                     </div>
 
                     {/* Chart Bars */}
@@ -342,15 +344,15 @@ export default function CaseStudy() {
                 viewport={{ once: true }}
                 className="text-white bg-gradient-to-b from-[#3AA6B9]/90 to-transparent backdrop-blur-sm rounded-2xl p-6"
               >
-                <p className="text-sm mb-2 opacity-90 font-bold">Case study (SEO)</p>
+                <p className="text-sm mb-2 opacity-90 font-bold">{t.caseStudy.caseTitle}</p>
                 <p className="text-xs opacity-70 mb-4">
-                  ERP Customization, Frontend Optimization
+                  {t.caseStudy.caseSubtitle}
                 </p>
                 <h2 className="text-[32px] font-semibold leading-[1.2] text-white mb-4" style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
-                  asightsolutions®
+                  {t.caseStudy.brandName}
                 </h2>
                 <a href="https://re-automation.net" target="_blank" rel="noopener noreferrer" className="text-sm opacity-80 hover:opacity-100 transition-opacity underline inline-block">
-                  RE Automation Website →
+                  {t.caseStudy.websiteLink}
                 </a>
               </motion.div>
 
@@ -367,14 +369,14 @@ export default function CaseStudy() {
             >
               {/* Left Side - Performance Data (2/3) */}
               <div className="flex-[2]">
-                <p className="text-[9px] text-gray-500 mb-1">Performance Boost:</p>
-                <h4 className="text-base lg:text-lg font-bold mb-1">Top Ten Keyword Positionings</h4>
-                <p className="text-xl lg:text-2xl font-bold mb-1">+20,</p>
-                <p className="text-base lg:text-lg font-bold">Bounce rate -23%</p>
+                <p className="text-[9px] text-gray-500 mb-1">{t.caseStudy.boostLabel}</p>
+                <h4 className="text-base lg:text-lg font-bold mb-1">{t.caseStudy.boostTitle}</h4>
+                <p className="text-xl lg:text-2xl font-bold mb-1">{t.caseStudy.boostKeywords}</p>
+                <p className="text-base lg:text-lg font-bold">{t.caseStudy.boostBounce}</p>
 
                 <div className="mt-2">
-                  <p className="text-[9px] text-gray-500 mb-1">Conversion Rate Improvement:</p>
-                  <p className="text-base lg:text-lg font-bold">2.2% → 5.9%</p>
+                  <p className="text-[9px] text-gray-500 mb-1">{t.caseStudy.conversionLabel}</p>
+                  <p className="text-base lg:text-lg font-bold">{t.caseStudy.conversionValue}</p>
                 </div>
               </div>
 
@@ -389,11 +391,11 @@ export default function CaseStudy() {
                   ))}
                 </div>
                 <p className="text-[10px] text-gray-700 mb-2 leading-relaxed">
-                  "Thanks to the strong methodological approach we were able to increase our e-commerce return by 230%"
+                  {t.caseStudy.testimonialText}
                 </p>
                 <div className="flex items-center gap-2">
                   <div className="w-6 h-6 rounded-full bg-gray-300" />
-                  <p className="text-[10px] text-gray-600">Jürgen Rentscher</p>
+                  <p className="text-[10px] text-gray-600">{t.caseStudy.testimonialAuthor}</p>
                 </div>
               </div>
             </motion.div>
@@ -412,9 +414,9 @@ export default function CaseStudy() {
                   <div className="w-16 h-16 lg:w-20 lg:h-20 rounded-full border-8 border-gray-200 flex items-center justify-center mx-auto mb-2">
                     <span className="text-xl lg:text-2xl font-bold">99</span>
                   </div>
-                  <p className="text-[9px] text-gray-500 text-center mb-2">Pagehealth score</p>
+                  <p className="text-[9px] text-gray-500 text-center mb-2">{t.caseStudy.pagehealthLabel}</p>
                   <p className="text-[8px] text-gray-600 text-center leading-tight px-1">
-                    We prioritize performance without sacrificing visual appeal or functionality.
+                    {t.caseStudy.pagehealthDescription}
                   </p>
                 </div>
               </motion.div>
@@ -436,7 +438,7 @@ export default function CaseStudy() {
                     </p>
                     <span className="bg-[#3AA6B9] text-white text-[8px] px-2 py-1 rounded-full font-semibold">+30%</span>
                   </div>
-                  <p className="text-[9px] text-gray-500">quarterly visits</p>
+                  <p className="text-[9px] text-gray-500">{t.caseStudy.visitsLabel}</p>
                 </div>
 
                 {/* Chart Bars - Heights scaled to fit card better */}

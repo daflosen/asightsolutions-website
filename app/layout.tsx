@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import LoadingScreen from '@/components/LoadingScreen'
 import Navigation from '@/components/common/Navigation'
+import FloatingContactWidget from '@/components/ui/FloatingContactWidget'
 import { LanguageProvider } from '@/contexts/LanguageContext'
 
 const inter = Inter({
@@ -104,6 +105,7 @@ export default function RootLayout({
         <LanguageProvider>
           <LoadingScreen />
           <Navigation />
+          <FloatingContactWidget />
           {children}
         </LanguageProvider>
 

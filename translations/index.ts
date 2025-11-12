@@ -106,10 +106,11 @@ export const translations = {
     testimonials: {
       badge: 'Client Success Stories',
       title: 'Experiences.',
+      ratingText: 'We\'ve delivered 50+ projects that help companies generate results.',
       items: [
         {
           text: 'Working with A Sight Solutions transformed our business. Their expertise in process automation saved us countless hours.',
-          author: 'Dr. Michael Schmidt',
+          author: 'Dr. Tessa Campbell',
           role: 'CEO, TechMed Solutions',
           rating: 5
         },
@@ -121,11 +122,16 @@ export const translations = {
         },
         {
           text: 'Professional, reliable, and innovative. Their AI solutions have revolutionized our workflows.',
-          author: 'Thomas Müller',
+          author: 'Tanja Müller',
           role: 'Operations Manager, Logistics Pro',
           rating: 5
         }
-      ]
+      ],
+      statsLabels: {
+        toolsDesigned: 'Tools designed',
+        successfulProjects: 'Successful\nprojects launched',
+        clientSatisfaction: 'Client\nsatisfaction rate'
+      }
     },
     team: {
       badge: 'Meet the Team',
@@ -189,6 +195,94 @@ export const translations = {
       menu: 'Menu',
       fullMenu: 'Full Menu',
       projectCount: '27'
+    },
+    ourClients: {
+      title: 'Our clients',
+      period: '(2016-25©)'
+    },
+    caseStudy: {
+      badge: 'asightsolutions®',
+      tagline: 'Every project we take on is designed for long-term success.',
+      mainHeadingGray: 'Our approach is straight forward: ',
+      mainHeadingBlack: 'we focus on precisely targeting functionality ensuring that every digital solution serves a clear purpose without unnecessary complexity and overhead.',
+      description: 'We don\'t overpromise or use flashy marketing language. We simply build well-designed, functional tools and strategies that help businesses succeed.',
+      caseTitle: 'Case study (SEO)',
+      caseSubtitle: 'ERP Customization, Frontend Optimization',
+      brandName: 'asightsolutions®',
+      websiteLink: 'RE Automation Website →',
+      performanceTitle: 'From Site Audits,',
+      performanceSubtitle1: 'Keyword Strategy',
+      performanceSubtitle2: 'and Backlink Analytics…',
+      performanceNote: '...we do it all.',
+      boostLabel: 'Performance Boost:',
+      boostTitle: 'Top Ten Keyword Positionings',
+      boostKeywords: '+20,',
+      boostBounce: 'Bounce rate -23%',
+      conversionLabel: 'Conversion Rate Improvement:',
+      conversionValue: '2.2% → 5.9%',
+      testimonialText: '"Thanks to the strong methodological approach we were able to increase our e-commerce return by 230%"',
+      testimonialAuthor: 'Jürgen Rentscher',
+      pagehealthLabel: 'Pagehealth score',
+      pagehealthDescription: 'We prioritize performance without sacrificing visual appeal or functionality.',
+      visitsLabel: 'quarterly visits'
+    },
+    ctaSimple: {
+      brandName: 'asightsolutions®',
+      heading: 'Have a project ',
+      headingGray: 'in mind?',
+      namePlaceholder: 'Name',
+      emailPlaceholder: 'Email',
+      phonePlaceholder: 'Phone',
+      messagePlaceholder: 'Message',
+      submitButton: 'Send message',
+      copyright: '© 2025 asightsolutions',
+      mainHeading: 'Let\'s talk.',
+      description: 'Tell us about your project—whether it\'s a process digitalization, SEO or your digital presence on the www.',
+      quickResponseTitle: 'Quick response',
+      quickResponseText: 'If you\'re ready to create and collaborate, we\'d love to hear from you.',
+      clearStepsTitle: 'Clear next Steps',
+      clearStepsText: 'After the consultation, we\'ll provide you with a detailed plan and timeline.',
+      founderRole: 'Founder Acquisition',
+      founderCompany: 'at asight®',
+      founderName: 'Alex Eyb'
+    },
+    teamSection: {
+      brandName: 'asightsolutions®',
+      heading: 'The faces ',
+      headingGray: 'behind',
+      headingGray2: 'the projects.',
+      missionTitle: 'Be part of our mission',
+      missionText: 'If you\'re ready to create and collaborate, we\'d love to hear from you.',
+      applyButton: 'Apply now',
+      collaborationHeading: 'We believe great work comes from collaboration.',
+      collaborationText: 'That\'s why we work closely with each other to ensure every project meets your goals and exceeds expectations.',
+      members: [
+        { name: 'Florian Bartsch', position: 'CEO', company: 'at asightsolutions®' },
+        { name: 'Jürgen Rentschler', position: 'Full Stack Developer', company: 'at asightsolutions®' },
+        { name: 'Sophie Gehlert', position: 'Creative Director', company: 'at asightsolutions®' },
+        { name: 'Alex Eyb', position: 'UX/UI Designer', company: 'at asightsolutions®' }
+      ]
+    },
+    preFooterSection: {
+      phone: 'tel: +49 151 571 65 903',
+      email: 'hello@asightsolutions.com',
+      navigationTitle: 'Navigation',
+      navHome: 'Home',
+      navAbout: 'This is us',
+      navProjects: 'Projects',
+      navBlog: 'Blog',
+      socialTitle: 'Social',
+      socialTwitter: 'Twitter',
+      socialInstagram: 'Instagram',
+      socialDribbble: 'Dribbble',
+      brandName: 'asight',
+      brandSuffix: 'solutions'
+    },
+    contactWidget: {
+      phone: 'Call',
+      email: 'Email',
+      whatsapp: 'WhatsApp',
+      calendar: 'Schedule'
     }
   },
   de: {
@@ -298,10 +392,11 @@ export const translations = {
     testimonials: {
       badge: 'Kundenstimmen',
       title: 'Erfahrungen.',
+      ratingText: 'Wir haben über 50 Projekte erfolgreich umgesetzt, die Unternehmen messbare Ergebnisse liefern.',
       items: [
         {
           text: 'Die Zusammenarbeit mit A Sight Solutions hat unser Geschäft transformiert. Ihre Expertise in Prozessautomatisierung hat uns unzählige Stunden gespart.',
-          author: 'Dr. Michael Schmidt',
+          author: 'Dr. Tessa Campbell',
           role: 'Geschäftsführer, TechMed Solutions',
           rating: 5
         },
@@ -313,11 +408,16 @@ export const translations = {
         },
         {
           text: 'Professionell, zuverlässig und innovativ. Ihre KI-Lösungen haben unsere Arbeitsabläufe revolutioniert.',
-          author: 'Thomas Müller',
+          author: 'Tanja Müller',
           role: 'Operations Manager, Logistics Pro',
           rating: 5
         }
-      ]
+      ],
+      statsLabels: {
+        toolsDesigned: 'Tools entwickelt',
+        successfulProjects: 'Erfolgreiche\nProjekte gestartet',
+        clientSatisfaction: 'Kunden-\nzufriedenheit'
+      }
     },
     team: {
       badge: 'Unser Team',
@@ -385,6 +485,94 @@ export const translations = {
       menu: 'Menü',
       fullMenu: 'Vollständiges Menü',
       projectCount: '27'
+    },
+    ourClients: {
+      title: 'Unsere Kunden',
+      period: '(2016-25©)'
+    },
+    caseStudy: {
+      badge: 'asightsolutions®',
+      tagline: 'Jedes Projekt ist auf langfristigen Erfolg ausgelegt.',
+      mainHeadingGray: 'Unser Ansatz ist klar: ',
+      mainHeadingBlack: 'Wir konzentrieren uns auf präzise Funktionalität und stellen sicher, dass jede digitale Lösung einen klaren Zweck erfüllt – ohne unnötige Komplexität und Overhead.',
+      description: 'Wir versprechen nicht zu viel und nutzen keine Marketing-Floskeln. Wir bauen einfach gut durchdachte, funktionale Tools und Strategien, die Unternehmen zum Erfolg verhelfen.',
+      caseTitle: 'Fallstudie (SEO)',
+      caseSubtitle: 'ERP Anpassung, Frontend Optimierung',
+      brandName: 'asightsolutions®',
+      websiteLink: 'RE Automation Website →',
+      performanceTitle: 'Von Site Audits,',
+      performanceSubtitle1: 'Keyword-Strategie',
+      performanceSubtitle2: 'bis Backlink-Analyse…',
+      performanceNote: '...wir machen alles.',
+      boostLabel: 'Performance-Steigerung:',
+      boostTitle: 'Top-10-Keyword-Platzierungen',
+      boostKeywords: '+20,',
+      boostBounce: 'Absprungrate -23%',
+      conversionLabel: 'Conversion-Rate-Verbesserung:',
+      conversionValue: '2,2% → 5,9%',
+      testimonialText: '"Dank des starken methodischen Ansatzes konnten wir unseren E-Commerce-Umsatz um 230% steigern"',
+      testimonialAuthor: 'Jürgen Rentschler',
+      pagehealthLabel: 'Pagehealth Score',
+      pagehealthDescription: 'Wir priorisieren Performance ohne visuelle Attraktivität oder Funktionalität zu opfern.',
+      visitsLabel: 'vierteljährliche Besuche'
+    },
+    ctaSimple: {
+      brandName: 'asightsolutions®',
+      heading: 'Haben Sie ein Projekt ',
+      headingGray: 'im Kopf?',
+      namePlaceholder: 'Name',
+      emailPlaceholder: 'E-Mail',
+      phonePlaceholder: 'Telefon',
+      messagePlaceholder: 'Nachricht',
+      submitButton: 'Nachricht senden',
+      copyright: '© 2025 asightsolutions',
+      mainHeading: 'Lassen Sie uns sprechen.',
+      description: 'Erzählen Sie uns von Ihrem Projekt – ob Prozessdigitalisierung, SEO oder Ihre digitale Präsenz im Web.',
+      quickResponseTitle: 'Schnelle Antwort',
+      quickResponseText: 'Wenn Sie bereit sind zu kreieren und zusammenzuarbeiten, würden wir uns freuen, von Ihnen zu hören.',
+      clearStepsTitle: 'Klare nächste Schritte',
+      clearStepsText: 'Nach der Beratung erhalten Sie einen detaillierten Plan und Zeitplan.',
+      founderRole: 'Gründer Akquise',
+      founderCompany: 'bei asight®',
+      founderName: 'Alex Eyb'
+    },
+    teamSection: {
+      brandName: 'asightsolutions®',
+      heading: 'Die Gesichter ',
+      headingGray: 'hinter',
+      headingGray2: 'den Projekten.',
+      missionTitle: 'Seien Sie Teil unserer Mission',
+      missionText: 'Wenn Sie bereit sind zu kreieren und zusammenzuarbeiten, würden wir uns freuen, von Ihnen zu hören.',
+      applyButton: 'Jetzt bewerben',
+      collaborationHeading: 'Wir glauben, dass großartige Arbeit aus Zusammenarbeit entsteht.',
+      collaborationText: 'Deshalb arbeiten wir eng miteinander, um sicherzustellen, dass jedes Projekt Ihre Ziele erfüllt und die Erwartungen übertrifft.',
+      members: [
+        { name: 'Florian Bartsch', position: 'Geschäftsführer', company: 'bei asightsolutions®' },
+        { name: 'Jürgen Rentschler', position: 'Full Stack Entwickler', company: 'bei asightsolutions®' },
+        { name: 'Sophie Gehlert', position: 'Creative Director', company: 'bei asightsolutions®' },
+        { name: 'Alex Eyb', position: 'UX/UI Designer', company: 'bei asightsolutions®' }
+      ]
+    },
+    preFooterSection: {
+      phone: 'tel: +49 151 571 65 903',
+      email: 'hallo@asightsolutions.com',
+      navigationTitle: 'Navigation',
+      navHome: 'Home',
+      navAbout: 'Das sind wir',
+      navProjects: 'Projekte',
+      navBlog: 'Blog',
+      socialTitle: 'Social',
+      socialTwitter: 'Twitter',
+      socialInstagram: 'Instagram',
+      socialDribbble: 'Dribbble',
+      brandName: 'asight',
+      brandSuffix: 'solutions'
+    },
+    contactWidget: {
+      phone: 'Anrufen',
+      email: 'E-Mail',
+      whatsapp: 'WhatsApp',
+      calendar: 'Termin buchen'
     }
   }
 } as const

@@ -2,8 +2,10 @@
 
 import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
+import { useTranslations } from '@/hooks/useTranslations'
 
 export default function OurClients() {
+  const t = useTranslations()
   const sectionRef = useRef<HTMLElement>(null)
   const [isScrolled, setIsScrolled] = useState(false)
 
@@ -40,9 +42,9 @@ export default function OurClients() {
             <span className="w-6 h-6 bg-black rounded-full inline-flex items-center justify-center text-white text-lg font-bold">
               +
             </span>
-            Our clients
+            {t.ourClients.title}
           </p>
-          <p className="text-sm text-gray-600">(2016-25©)</p>
+          <p className="text-sm text-gray-600">{t.ourClients.period}</p>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
           <div className="bg-white rounded-2xl p-8 flex items-center justify-center aspect-square hover:shadow-xl transition-all border border-gray-200">

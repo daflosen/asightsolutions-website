@@ -1,8 +1,10 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { useTranslations } from '@/hooks/useTranslations'
 
 export default function CTASimple() {
+  const t = useTranslations()
   return (
     <section className="min-h-screen relative overflow-hidden flex items-center">
       {/* Background Video */}
@@ -40,18 +42,18 @@ export default function CTASimple() {
             viewport={{ once: true }}
             className="bg-white rounded-3xl p-6 md:p-8 shadow-xl"
           >
-            <p className="text-xs font-bold mb-4 text-gray-900">asightsolutions®</p>
+            <p className="text-xs font-bold mb-4 text-gray-900">{t.ctaSimple.brandName}</p>
 
             <h3 className="text-2xl font-bold mb-6">
-              <span className="text-gray-900">Have a project </span>
-              <span className="text-gray-400">in mind?</span>
+              <span className="text-gray-900">{t.ctaSimple.heading}</span>
+              <span className="text-gray-400">{t.ctaSimple.headingGray}</span>
             </h3>
 
             <form className="space-y-4">
               <div>
                 <input
                   type="text"
-                  placeholder="Name"
+                  placeholder={t.ctaSimple.namePlaceholder}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
                 />
               </div>
@@ -59,7 +61,7 @@ export default function CTASimple() {
               <div>
                 <input
                   type="email"
-                  placeholder="Email"
+                  placeholder={t.ctaSimple.emailPlaceholder}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
                 />
               </div>
@@ -67,14 +69,14 @@ export default function CTASimple() {
               <div>
                 <input
                   type="tel"
-                  placeholder="Phone"
+                  placeholder={t.ctaSimple.phonePlaceholder}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
                 />
               </div>
 
               <div>
                 <textarea
-                  placeholder="Message"
+                  placeholder={t.ctaSimple.messagePlaceholder}
                   rows={4}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 resize-none"
                 />
@@ -84,12 +86,12 @@ export default function CTASimple() {
                 type="submit"
                 className="w-full bg-black text-white py-3 rounded-full font-medium hover:bg-gray-800 transition-colors"
               >
-                Send message
+                {t.ctaSimple.submitButton}
               </button>
             </form>
 
             <p className="text-xs text-gray-500 mt-4 text-center">
-              © 2025 asightsolutions
+              {t.ctaSimple.copyright}
             </p>
           </motion.div>
 
@@ -103,11 +105,11 @@ export default function CTASimple() {
             {/* Top Section */}
             <div>
               <h2 className="text-[48px] md:text-7xl lg:text-8xl font-bold mb-4 md:mb-8 leading-tight text-white">
-                Let's talk.
+                {t.ctaSimple.mainHeading}
               </h2>
 
               <p className="text-base md:text-xl lg:text-2xl leading-relaxed text-white opacity-90">
-                Tell us about your project—whether it's a process digitalization, SEO or your digital presence on the www.
+                {t.ctaSimple.description}
               </p>
             </div>
 
@@ -119,10 +121,10 @@ export default function CTASimple() {
                   <svg className="w-6 h-6 text-white flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
-                  <h3 className="text-base md:text-lg font-bold text-white">Quick response</h3>
+                  <h3 className="text-base md:text-lg font-bold text-white">{t.ctaSimple.quickResponseTitle}</h3>
                 </div>
                 <p className="text-sm text-white opacity-80">
-                  If you're ready to create and collaborate, we'd love to hear from you.
+                  {t.ctaSimple.quickResponseText}
                 </p>
               </div>
 
@@ -132,10 +134,10 @@ export default function CTASimple() {
                   <svg className="w-6 h-6 text-white flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 21h4v-4h4v-4h4v-4h4V5h2" />
                   </svg>
-                  <h3 className="text-base md:text-lg font-bold text-white">Clear next Steps</h3>
+                  <h3 className="text-base md:text-lg font-bold text-white">{t.ctaSimple.clearStepsTitle}</h3>
                 </div>
                 <p className="text-sm text-white opacity-80">
-                  After the consultation, we'll provide you with a detailed plan and timeline.
+                  {t.ctaSimple.clearStepsText}
                 </p>
               </div>
             </div>
@@ -157,9 +159,9 @@ export default function CTASimple() {
                 />
               </div>
               <div className="text-gray-900">
-                <p className="text-xs md:text-sm text-gray-600">Founder Acquisition</p>
-                <p className="text-[10px] md:text-xs text-gray-500">at asight®</p>
-                <p className="font-bold text-base md:text-lg mt-1">Alex Eyb</p>
+                <p className="text-xs md:text-sm text-gray-600">{t.ctaSimple.founderRole}</p>
+                <p className="text-[10px] md:text-xs text-gray-500">{t.ctaSimple.founderCompany}</p>
+                <p className="font-bold text-base md:text-lg mt-1">{t.ctaSimple.founderName}</p>
               </div>
             </motion.div>
           </motion.div>
