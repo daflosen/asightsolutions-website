@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import { useTranslations } from '@/hooks/useTranslations'
 
 const projects = [
   {
@@ -56,13 +57,15 @@ const projects = [
 ]
 
 export default function DigitalSolution() {
+  const t = useTranslations()
+
   return (
     <section className="py-20" style={{ backgroundColor: '#F5F5F5' }}>
       <div className="container mx-auto px-6">
         <div className="mb-16">
           <span className="inline-flex items-center gap-2 text-sm font-medium mb-8">
             <span className="w-2 h-2 bg-dark rounded-full" />
-            (27)
+            {t.digitalSolution.badge}
           </span>
 
           <div className="max-w-5xl mx-auto">
@@ -74,9 +77,9 @@ export default function DigitalSolution() {
                 className="text-left mb-4"
                 style={{ fontSize: 'clamp(48px, 12vw, 144px)', fontWeight: 600, fontFamily: 'Inter, sans-serif', lineHeight: '0.9' }}
               >
-                Your<br />
-                Digital<br />
-                Solution.
+                {t.digitalSolution.title.split('\n').map((line, i) => (
+                  <span key={i}>{line}{i < t.digitalSolution.title.split('\n').length - 1 && <br />}</span>
+                ))}
               </motion.h2>
 
               <motion.div
@@ -87,9 +90,7 @@ export default function DigitalSolution() {
                 className="flex-1 pt-0 md:pt-8"
               >
                 <p className="text-gray-500 leading-relaxed" style={{ fontSize: '16px', fontWeight: 600, fontFamily: 'Inter, sans-serif' }}>
-                  We've helped businesses across<br className="hidden md:block" />
-                  industries achieve their digitalization<br className="hidden md:block" />
-                  goals. Here are some of our recent tools.
+                  {t.digitalSolution.subtitle}
                 </p>
               </motion.div>
             </div>

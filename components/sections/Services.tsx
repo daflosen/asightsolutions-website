@@ -2,31 +2,11 @@
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-
-const services = [
-  {
-    number: '001',
-    name: 'Website Design & SEO',
-    description: 'Modern, responsive websites optimized for search engines. We create stunning digital experiences that drive traffic and convert visitors into customers.'
-  },
-  {
-    number: '002',
-    name: 'Full Stack & Low-Code Development',
-    description: 'End-to-end application development using cutting-edge technologies and low-code platforms. From concept to deployment, we build scalable solutions tailored to your needs.'
-  },
-  {
-    number: '003',
-    name: 'Our Personal Tech AI',
-    description: 'Custom AI solutions that automate workflows, enhance decision-making, and provide intelligent insights. Leverage the power of AI to transform your business operations.'
-  },
-  {
-    number: '004',
-    name: 'View all',
-    description: 'Explore our complete portfolio of digital services and solutions. From consulting to implementation, we offer comprehensive support for your digital transformation journey.'
-  }
-]
+import { useTranslations } from '@/hooks/useTranslations'
 
 export default function Services() {
+  const t = useTranslations()
+  const services = t.services.items
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null)
 
   const toggleService = (index: number) => {
@@ -50,7 +30,7 @@ export default function Services() {
             <span className="w-6 h-6 bg-white rounded-full inline-flex items-center justify-center text-[#3AA6B9] text-sm font-bold">
               +
             </span>
-            What we do
+            {t.services.badge}
           </span>
         </motion.div>
 
@@ -62,7 +42,7 @@ export default function Services() {
           className="text-center text-[48px] md:text-[56px] font-semibold text-white mb-16 leading-[1.2]"
           style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}
         >
-          Services (4)
+          {t.services.title}
         </motion.h2>
 
         {/* Service List - Full Width */}

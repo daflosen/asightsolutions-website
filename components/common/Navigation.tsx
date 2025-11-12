@@ -3,8 +3,10 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import LanguageToggle from '@/components/ui/LanguageToggle'
+import { useTranslations } from '@/hooks/useTranslations'
 
 export default function Navigation() {
+  const t = useTranslations()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
@@ -48,7 +50,7 @@ export default function Navigation() {
               fontSize: '0.9rem',
               padding: '0.5rem 0.75rem',
               transition: 'color 0.3s'
-            }}>This is us</a>
+            }}>{t.navigation.links.about}</a>
             <a href="#" style={{
               color: '#666',
               textDecoration: 'none',
@@ -58,26 +60,26 @@ export default function Navigation() {
               alignItems: 'center',
               gap: '0.3rem'
             }}>
-              Projects
+              {t.navigation.links.projects}
               <span style={{
                 fontSize: '0.7rem',
                 background: '#f0f0f0',
                 padding: '0.1rem 0.4rem',
                 borderRadius: '10px'
-              }}>27</span>
+              }}>{t.navigation.projectCount}</span>
             </a>
             <a href="#" style={{
               color: '#666',
               textDecoration: 'none',
               fontSize: '0.9rem',
               padding: '0.5rem 0.75rem'
-            }}>Blog</a>
+            }}>{t.navigation.links.blog}</a>
             <a href="#" style={{
               color: '#666',
               textDecoration: 'none',
               fontSize: '0.9rem',
               padding: '0.5rem 0.75rem'
-            }}>Contact</a>
+            }}>{t.navigation.links.contact}</a>
 
             <LanguageToggle />
 
@@ -107,7 +109,7 @@ export default function Navigation() {
                 <div style={{ width: '4px', height: '4px', background: 'white', borderRadius: '1px' }}></div>
                 <div style={{ width: '4px', height: '4px', background: 'white', borderRadius: '1px' }}></div>
               </div>
-              Menu
+              {t.navigation.menu}
             </button>
           </div>
 
@@ -223,7 +225,7 @@ export default function Navigation() {
                     alignItems: 'center'
                   }}
                 >
-                  This is us
+                  {t.navigation.links.about}
                 </a>
                 <a
                   href="#"
@@ -242,13 +244,13 @@ export default function Navigation() {
                     gap: '0.5rem'
                   }}
                 >
-                  Projects
+                  {t.navigation.links.projects}
                   <span style={{
                     fontSize: '0.8rem',
                     background: '#f0f0f0',
                     padding: '0.2rem 0.6rem',
                     borderRadius: '12px'
-                  }}>27</span>
+                  }}>{t.navigation.projectCount}</span>
                 </a>
                 <a
                   href="#"
@@ -266,7 +268,7 @@ export default function Navigation() {
                     alignItems: 'center'
                   }}
                 >
-                  Blog
+                  {t.navigation.links.blog}
                 </a>
                 <a
                   href="#"
@@ -284,7 +286,7 @@ export default function Navigation() {
                     alignItems: 'center'
                   }}
                 >
-                  Contact
+                  {t.navigation.links.contact}
                 </a>
 
                 <div style={{
@@ -325,7 +327,7 @@ export default function Navigation() {
                     <div style={{ width: '4px', height: '4px', background: 'white', borderRadius: '1px' }}></div>
                     <div style={{ width: '4px', height: '4px', background: 'white', borderRadius: '1px' }}></div>
                   </div>
-                  Full Menu
+                  {t.navigation.fullMenu}
                 </button>
               </nav>
             </motion.div>
