@@ -2,8 +2,10 @@
 
 import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
+import { useTranslations } from '@/hooks/useTranslations'
 
 export default function HeroVideo() {
+  const t = useTranslations()
   const videoContainerRef = useRef<HTMLDivElement>(null)
   const videoRef = useRef<HTMLVideoElement>(null)
   const [shouldPlayVideo, setShouldPlayVideo] = useState(false)
@@ -11,12 +13,7 @@ export default function HeroVideo() {
   const [mobileLayout, setMobileLayout] = useState<'centered' | 'stacked' | 'carousel'>('carousel')
   const [currentCardIndex, setCurrentCardIndex] = useState(0)
 
-  const services = [
-    { title: 'Process Digitalization', desc: 'Transform manual processes into efficient digital workflows' },
-    { title: 'Business Optimization', desc: 'Streamline operations and maximize efficiency' },
-    { title: 'Web Design & SEO', desc: 'Beautiful websites that rank and convert' },
-    { title: 'Full Stack Development', desc: 'From concept to deployment' }
-  ]
+  const services = t.hero.services
 
   // Carousel rotation effect
   useEffect(() => {
@@ -108,7 +105,7 @@ export default function HeroVideo() {
 
         {/* SEO H1 - Hidden visually but readable by search engines */}
         <h1 className="sr-only">
-          Digitalisierung Unternehmensberatung Stuttgart - A Sight Solutions: KI, Automatisierung & Prozessoptimierung für den Mittelstand
+          {t.hero.seoH1}
         </h1>
 
         {/* Main Logo "asight" - Responsive, prominent on mobile (visual H2) */}
@@ -125,9 +122,9 @@ export default function HeroVideo() {
       {/* Services List Top Right - Hidden on Mobile */}
       <div className="hidden lg:block absolute top-24 right-24 z-10 text-right opacity-0 animate-fade-in" style={{ animationDelay: '0.5s' }}>
         <ul className="space-y-2 leading-relaxed text-white opacity-80" style={{ fontSize: '18px', fontWeight: 600, fontFamily: 'Inter, sans-serif' }}>
-          <li>Process Digitalization & Tooling</li>
-          <li>Web Design and SEO</li>
-          <li>Full Stack & Low Code Development</li>
+          {services.slice(0, 3).map((service, i) => (
+            <li key={i}>{service.title}</li>
+          ))}
         </ul>
       </div>
 
@@ -163,8 +160,9 @@ export default function HeroVideo() {
         }}
       >
         <h1 className="text-white leading-[1.4]" style={{ fontSize: 'clamp(16px, 4vw, 22px)', fontWeight: 600, fontFamily: 'Inter, sans-serif', textIndent: '2em' }}>
-          Digital solutions and strategies that help<br />
-          your processes thrive and your business grow.
+          {t.hero.tagline.split('\n').map((line, i) => (
+            <span key={i}>{line}{i < t.hero.tagline.split('\n').length - 1 && <br />}</span>
+          ))}
         </h1>
       </div>
 
@@ -173,25 +171,15 @@ export default function HeroVideo() {
         <div className="lg:hidden absolute top-1/2 -translate-y-1/2 left-0 right-0 z-[15] opacity-0 animate-fade-in" style={{ animationDelay: '0.5s' }}>
           <div className="overflow-x-auto overflow-y-hidden pb-4 px-[5%] scrollbar-hide">
             <div className="flex gap-4 min-w-max">
-              <div className="min-w-[85vw] max-w-[320px] bg-white/15 backdrop-blur-md rounded-[24px] p-7 border border-white/20">
-                <h3 className="text-xl font-bold text-white mb-3">Process Digitalization</h3>
-                <p className="text-sm text-white/90 leading-relaxed">Transform manual processes into efficient digital workflows</p>
-              </div>
-              <div className="min-w-[85vw] max-w-[320px] bg-white/15 backdrop-blur-md rounded-[24px] p-7 border border-white/20">
-                <h3 className="text-xl font-bold text-white mb-3">Business Optimization</h3>
-                <p className="text-sm text-white/90 leading-relaxed">Streamline operations and maximize efficiency</p>
-              </div>
-              <div className="min-w-[85vw] max-w-[320px] bg-white/15 backdrop-blur-md rounded-[24px] p-7 border border-white/20">
-                <h3 className="text-xl font-bold text-white mb-3">Web Design & SEO</h3>
-                <p className="text-sm text-white/90 leading-relaxed">Beautiful websites that rank and convert</p>
-              </div>
-              <div className="min-w-[85vw] max-w-[320px] bg-white/15 backdrop-blur-md rounded-[24px] p-7 border border-white/20">
-                <h3 className="text-xl font-bold text-white mb-3">Full Stack Development</h3>
-                <p className="text-sm text-white/90 leading-relaxed">From concept to deployment</p>
-              </div>
+              {services.map((service, i) => (
+                <div key={i} className="min-w-[85vw] max-w-[320px] bg-white/15 backdrop-blur-md rounded-[24px] p-7 border border-white/20">
+                  <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
+                  <p className="text-sm text-white/90 leading-relaxed">{service.desc}</p>
+                </div>
+              ))}
             </div>
           </div>
-          <p className="text-center text-white/60 text-xs mt-3">← Swipe to explore →</p>
+          <p className="text-center text-white/60 text-xs mt-3">{t.hero.swipeHint}</p>
         </div>
       )}
 
@@ -199,24 +187,14 @@ export default function HeroVideo() {
       {mobileLayout === 'stacked' && (
         <div className="lg:hidden absolute top-1/2 -translate-y-1/2 left-0 right-0 z-[15] px-[5%] opacity-0 animate-fade-in" style={{ animationDelay: '0.5s' }}>
           <div className="space-y-3 max-h-[60vh] overflow-y-auto scrollbar-hide">
-            <div className="bg-white/15 backdrop-blur-md rounded-[20px] p-6 border border-white/20">
-              <h3 className="text-lg font-bold text-white mb-2">Process Digitalization</h3>
-              <p className="text-sm text-white/90 leading-relaxed">Transform manual processes into efficient digital workflows</p>
-            </div>
-            <div className="bg-white/15 backdrop-blur-md rounded-[20px] p-6 border border-white/20">
-              <h3 className="text-lg font-bold text-white mb-2">Business Optimization</h3>
-              <p className="text-sm text-white/90 leading-relaxed">Streamline operations and maximize efficiency</p>
-            </div>
-            <div className="bg-white/15 backdrop-blur-md rounded-[20px] p-6 border border-white/20">
-              <h3 className="text-lg font-bold text-white mb-2">Web Design & SEO</h3>
-              <p className="text-sm text-white/90 leading-relaxed">Beautiful websites that rank and convert</p>
-            </div>
-            <div className="bg-white/15 backdrop-blur-md rounded-[20px] p-6 border border-white/20">
-              <h3 className="text-lg font-bold text-white mb-2">Full Stack Development</h3>
-              <p className="text-sm text-white/90 leading-relaxed">From concept to deployment</p>
-            </div>
+            {services.map((service, i) => (
+              <div key={i} className="bg-white/15 backdrop-blur-md rounded-[20px] p-6 border border-white/20">
+                <h3 className="text-lg font-bold text-white mb-2">{service.title}</h3>
+                <p className="text-sm text-white/90 leading-relaxed">{service.desc}</p>
+              </div>
+            ))}
           </div>
-          <p className="text-center text-white/60 text-xs mt-4">↑ Scroll to explore ↓</p>
+          <p className="text-center text-white/60 text-xs mt-4">{t.hero.scrollHint}</p>
         </div>
       )}
 
@@ -294,7 +272,7 @@ export default function HeroVideo() {
               )
             })}
           </div>
-          <p className="text-center text-white/60 text-xs mt-5">← Swipe or wait for auto-rotation →</p>
+          <p className="text-center text-white/60 text-xs mt-5">{t.hero.swipeOrWait}</p>
         </div>
       )}
 
@@ -316,8 +294,8 @@ export default function HeroVideo() {
           />
         </div>
         <div className="flex-1 flex flex-col gap-[6px] p-5 justify-center">
-          <p className="text-[13px] font-medium text-gray-600 m-0">Founder</p>
-          <p className="text-[12px] text-gray-500 m-0">at asight®</p>
+          <p className="text-[13px] font-medium text-gray-600 m-0">{t.hero.founderRole}</p>
+          <p className="text-[12px] text-gray-500 m-0">{t.hero.founderCompany}</p>
           <h3 className="text-[20px] font-bold text-gray-900 my-2 leading-[1.1]">
             Florian Bartsch
           </h3>
@@ -325,7 +303,7 @@ export default function HeroVideo() {
             href="/contact"
             className="inline-flex items-center gap-2 bg-gray-900 text-white px-[18px] py-2 rounded-[18px] text-[13px] font-semibold no-underline transition-all self-start hover:translate-y-[-1px] hover:shadow-[0_4px_12px_rgba(0,0,0,0.2)]"
           >
-            Let&apos;s talk
+            {t.hero.contactButton}
             <span className="text-[11px] ml-[2px]">↗</span>
           </a>
         </div>
