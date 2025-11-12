@@ -83,6 +83,9 @@ export default function Home() {
         <Services />
       </LazySection>
 
+      {/* BAFA Section - prominent placement after Services */}
+      <BAFAFunding />
+
       <LazySection threshold={0.1} rootMargin="200px">
         <AboutUs />
       </LazySection>
@@ -102,9 +105,6 @@ export default function Home() {
       <LazySection threshold={0.1} rootMargin="200px">
         <FAQSimple />
       </LazySection>
-
-      {/* BAFA Section - always load for visibility */}
-      <BAFAFunding />
 
       <LazySection threshold={0.1} rootMargin="200px">
         <CTASimple />
