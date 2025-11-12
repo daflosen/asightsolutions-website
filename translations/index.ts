@@ -1,5 +1,8 @@
+import { servicesDetailed } from './services-detailed'
+
 export const translations = {
   en: {
+    ...servicesDetailed.en,
     hero: {
       services: [
         { title: 'Process Digitalization', desc: 'Transform manual processes into efficient digital workflows' },
@@ -286,6 +289,7 @@ export const translations = {
     }
   },
   de: {
+    ...servicesDetailed.de,
     hero: {
       services: [
         { title: 'Prozessdigitalisierung', desc: 'Digitale Transformation für effiziente Geschäftsprozesse' },

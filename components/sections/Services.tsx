@@ -7,6 +7,7 @@ import { useTranslations } from '@/hooks/useTranslations'
 export default function Services() {
   const t = useTranslations()
   const services = t.services.items
+  const servicesDetailed = (t as any).servicesDetailed?.items || services
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null)
 
   const toggleService = (index: number) => {
@@ -89,10 +90,27 @@ export default function Services() {
                     transition={{ duration: 0.3 }}
                     className="overflow-hidden"
                   >
-                    <div className="pb-6 pl-20">
-                      <p className="text-white/80 text-lg leading-relaxed">
-                        {service.description}
-                      </p>
+                    <div className="pb-8 pl-20 pr-8">
+                      {/* Detailed Content */}
+                      <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 md:p-8">
+                        {servicesDetailed[index]?.detailedTitle && (
+                          <h3 className="text-2xl font-semibold text-white mb-4">
+                            {servicesDetailed[index].detailedTitle}
+                          </h3>
+                        )}
+                        <div className="prose prose-invert max-w-none">
+                          {servicesDetailed[index]?.detailedContent ? (
+                            <div
+                              className="text-white/90 leading-relaxed space-y-4"
+                              dangerouslySetInnerHTML={{ __html: servicesDetailed[index].detailedContent }}
+                            />
+                          ) : (
+                            <p className="text-white/80 text-lg leading-relaxed">
+                              {service.description}
+                            </p>
+                          )}
+                        </div>
+                      </div>
                     </div>
                   </motion.div>
                 )}

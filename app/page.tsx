@@ -3,6 +3,7 @@ import HeroVideo from '@/components/sections/HeroVideo'
 import OurClients from '@/components/sections/OurClients'
 import DigitalSolution from '@/components/sections/DigitalSolution'
 import Services from '@/components/sections/Services'
+import BAFAFunding from '@/components/sections/BAFAFunding'
 import AboutUs from '@/components/sections/AboutUs'
 import CaseStudy from '@/components/sections/CaseStudy'
 import Team from '@/components/sections/Team'
@@ -80,6 +81,10 @@ export default function Home() {
 
       <LazySection threshold={0.1} rootMargin="200px">
         <Services />
+      </LazySection>
+
+      <LazySection threshold={0.1} rootMargin="200px">
+        <BAFAFunding />
       </LazySection>
 
       <LazySection threshold={0.1} rootMargin="200px">
