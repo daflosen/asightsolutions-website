@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 568.03 386.78">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #1d1d1b;
+      }
+    </style>
+  </defs>
+  <polygon class="cls-1" points="499.9 168.64 499.9 135.48 72.17 317.7 499.9 168.64"/>
+  <polygon class="cls-1" points="499.9 201.81 77.32 317.7 499.9 235 499.9 201.81"/>
+  <polygon class="cls-1" points="469.38 123.13 450.5 156.53 469.93 148.25 494.51 110.58 469.38 123.13"/>
+  <g>
+    <polygon class="cls-1" points="367.25 317.7 487.97 242.44 443.42 251.16 367.25 317.7"/>
+    <polygon class="cls-1" points="499.9 235 450.94 244.58 450.93 244.59 499.88 235.01 499.9 235"/>
+    <polygon class="cls-1" points="359.35 317.72 396.84 260.27 391.22 261.37 359.35 317.72"/>
+    <rect class="cls-1" x="394.4" y="255.03" width="6.31" height="0" transform="translate(-41.58 81.1) rotate(-11.07)"/>
+    <rect class="cls-1" x="411.78" y="250.91" width="13.65" height="0" transform="translate(-40.4 85.07) rotate(-11.07)"/>
+    <polygon class="cls-1" points="362.55 317.7 419.57 255.82 407.4 258.2 362.55 317.7"/>
+  </g>
+  <g>
+    <polygon class="cls-1" points="411.13 226.15 420.84 223.49 439.41 195.02 426.11 199.66 411.13 226.15"/>
+    <rect class="cls-1" x="429.43" y="190.61" width="14.87" height="0" transform="translate(-38.39 154.38) rotate(-19.21)"/>
+    <polygon class="cls-1" points="499.9 168.64 466 180.46 465.99 180.47 499.89 168.66 499.9 168.64"/>
+    <polygon class="cls-1" points="460.58 187.65 436.88 219.09 459.01 213.02 492.7 176.46 460.58 187.65"/>
+  </g>
+  <polygon class="cls-1" points="499.9 69.15 68.35 317.72 499.9 102.32 499.9 69.15"/>
+</svg>
