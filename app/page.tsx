@@ -103,9 +103,8 @@ export default function Home() {
         <FAQSimple />
       </LazySection>
 
-      <LazySection threshold={0.1} rootMargin="200px">
-        <BAFAFunding />
-      </LazySection>
+      {/* BAFA Section - always load for visibility */}
+      <BAFAFunding />
 
       <LazySection threshold={0.1} rootMargin="200px">
         <CTASimple />
