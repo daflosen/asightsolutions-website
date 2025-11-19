@@ -62,13 +62,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'de_DE',
-    url: 'https://asightsolutions.com',
+    url: 'https://www.asightsolutions.com',
     siteName: 'A Sight Solutions',
     title: 'Digitalisierung Unternehmensberatung Stuttgart | A Sight Solutions',
     description: 'Führende Unternehmensberatung für Digitalisierung in Stuttgart. BAFA-gefördert, 200+ Projekte, KI & Automatisierung für Mittelstand.',
     images: [
       {
-        url: 'https://asightsolutions.com/images/optimized/Laptop_Oben.webp',
+        url: 'https://www.asightsolutions.com/images/optimized/Laptop_Oben.webp',
         width: 1200,
         height: 630,
         alt: 'A Sight Solutions - Digitalisierung Unternehmensberatung Stuttgart',
@@ -79,16 +79,16 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Digitalisierung Unternehmensberatung Stuttgart | A Sight Solutions',
     description: 'Führende Unternehmensberatung für Digitalisierung in Stuttgart. BAFA-gefördert, 200+ Projekte, KI & Automatisierung.',
-    images: ['https://asightsolutions.com/images/optimized/Laptop_Oben.webp'],
+    images: ['https://www.asightsolutions.com/images/optimized/Laptop_Oben.webp'],
   },
   verification: {
     google: 'your-google-verification-code', // TODO: Add actual verification code
   },
   alternates: {
-    canonical: 'https://asightsolutions.com',
+    canonical: 'https://www.asightsolutions.com',
     languages: {
-      'de-DE': 'https://asightsolutions.com',
-      'x-default': 'https://asightsolutions.com',
+      'de-DE': 'https://www.asightsolutions.com',
+      'x-default': 'https://www.asightsolutions.com',
     },
   },
 }
@@ -117,8 +117,8 @@ export default function RootLayout({
               '@type': 'ProfessionalService',
               name: 'A Sight Solutions',
               alternateName: 'asightsolutions',
-              url: 'https://asightsolutions.com',
-              logo: 'https://asightsolutions.com/images/Asight_Trademark.png',
+              url: 'https://www.asightsolutions.com',
+              logo: 'https://www.asightsolutions.com/images/Asight_Trademark.png',
               description: 'Führende Unternehmensberatung für Digitalisierung in Stuttgart. BAFA-gefördert, 200+ Projekte, KI & Automatisierung für Mittelstand.',
               address: {
                 '@type': 'PostalAddress',

@@ -21,10 +21,10 @@ export const metadata: Metadata = {
   title: 'Digitalisierung Unternehmensberatung Stuttgart | A Sight Solutions',
   description: 'Spezialisierte Unternehmensberatung für Digitalisierung und digitale Transformation. BAFA-gefördert. Experten für KI & Automatisierung im Mittelstand.',
   alternates: {
-    canonical: 'https://asightsolutions.com',
+    canonical: 'https://www.asightsolutions.com',
     languages: {
-      'de-DE': 'https://asightsolutions.com',
-      'x-default': 'https://asightsolutions.com',
+      'de-DE': 'https://www.asightsolutions.com',
+      'x-default': 'https://www.asightsolutions.com',
     },
   },
   keywords: [
