@@ -6,14 +6,14 @@ export const servicesDetailed = {
         {
           number: '001',
           name: 'Prozessdigitalisierung für den Mittelstand – Effizienz steigern, Kosten senken',
-          description: 'Transformiere deine analogen Prozesse in effiziente digitale Workflows mit bewährten Technologien.',
-          detailedContent: `<p>Als führende Unternehmensberatung für Digitalisierung in Stuttgart transformieren wir deine analogen Geschäftsprozesse in hocheffiziente digitale Workflows. Mit über 200 erfolgreichen Digitalisierungsprojekten im Mittelstand kennen wir die Herausforderungen traditioneller Unternehmen genau.</p>
+          description: 'Transformiere Deine analogen Prozesse in effiziente digitale Workflows mit bewährten Technologien.',
+          detailedContent: `<p>Als führende Unternehmensberatung für Digitalisierung in Stuttgart transformieren wir Deine analogen Geschäftsprozesse in hocheffiziente digitale Workflows. Mit über 200 erfolgreichen Digitalisierungsprojekten im Mittelstand kennen wir die Herausforderungen traditioneller Unternehmen genau – von Digitalisierung Arztpraxis bis Digitalisierung Behörden.</p>
 
-<p>Unsere Prozessdigitalisierung beginnt mit einer detaillierten Analyse deiner bestehenden Abläufe. Wir identifizieren Automatisierungspotenziale, eliminieren Medienbrüche und reduzieren manuelle Tätigkeiten auf ein Minimum. Dabei setzen wir auf bewährte Technologien wie Robotic Process Automation (RPA), intelligente Dokumentenverarbeitung und Cloud-basierte Workflow-Management-Systeme.</p>
+<p>Unsere Prozessdigitalisierung beginnt mit einer detaillierten Analyse Deiner bestehenden Abläufe. Wir identifizieren Automatisierungspotenziale, eliminieren Medienbrüche und reduzieren manuelle Tätigkeiten auf ein Minimum. Dabei setzen wir auf bewährte Prozessautomatisierung Software wie Robotic Process Automation (RPA), intelligente Dokumentenverarbeitung und Cloud-basierte Workflow Automatisierung Systeme für optimale digitale Prozesse.</p>
 
-<p>Das Ergebnis unserer Digitalisierungsberatung: Deine Prozesse werden bis zu 40% schneller, die Fehlerquote sinkt um durchschnittlich 60%, und deine Mitarbeiter haben mehr Zeit für wertschöpfende Tätigkeiten. Ein Beispiel aus der Praxis: Ein mittelständischer Maschinenbauer aus Stuttgart konnte durch unsere Prozessautomatisierung die Auftragsbearbeitungszeit von 3 Tagen auf 4 Stunden reduzieren.</p>
+<p>Das Ergebnis unserer Digitalisierungsberatung: Deine Prozesse werden bis zu 40% schneller, die Fehlerquote sinkt um durchschnittlich 60%, und Deine Mitarbeiter haben mehr Zeit für wertschöpfende Tätigkeiten. Ein Beispiel aus der Praxis: Ein mittelständischer Maschinenbauer aus Stuttgart konnte durch unsere Prozessautomatisierung die Auftragsbearbeitungszeit von 3 Tagen auf 4 Stunden reduzieren.</p>
 
-<p>Wir begleiten dich von der Strategieentwicklung über die Implementierung bis zur Schulung deiner Mitarbeiter. Deine Digitalisierungsprojekte sind BAFA-förderfähig – bis zu 50% Zuschuss sind möglich. Wir bereiten alle erforderlichen Unterlagen für dich vor und arbeiten mit erfahrenen BAFA-Beratern zusammen, um dir die maximale Förderung zu sichern.</p>
+<p>Wir begleiten Dich von der Strategieentwicklung über die Implementierung bis zur Schulung deiner Mitarbeiter. Deine Digitalisierungsprojekte sind BAFA-förderfähig – bis zu 50% Zuschuss sind möglich. Wir bereiten alle erforderlichen Unterlagen für Dich vor und arbeiten mit erfahrenen BAFA-Beratern zusammen, um Dir die maximale Förderung zu sichern.</p>
 
 <p>Starte jetzt deine digitale Transformation. In einem kostenlosen Erstgespräch analysieren wir dein Digitalisierungspotenzial und zeigen dir konkrete Optimierungsmöglichkeiten für dein Unternehmen in Baden-Württemberg auf.</p>`
         },
@@ -21,13 +21,13 @@ export const servicesDetailed = {
           number: '002',
           name: 'Unternehmensberatung Digitalisierung Stuttgart – Dein Partner für digitale Transformation',
           description: 'Ganzheitliche Digitalisierungsstrategie für deine digitale Transformation im Mittelstand.',
-          detailedContent: `<p>Die digitale Transformation ist mehr als nur Technologie – sie erfordert eine ganzheitliche Neuausrichtung deines Unternehmens. Als erfahrene Digitalisierungsberatung in Stuttgart entwickeln wir mit dir eine maßgeschneiderte Digitalisierungsstrategie, die zu deiner Branche, deiner Unternehmensgröße und deiner Vision passt.</p>
+          detailedContent: `<p>Die digitale Transformation Beratung ist mehr als nur Technologie – sie erfordert eine ganzheitliche Neuausrichtung deines Unternehmens. Als erfahrene Digitalisierungsberatung in Stuttgart entwickeln wir mit dir eine maßgeschneiderte Digitalisierungsstrategie, die zu deiner Branche, deiner Unternehmensgröße und deiner Vision passt.</p>
 
-<p>Unsere Unternehmensberatung für Digitalisierung umfasst alle Aspekte der digitalen Transformation: Von der Digital-Readiness-Analyse über die Entwicklung digitaler Geschäftsmodelle bis zur Implementierung neuer Technologien. Wir analysieren deine Wertschöpfungskette, identifizieren digitale Chancen und entwickeln einen klaren Fahrplan für deine Transformation.</p>
+<p>Unsere Unternehmensberatung für Digitalisierung umfasst alle Aspekte der digitalen Transformation: Von der Digital-Readiness-Analyse über die Entwicklung digitaler Geschäftsmodelle bis zur Implementierung neuer Technologien. Als erfahrene ERP Berater analysieren wir deine Wertschöpfungskette, identifizieren digitale Chancen und entwickeln einen klaren Fahrplan für deine Transformation mit optimalen digitalen Prozessen.</p>
 
-<p>Besonders im Mittelstand sehen wir enormes Potenzial: Während Großunternehmen oft träge sind, können mittelständische Unternehmen agil auf Marktveränderungen reagieren. Mit unserer Expertise in KI, Machine Learning und Business Intelligence verschaffen wir dir entscheidende Wettbewerbsvorteile. Ein Kunde aus der Automobilzulieferindustrie konnte durch unsere Beratung seine Time-to-Market um 35% verkürzen und gleichzeitig die Entwicklungskosten um 25% senken.</p>
+<p>Besonders im Mittelstand sehen wir enormes Potenzial: Während Großunternehmen oft träge sind, können mittelständische Unternehmen agil auf Marktveränderungen reagieren. Mit unserer Expertise in KI, Machine Learning und Business Intelligence verschaffen wir dir entscheidende Wettbewerbsvorteile durch Automation in Business. Ein Kunde aus der Automobilzulieferindustrie konnte durch unsere Beratung seine Time-to-Market um 35% verkürzen und gleichzeitig die Entwicklungskosten um 25% senken.</p>
 
-<p>Wir verstehen, dass digitale Transformation auch kulturellen Wandel bedeutet. Deshalb legen wir besonderen Wert auf Change Management und Mitarbeiterqualifizierung. Unsere Digitalisierungs-Workshops und Schulungen stellen sicher, dass dein Team die neuen Technologien nicht nur akzeptiert, sondern begeistert nutzt.</p>
+<p>Wir verstehen, dass digitale Transformation auch kulturellen Wandel bedeutet. Deshalb legen wir besonderen Wert auf professionelles Change Management und Mitarbeiterqualifizierung. Unsere Digitalisierungs-Workshops und Schulungen stellen sicher, dass dein Team die neuen Technologien nicht nur akzeptiert, sondern begeistert nutzt.</p>
 
 <p>Mit Standort in Stuttgart betreuen wir Unternehmen in ganz Baden-Württemberg – von Heilbronn über Karlsruhe bis Ulm. Nutze staatliche Förderungen wie BAFA oder go-digital und reduziere deine Investitionskosten um bis zu 50%.</p>`
         },
@@ -43,15 +43,15 @@ export const servicesDetailed = {
 
 <p>Wir entmystifizieren KI und machen sie greifbar. In unseren Workshops zeigen wir deinen Mitarbeitern, wie sie KI-Tools effektiv nutzen können – von ChatGPT für die Content-Erstellung bis zu KI-gestützten Analysetools für bessere Entscheidungen. Dabei achten wir stets auf Datenschutz und DSGVO-Konformität.</p>
 
-<p>Nutze staatliche Förderungen für deine KI-Projekte! Die BAFA-Förderung ermöglicht bis zu 50% Zuschuss. Wir unterstützen dich bei der Vorbereitung aller Unterlagen und vermitteln dir gerne einen zertifizierten BAFA-Berater für die Antragstellung. Starte jetzt mit KI durch – wir begleiten dich von der Strategie bis zur Umsetzung.</p>`
+<p>Nutze staatliche Förderungen für deine KI-Projekte! Die BAFA-Förderung ermöglicht bis zu 50% Zuschuss. Wir unterstützen dich bei der Vorbereitung aller Unterlagen und vermitteln dir gerne einen zertifizierten BAFA-Berater für die Antragstellung. Starte jetzt mit KI durch – wir begleiten Dich von der Strategie bis zur Umsetzung.</p>`
         },
         {
           number: '004',
           name: 'Website erstellen lassen Stuttgart – SEO-optimiert für Top-Rankings',
           description: 'SEO-optimierte Websites mit modernem Design für Top-Rankings bei Google.',
-          detailedContent: `<p>Deine Website ist dein wichtigster digitaler Vertriebskanal. Als Full-Service Digitalagentur in Stuttgart entwickeln wir nicht nur optisch ansprechende Websites, sondern digitale Vertriebsmaschinen, die nachweisbar mehr Kunden generieren.</p>
+          detailedContent: `<p>Deine Website ist dein wichtigster digitaler Vertriebskanal. Als Full-Service Digitalagentur in Stuttgart entwickeln wir nicht nur optisch ansprechende Websites, sondern digitale Vertriebsmaschinen, die nachweisbar mehr Kunden generieren. Du willst eine Website WordPress erstellen lassen? Wir sind dein Partner.</p>
 
-<p>Unsere WordPress-Websites vereinen modernes Design mit technischer Exzellenz. Wir entwickeln responsive Webseiten, die auf allen Geräten perfekt funktionieren, blitzschnell laden und bei Google ganz oben ranken. Dabei setzen wir auf bewährte Content-Management-Systeme wie WordPress oder moderne Frameworks wie Next.js für maximale Performance.</p>
+<p>Unsere WordPress-Websites vereinen modernes Design mit technischer Exzellenz. Wenn du eine professionelle Website WordPress erstellen lassen möchtest, entwickeln wir responsive Webseiten, die auf allen Geräten perfekt funktionieren, blitzschnell laden und bei Google ganz oben ranken. Dabei setzen wir auf bewährte Content-Management-Systeme wie WordPress oder moderne Frameworks wie Next.js für maximale Performance.</p>
 
 <p>SEO-Optimierung ist bei uns keine Zusatzleistung, sondern Standard. Jede Website wird von Grund auf für Suchmaschinen optimiert: Technisches SEO, On-Page-Optimierung, strukturierte Daten und Core Web Vitals – wir sorgen dafür, dass deine Website bei relevanten Suchanfragen in Stuttgart und Baden-Württemberg gefunden wird. Ein aktuelles Projekt: Nach unserer SEO-Optimierung steigerte ein Stuttgarter Dienstleister seinen organischen Traffic um 380% innerhalb von 6 Monaten.</p>
 
@@ -110,11 +110,11 @@ export const servicesDetailed = {
         }
       ],
       ourService: {
-        title: 'Unser Service: Maximale Förderung für Ihr Projekt',
+        title: 'Unser Service: Maximale Förderung für dein Projekt',
         features: [
           {
             title: 'Fördercheck',
-            description: 'Wir analysieren, welche Programme für Sie passen'
+            description: 'Wir analysieren, welche Programme für dich passen'
           },
           {
             title: 'Vorbereitung',
@@ -135,7 +135,7 @@ export const servicesDetailed = {
         ]
       },
       benefits: {
-        title: 'Ihre Vorteile mit uns',
+        title: 'Deine Vorteile mit uns',
         items: [
           'Überblick über ALLE relevanten Förderprogramme',
           'Professionelle Vorbereitung aller Antragsunterlagen',

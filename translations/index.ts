@@ -286,19 +286,63 @@ export const translations = {
       email: 'Email',
       whatsapp: 'WhatsApp',
       calendar: 'Schedule'
+    },
+    industriesBranchen: {
+      badge: 'Industry Solutions',
+      title: 'Digitalization for Specific Industries',
+      subtitle: 'Tailored solutions for your industry',
+      items: [
+        {
+          title: 'Medical Practices & Healthcare',
+          description: 'Healthcare digitalization with focus on electronic health records. We implement digital tools for practice management, appointment scheduling, and secure patient communication. GDPR-compliant and future-proof.',
+          features: ['Electronic Health Records', 'Digital Appointment Management', 'Secure Patient Communication', 'GDPR-compliant Solutions']
+        },
+        {
+          title: 'Government & Public Administration',
+          description: 'Government digitalization with modern business process solutions. We optimize administrative processes, implement e-government solutions, and create efficient digital workflows for citizen services.',
+          features: ['E-Government Solutions', 'Digital Citizen Services', 'Process Optimization', 'Secure Data Processing']
+        },
+        {
+          title: 'SMEs & Manufacturing',
+          description: 'Specialized digitalization for SMEs. From production planning to customer service – we digitalize your business processes end-to-end with proven digital tools.',
+          features: ['ERP Integration', 'Production Optimization', 'Supply Chain Digitalization', 'Customer Portal Solutions']
+        }
+      ]
+    },
+    toolsMethoden: {
+      badge: 'Our Expertise',
+      title: 'Our Tools & Methods',
+      subtitle: 'Professional approaches for your digital success',
+      items: [
+        {
+          title: 'Change Management Processes',
+          description: 'Successful digital transformation requires more than technology. Our change management guides your team through the transition – from strategy to sustainable adoption of new working methods.',
+          features: ['Stakeholder Analysis', 'Communication Strategy', 'Training Programs', 'Success Measurement']
+        },
+        {
+          title: 'Workflow Automation',
+          description: 'Automate repetitive tasks and increase efficiency. Our workflow automation seamlessly connects your digital tools and creates continuous business processes without media breaks.',
+          features: ['Process Analysis', 'Tool Integration', 'Automated Workflows', 'Monitoring & Reporting']
+        },
+        {
+          title: 'SEO & Google Ads Consulting',
+          description: 'Is SEO worth it? Definitely! Our professional SEO consulting and Google Ads campaigns get you to page 1. Unlike other SEO agencies, we work transparently – you see exactly what your SEO investment delivers.',
+          features: ['SEO Audit & Strategy', 'Google Ads Campaigns', 'Content Optimization', 'Transparent Reporting']
+        }
+      ]
     }
   },
   de: {
     ...servicesDetailed.de,
     hero: {
       services: [
-        { title: 'Prozessdigitalisierung', desc: 'Digitale Transformation für effiziente Geschäftsprozesse' },
-        { title: 'Unternehmensberatung Digitalisierung', desc: 'Digitalisierung Mittelstand – professionell & BAFA-gefördert' },
-        { title: 'Website & SEO Optimierung Stuttgart', desc: 'WordPress Websites erstellen lassen mit Top-Rankings' },
-        { title: 'KI Beratung Mittelstand', desc: 'Automatisierung & künstliche Intelligenz für dein Business' }
+        { title: 'Prozessdigitalisierung', desc: 'Workflow Automatisierung für effiziente digitale Prozesse' },
+        { title: 'Digitale Transformation Beratung', desc: 'Digitalisierung Mittelstand – professionell & BAFA-gefördert' },
+        { title: 'Website WordPress erstellen lassen', desc: 'SEO-optimierte Websites mit Top-Rankings in Stuttgart' },
+        { title: 'KI & Business Automation', desc: 'Automation in Business – künstliche Intelligenz für Dein Unternehmen' }
       ],
       seoH1: 'Digitalisierung Unternehmensberatung Stuttgart - A Sight Solutions: KI, Automatisierung & Prozessoptimierung für den Mittelstand',
-      tagline: 'Digitale Lösungen und Strategien, die deine\nProzesse optimieren und dein Business wachsen lassen.',
+      tagline: 'Digitale Lösungen und Strategien, die Deine\nProzesse optimieren und Dein Business wachsen lassen.',
       founderRole: 'Gründer',
       founderCompany: 'bei asight®',
       contactButton: 'Kontakt aufnehmen',
@@ -308,8 +352,8 @@ export const translations = {
     },
     digitalSolution: {
       badge: '(27)',
-      title: 'deine\nDigitale\nLösung.',
-      subtitle: 'Wir entwickeln digitale Lösungen, die dein Unternehmen effizienter, erfolgreicher und zukunftssicher machen. Spezialisiert auf Digitalisierung für den Mittelstand.'
+      title: 'Deine\nDigitale\nLösung.',
+      subtitle: 'Wir entwickeln digitale Lösungen und optimieren digitale Prozesse, die Dein Unternehmen effizienter, erfolgreicher und zukunftssicher machen. Spezialisiert auf Digitalisierung für den Mittelstand mit Prozessautomatisierung Software und Workflow Automatisierung.'
     },
     services: {
       badge: 'Was wir tun',
@@ -318,17 +362,17 @@ export const translations = {
         {
           number: '001',
           name: 'Prozessdigitalisierung für den Mittelstand – Effizienz steigern, Kosten senken',
-          description: 'Transformiere deine analogen Prozesse in effiziente digitale Workflows. Prozessautomatisierung Software und digitale Prozesse für maximale Effizienz im Mittelstand.'
+          description: 'Transformiere Deine analogen Prozesse in effiziente digitale Workflows. Prozessautomatisierung Software und digitale Prozesse für maximale Effizienz im Mittelstand.'
         },
         {
           number: '002',
           name: 'Unternehmensberatung Digitalisierung Stuttgart – Dein Partner für digitale Transformation',
-          description: 'Ganzheitliche Digitalisierungsstrategie und digitale Transformation Beratung. Als Unternehmensberatung Digitalisierung Stuttgart begleiten wir dich bei der digitalen Transformation.'
+          description: 'Ganzheitliche Digitalisierungsstrategie und digitale Transformation Beratung mit professionellem Change Management. Als ERP Berater und Unternehmensberatung Digitalisierung Stuttgart begleiten wir Dich bei der digitalen Transformation.'
         },
         {
           number: '003',
           name: 'KI-Beratung Mittelstand – Künstliche Intelligenz praktisch einsetzen',
-          description: 'Maßgeschneiderte KI Beratung für den Mittelstand. Unsere KI-Lösungen automatisieren Workflows, optimieren Entscheidungen und liefern intelligente Insights. Business Automation für deine digitale Transformation.'
+          description: 'Maßgeschneiderte KI Beratung für den Mittelstand. Unsere KI-Lösungen automatisieren Workflows, optimieren Entscheidungen und liefern intelligente Insights. Business Automation für Deine digitale Transformation.'
         },
         {
           number: '004',
@@ -340,12 +384,12 @@ export const translations = {
     about: {
       badge: 'Das sind wir',
       title: 'Über Uns',
-      subtitle: 'dein Partner für Digitalisierung Stuttgart',
-      description: 'Wir sind eine spezialisierte Unternehmensberatung für Digitalisierung in Stuttgart. Mit BAFA-Förderung und über 200 erfolgreich abgeschlossenen Projekten begleiten wir Unternehmen bei der digitalen Transformation. Als BAFA Berater Stuttgart unterstützen wir besonders den Mittelstand.',
+      subtitle: 'Dein Partner für digitale Transformation Beratung Stuttgart',
+      description: 'Wir sind eine spezialisierte Unternehmensberatung für Digitalisierung in Stuttgart. Mit BAFA-Förderung und über 200 erfolgreich abgeschlossenen Projekten begleiten wir Unternehmen bei der digitalen Transformation. Als ERP Berater und BAFA Berater Stuttgart unterstützen wir den Mittelstand mit Prozessautomatisierung Software und professionellem Change Management.',
       brandName: 'asightsolutions®',
       mainTitle: 'Wie wir',
       mainTitleGray: 'Prozessoptimierungs-Projekte und Tool-Integrationen umsetzen.',
-      introText: 'Sehen du, wie unser Team Kreativität, Technologie und Strategie kombiniert, um leistungsstarke digitale Lösungen zu entwickeln.',
+      introText: 'Sieh, wie unser Team Kreativität, Technologie und Strategie kombiniert, um leistungsstarke digitale Lösungen zu entwickeln.',
       processSteps: [
         {
           number: '01',
@@ -359,12 +403,12 @@ export const translations = {
         },
         {
           number: '03',
-          title: 'Full Stack und Low-Code Entwickler, die deine Bedürfnisse verstehen',
-          description: 'Technische Lösungen, die auf deine spezifischen Anforderungen zugeschnitten sind'
+          title: 'Full Stack und Low-Code Entwickler, die Deine Bedürfnisse verstehen',
+          description: 'Technische Lösungen, die auf Deine spezifischen Anforderungen zugeschnitten sind'
         },
         {
           number: '04',
-          title: 'Ergebnisse messbar machen für dein Erfolgsgefühl',
+          title: 'Ergebnisse messbar machen für Dein Erfolgsgefühl',
           description: 'Transparente Metriken und klare Erfolgsindikatoren'
         }
       ],
@@ -379,9 +423,9 @@ export const translations = {
       badge: 'Warum uns wählen',
       mainTitle: 'Nachweisbare Ergebnisse für jedes Projekt,',
       mainTitleGray: 'mit Fokus auf Präzision und Funktionalität.',
-      description: 'Kein Overhead, nur Tools die präzise auf deine',
+      description: 'Kein Overhead, nur Tools die präzise auf Deine',
       descriptionBr: 'individuellen prozessualen Bedürfnisse abzielen.',
-      descriptionGray: 'Durchdachte, leistungsstarke und nutzerzentrierte Tools, die deine Arbeit erleichtern.',
+      descriptionGray: 'Durchdachte, leistungsstarke und nutzerzentrierte Tools, die Deine Arbeit erleichtern.',
       stat1Value: '50+',
       stat1Label: 'Erfolgreich abgeschlossene Projekte',
       stat2Value: '98%',
@@ -399,7 +443,7 @@ export const translations = {
       ratingText: 'Wir haben über 50 Projekte erfolgreich umgesetzt, die Unternehmen messbare Ergebnisse liefern.',
       items: [
         {
-          text: 'Die Zusammenarbeit mit A Sight Solutions hat unser Geschäft transformiert. deine Expertise in Prozessautomatisierung hat uns unzählige Stunden gespart.',
+          text: 'Die Zusammenarbeit mit A Sight Solutions hat unser Geschäft transformiert. Eure Expertise in Prozessautomatisierung hat uns unzählige Stunden gespart.',
           author: 'Dr. Tessa Campbell',
           role: 'Geschäftsführer, TechMed Solutions',
           rating: 5
@@ -411,7 +455,7 @@ export const translations = {
           rating: 5
         },
         {
-          text: 'Professionell, zuverlässig und innovativ. deine KI-Lösungen haben unsere Arbeitsabläufe revolutioniert.',
+          text: 'Professionell, zuverlässig und innovativ. Eure KI-Lösungen haben unsere Arbeitsabläufe revolutioniert.',
           author: 'Tanja Müller',
           role: 'Operations Manager, Logistics Pro',
           rating: 5
@@ -440,29 +484,29 @@ export const translations = {
       items: [
         {
           question: 'Was ist die BAFA-Förderung?',
-          answer: 'Die BAFA-Förderung (Bundesamt für Wirtschaft und Ausfuhrkontrolle) unterstützt Unternehmen bei der Digitalisierungsberatung. Als BAFA Berater Stuttgart helfen wir dir, diese Förderung zu beantragen und für deine Digitalisierungsprojekte zu nutzen.'
+          answer: 'Die BAFA-Förderung (Bundesamt für Wirtschaft und Ausfuhrkontrolle) unterstützt Unternehmen bei der Digitalisierungsberatung. Als BAFA Berater Stuttgart helfen wir Dir, diese Förderung zu beantragen und für Deine Digitalisierungsprojekte zu nutzen.'
         },
         {
           question: 'Wie lange dauert ein typisches Projekt?',
           answer: 'Die Projektdauer variiert je nach Umfang. Eine WordPress Website erstellen lassen dauert typischerweise 4-8 Wochen, während umfassende Digitalisierungsprojekte 3-6 Monate in Anspruch nehmen können. Wir erstellen detaillierte Zeitpläne im Erstgespräch.'
         },
         {
-          question: 'Bieten du fortlaufenden Support an?',
-          answer: 'Ja! Wir bieten 24/7 Support und Wartungspakete für alle unsere Lösungen an. Unser Team stellt sicher, dass deine Systeme reibungslos laufen und stets auf dem neuesten Stand der Technologie bleiben.'
+          question: 'Bietest du fortlaufenden Support an?',
+          answer: 'Ja! Wir bieten 24/7 Support und Wartungspakete für alle unsere Lösungen an. Unser Team stellt sicher, dass Deine Systeme reibungslos laufen und stets auf dem neuesten Stand der Technologie bleiben.'
         },
         {
-          question: 'Welche Branchen bedienen du?',
-          answer: 'Wir arbeiten branchenübergreifend – von Digitalisierung Arztpraxis über Digitalisierung Behörden bis hin zu produzierenden Unternehmen und Dienstleistern. Unsere Lösungen sind speziell auf die Digitalisierung für den Mittelstand zugeschnitten.'
+          question: 'Welche Branchen bedienst du?',
+          answer: 'Wir arbeiten branchenübergreifend mit Fokus auf Automation in Business: Digitalisierung Arztpraxis, Digitalisierung Behörden, produzierende Unternehmen und Dienstleister. Unsere Workflow Automatisierung und digitale Prozesse sind speziell auf die Digitalisierung für den Mittelstand zugeschnitten.'
         },
         {
           question: 'Was kostet SEO Optimierung?',
-          answer: 'Die SEO Optimierung Kosten variieren je nach Projekt-Umfang und Zielen. In einem kostenlosen Erstgespräch analysieren wir deine Anforderungen und erstellen ein transparentes Angebot für deine Website und SEO-Strategie.'
+          answer: 'Lohnt sich SEO? Definitiv – die Kosten für SEO amortisieren sich durch nachhaltigen Traffic. Die SEO Optimierung Kosten variieren je nach Projekt-Umfang und Zielen. Unsere professionelle SEO Beratung zeigt Dir transparent, was möglich ist. In einem kostenlosen Erstgespräch analysieren wir Deine Anforderungen und erstellen ein transparentes Angebot für Deine WordPress Websites und SEO-Strategie.'
         }
       ]
     },
     cta: {
-      title: 'Bereit für deine digitale Transformation?',
-      subtitle: 'Lassen du uns über deine Digitalisierung sprechen',
+      title: 'Bereit für Deine digitale Transformation?',
+      subtitle: 'Lass uns über Deine Digitalisierung sprechen',
       button: 'Kontakt aufnehmen',
       features: [
         'Kostenlose Erstberatung',
@@ -471,8 +515,8 @@ export const translations = {
       ]
     },
     preFooter: {
-      title: 'Lassen du uns zusammenarbeiten',
-      subtitle: 'Bereit für deine digitale Transformation?',
+      title: 'Lass uns zusammenarbeiten',
+      subtitle: 'Bereit für Deine digitale Transformation?',
       email: 'hallo@asightsolutions.com',
       phone: '+49 711 1234567'
     },
@@ -522,7 +566,7 @@ export const translations = {
     },
     ctaSimple: {
       brandName: 'asightsolutions®',
-      heading: 'Haben du ein Projekt ',
+      heading: 'Hast Du ein Projekt ',
       headingGray: 'im Kopf?',
       namePlaceholder: 'Name',
       emailPlaceholder: 'E-Mail',
@@ -530,12 +574,12 @@ export const translations = {
       messagePlaceholder: 'Nachricht',
       submitButton: 'Nachricht senden',
       copyright: '© 2025 asightsolutions',
-      mainHeading: 'Lassen du uns sprechen.',
-      description: 'Erzählen du uns von deinem Projekt – ob Prozessdigitalisierung, SEO oder deine digitale Präsenz im Web.',
+      mainHeading: 'Lass uns sprechen.',
+      description: 'Erzähl uns von Deinem Projekt – ob Prozessdigitalisierung, SEO oder Deine digitale Präsenz im Web.',
       quickResponseTitle: 'Schnelle Antwort',
-      quickResponseText: 'Wenn du bereit sind zu kreieren und zusammenzuarbeiten, würden wir uns freuen, von dir zu hören.',
+      quickResponseText: 'Wenn Du bereit bist zu kreieren und zusammenzuarbeiten, würden wir uns freuen, von Dir zu hören.',
       clearStepsTitle: 'Klare nächste Schritte',
-      clearStepsText: 'Nach der Beratung erhalten du einen detaillierten Plan und Zeitplan.',
+      clearStepsText: 'Nach der Beratung erhältst Du einen detaillierten Plan und Zeitplan.',
       founderRole: 'Gründer Akquise',
       founderCompany: 'bei asight®',
       founderName: 'Alex Eyb'
@@ -545,11 +589,11 @@ export const translations = {
       heading: 'Die Gesichter ',
       headingGray: 'hinter',
       headingGray2: 'den Projekten.',
-      missionTitle: 'Seien du Teil unserer Mission',
-      missionText: 'Wenn du bereit sind zu kreieren und zusammenzuarbeiten, würden wir uns freuen, von dir zu hören.',
+      missionTitle: 'Sei Teil unserer Mission',
+      missionText: 'Wenn Du bereit bist zu kreieren und zusammenzuarbeiten, würden wir uns freuen, von Dir zu hören.',
       applyButton: 'Jetzt bewerben',
       collaborationHeading: 'Wir glauben, dass großartige Arbeit aus Zusammenarbeit entsteht.',
-      collaborationText: 'Deshalb arbeiten wir eng miteinander, um sicherzustellen, dass jedes Projekt deine Ziele erfüllt und die Erwartungen übertrifft.',
+      collaborationText: 'Deshalb arbeiten wir eng miteinander, um sicherzustellen, dass jedes Projekt Deine Ziele erfüllt und die Erwartungen übertrifft.',
       members: [
         { name: 'Florian Bartsch', position: 'Geschäftsführer', company: 'bei asightsolutions®' },
         { name: 'Jürgen Rentschler', position: 'Full Stack Entwickler', company: 'bei asightsolutions®' },
@@ -577,6 +621,50 @@ export const translations = {
       email: 'E-Mail',
       whatsapp: 'WhatsApp',
       calendar: 'Termin buchen'
+    },
+    industriesBranchen: {
+      badge: 'Branchenlösungen',
+      title: 'Digitalisierung für spezielle Branchen',
+      subtitle: 'Maßgeschneiderte Lösungen für Deine Branche',
+      items: [
+        {
+          title: 'Arztpraxen & Gesundheitswesen',
+          description: 'Digitalisierung Arztpraxis mit Fokus auf die elektronische Patientenakte (ePA). Wir implementieren digitale Tools für Praxismanagement, Terminverwaltung und sichere Patientenkommunikation. DSGVO-konform und zukunftssicher.',
+          features: ['Elektronische Patientenakte ePA', 'Digitale Terminverwaltung', 'Sichere Patientenkommunikation', 'DSGVO-konforme Lösungen']
+        },
+        {
+          title: 'Behörden & Öffentliche Verwaltung',
+          description: 'Digitalisierung Behörden mit modernen Business Process Lösungen. Wir optimieren Verwaltungsprozesse, implementieren E-Government-Lösungen und schaffen effiziente digitale Workflows für Bürgerservices.',
+          features: ['E-Government Lösungen', 'Digitale Bürgerservices', 'Prozessoptimierung Verwaltung', 'Sichere Datenverarbeitung']
+        },
+        {
+          title: 'Mittelstand & Produktion',
+          description: 'Spezialisierte Digitalisierung für den Mittelstand. Von der Produktionsplanung bis zum Kundenservice – wir digitalisieren Deine Business Processes end-to-end mit bewährten digitalen Tools.',
+          features: ['ERP-Integration', 'Produktionsoptimierung', 'Supply Chain Digitalisierung', 'Kundenportal-Lösungen']
+        }
+      ]
+    },
+    toolsMethoden: {
+      badge: 'Unsere Expertise',
+      title: 'Unsere Tools & Methoden',
+      subtitle: 'Professionelle Ansätze für Deinen digitalen Erfolg',
+      items: [
+        {
+          title: 'Change Management Prozesse',
+          description: 'Erfolgreiche digitale Transformation braucht mehr als Technologie. Unser Change Management begleitet Dein Team durch den Wandel – von der Strategie bis zur nachhaltigen Verankerung neuer Arbeitsweisen.',
+          features: ['Stakeholder-Analyse', 'Kommunikationsstrategie', 'Schulungsprogramme', 'Erfolgsmessung']
+        },
+        {
+          title: 'Workflow Automatisierung',
+          description: 'Automatisiere repetitive Aufgaben und steigere die Effizienz. Unsere Workflow Automatisierung verbindet Deine digitalen Tools nahtlos und schafft durchgängige Business Processes ohne Medienbrüche.',
+          features: ['Prozessanalyse', 'Tool-Integration', 'Automatisierte Workflows', 'Monitoring & Reporting']
+        },
+        {
+          title: 'SEO & Google Ads Beratung',
+          description: 'Lohnt sich SEO? Definitiv! Unsere professionelle SEO Beratung und Google Ads Kampagnen bringen Dich auf Seite 1. Anders als andere SEO Agenturen arbeiten wir transparent – Du siehst genau, was die Kosten für SEO bringen.',
+          features: ['SEO-Audit & Strategie', 'Google Ads Kampagnen', 'Content-Optimierung', 'Transparentes Reporting']
+        }
+      ]
     }
   }
 } as const
