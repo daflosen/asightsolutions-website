@@ -9,18 +9,19 @@ export default function LanguageToggle() {
   const [isChanging, setIsChanging] = useState(false)
 
   // Determine current language from pathname
-  const isGerman = pathname.startsWith('/de')
-  const currentLang = isGerman ? 'DE' : 'EN'
+  // Default is German, only /en is English
+  const isEnglish = pathname.startsWith('/en')
+  const currentLang = isEnglish ? 'EN' : 'DE'
 
   const handleLanguageChange = () => {
     setIsChanging(true)
 
     // Set cookie for language preference
-    const newLang = isGerman ? 'en' : 'de'
+    const newLang = isEnglish ? 'de' : 'en'
     document.cookie = `preferred-lang=${newLang}; path=/; max-age=${60 * 60 * 24 * 365}; SameSite=Lax`
 
     // Navigate to the appropriate URL
-    const newPath = isGerman ? '/' : '/de'
+    const newPath = isEnglish ? '/' : '/en'
     router.push(newPath)
 
     // Reset changing state after navigation
@@ -60,7 +61,7 @@ export default function LanguageToggle() {
           e.currentTarget.style.borderColor = '#e5e5e5'
         }
       }}
-      aria-label={`Switch to ${isGerman ? 'English' : 'German'}`}
+      aria-label={`Switch to ${isEnglish ? 'German' : 'English'}`}
     >
       <svg
         width="16"

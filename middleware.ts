@@ -45,7 +45,20 @@ export function middleware(request: NextRequest) {
   // Check for existing language cookie
   const preferredLang = request.cookies.get('preferred-lang')?.value
 
-  // If user is already on a language-specific page, set cookie and continue
+  // If user is on /en path, set English cookie
+  if (pathname.startsWith('/en')) {
+    const response = NextResponse.next()
+    if (preferredLang !== 'en') {
+      response.cookies.set('preferred-lang', 'en', {
+        path: '/',
+        maxAge: 60 * 60 * 24 * 365, // 1 year
+        sameSite: 'lax',
+      })
+    }
+    return response
+  }
+
+  // If user is on /de path, set German cookie
   if (pathname.startsWith('/de')) {
     const response = NextResponse.next()
     if (preferredLang !== 'de') {
@@ -58,49 +71,17 @@ export function middleware(request: NextRequest) {
     return response
   }
 
-  // If on homepage or English pages
-  if (pathname === '/' || (!pathname.startsWith('/de'))) {
-    // Priority 1: Respect cookie if exists
-    if (preferredLang === 'de') {
-      return NextResponse.redirect(new URL('/de', request.url))
-    }
-
-    // Set English cookie if not on German page
+  // For homepage / - default is German (no redirect needed)
+  // Just set the cookie if not already set
+  if (pathname === '/') {
     const response = NextResponse.next()
-    if (preferredLang !== 'en') {
-      response.cookies.set('preferred-lang', 'en', {
+    if (!preferredLang) {
+      response.cookies.set('preferred-lang', 'de', {
         path: '/',
         maxAge: 60 * 60 * 24 * 365, // 1 year
         sameSite: 'lax',
       })
     }
-
-    // Priority 2: Check Geo-IP (only if no cookie)
-    if (!preferredLang) {
-      const country = getCountryFromRequest(request)
-      if (country && GERMAN_SPEAKING_COUNTRIES.includes(country)) {
-        const redirectResponse = NextResponse.redirect(new URL('/de', request.url))
-        redirectResponse.cookies.set('preferred-lang', 'de', {
-          path: '/',
-          maxAge: 60 * 60 * 24 * 365,
-          sameSite: 'lax',
-        })
-        return redirectResponse
-      }
-
-      // Priority 3: Check Browser Language (only if no cookie and no geo-match)
-      const browserLang = getBrowserLanguage(request)
-      if (browserLang === 'de') {
-        const redirectResponse = NextResponse.redirect(new URL('/de', request.url))
-        redirectResponse.cookies.set('preferred-lang', 'de', {
-          path: '/',
-          maxAge: 60 * 60 * 24 * 365,
-          sameSite: 'lax',
-        })
-        return redirectResponse
-      }
-    }
-
     return response
   }
 

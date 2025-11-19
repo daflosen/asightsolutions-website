@@ -15,7 +15,6 @@ import PreFooter from '@/components/sections/PreFooter'
 import FooterSimple from '@/components/sections/FooterSimple'
 import LazySection from '@/components/ui/LazySection'
 import IndustriesBranchen from '@/components/sections/IndustriesBranchen'
-import ToolsMethoden from '@/components/sections/ToolsMethoden'
 
 // Page-specific metadata (overrides layout metadata for this page)
 export const metadata: Metadata = {
@@ -87,10 +86,6 @@ export default function Home() {
 
       <LazySection threshold={0.1} rootMargin="200px">
         <IndustriesBranchen />
-      </LazySection>
-
-      <LazySection threshold={0.1} rootMargin="200px">
-        <ToolsMethoden />
       </LazySection>
 
       <LazySection threshold={0.1} rootMargin="200px">

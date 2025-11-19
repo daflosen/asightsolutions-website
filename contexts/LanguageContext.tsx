@@ -14,8 +14,10 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const pathname = usePathname()
-  const isGerman = pathname.startsWith('/de')
-  const language: Language = isGerman ? 'de' : 'en'
+  // Default to German, switch to English only on /en path
+  const isEnglish = pathname.startsWith('/en')
+  const language: Language = isEnglish ? 'en' : 'de'
+  const isGerman = !isEnglish
 
   return (
     <LanguageContext.Provider value={{ language, isGerman }}>

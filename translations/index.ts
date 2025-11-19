@@ -45,8 +45,8 @@ export const translations = {
         },
         {
           number: '004',
-          name: 'View all',
-          description: 'Explore our complete portfolio of digital services and solutions. From consulting to implementation, we offer comprehensive support for your digital transformation journey.'
+          name: 'Website Design & Google Ads',
+          description: 'Modern websites with professional SEO and Google Ads consulting. Is SEO worth it? Definitely! Unlike other SEO agencies, we show you transparently what SEO costs and delivers. Digital agency Stuttgart with proven results.'
         }
       ]
     },
@@ -62,23 +62,23 @@ export const translations = {
       processSteps: [
         {
           number: '01',
-          title: 'With a team that has proven experience in the industrial fields',
-          description: 'Deep industry knowledge combined with technical expertise'
+          title: 'Industry Experience & Expertise',
+          description: 'Deep knowledge in healthcare, government, manufacturing and SME sectors combined with technical expertise'
         },
         {
           number: '02',
-          title: 'User centricity with a deep, experienced but pragmatic methodological approach to problems',
-          description: 'Human-centered design meets practical problem-solving'
+          title: 'Change Management',
+          description: 'We guide your team through digital transformation – from strategy to sustainable adoption of new working methods'
         },
         {
           number: '03',
-          title: 'Full Stack and Low Code developers which understand your needs',
-          description: 'Technical solutions tailored to your specific requirements'
+          title: 'Workflow Automation',
+          description: 'We connect your digital tools seamlessly and create continuous business processes without media breaks'
         },
         {
           number: '04',
-          title: 'Make results measurable for your perceived success feeling',
-          description: 'Transparent metrics and clear success indicators'
+          title: 'Measurable Results',
+          description: 'Transparent metrics and clear success indicators – you see exactly what your investment delivers'
         }
       ],
       stats: [
@@ -308,28 +308,6 @@ export const translations = {
           features: ['ERP Integration', 'Production Optimization', 'Supply Chain Digitalization', 'Customer Portal Solutions']
         }
       ]
-    },
-    toolsMethoden: {
-      badge: 'Our Expertise',
-      title: 'Our Tools & Methods',
-      subtitle: 'Professional approaches for your digital success',
-      items: [
-        {
-          title: 'Change Management Processes',
-          description: 'Successful digital transformation requires more than technology. Our change management guides your team through the transition – from strategy to sustainable adoption of new working methods.',
-          features: ['Stakeholder Analysis', 'Communication Strategy', 'Training Programs', 'Success Measurement']
-        },
-        {
-          title: 'Workflow Automation',
-          description: 'Automate repetitive tasks and increase efficiency. Our workflow automation seamlessly connects your digital tools and creates continuous business processes without media breaks.',
-          features: ['Process Analysis', 'Tool Integration', 'Automated Workflows', 'Monitoring & Reporting']
-        },
-        {
-          title: 'SEO & Google Ads Consulting',
-          description: 'Is SEO worth it? Definitely! Our professional SEO consulting and Google Ads campaigns get you to page 1. Unlike other SEO agencies, we work transparently – you see exactly what your SEO investment delivers.',
-          features: ['SEO Audit & Strategy', 'Google Ads Campaigns', 'Content Optimization', 'Transparent Reporting']
-        }
-      ]
     }
   },
   de: {
@@ -376,8 +354,8 @@ export const translations = {
         },
         {
           number: '004',
-          name: 'Website erstellen lassen Stuttgart – SEO-optimiert für Top-Rankings',
-          description: 'Moderne WordPress Websites erstellen lassen mit SEO Optimierung Stuttgart. Wir erstellen Websites, die bei Google ranken und Besucher in Kunden verwandeln. Digitalagentur Stuttgart mit nachweisbaren Erfolgen.'
+          name: 'Website erstellen lassen Stuttgart – SEO & Google Ads',
+          description: 'Moderne WordPress Websites erstellen lassen mit professioneller SEO und Google Ads Beratung. Lohnt sich SEO? Definitiv! Anders als andere SEO Agenturen zeigen wir Dir transparent die Kosten für SEO und was sie bringen. Digitalagentur Stuttgart mit nachweisbaren Erfolgen.'
         }
       ]
     },
@@ -393,23 +371,23 @@ export const translations = {
       processSteps: [
         {
           number: '01',
-          title: 'Mit einem Team mit nachgewiesener Erfahrung in industriellen Bereichen',
-          description: 'Tiefes Branchenwissen kombiniert mit technischer Expertise'
+          title: 'Branchenerfahrung & Expertise',
+          description: 'Tiefes Wissen in Gesundheitswesen, Behörden, Produktion und Mittelstand kombiniert mit technischer Expertise'
         },
         {
           number: '02',
-          title: 'Nutzerzentriert mit einem tiefen, erfahrenen aber pragmatischen methodischen Ansatz',
-          description: 'Human-Centered Design trifft auf praktische Problemlösung'
+          title: 'Change Management',
+          description: 'Wir begleiten Dein Team durch die digitale Transformation – von der Strategie bis zur nachhaltigen Verankerung neuer Arbeitsweisen'
         },
         {
           number: '03',
-          title: 'Full Stack und Low-Code Entwickler, die Deine Bedürfnisse verstehen',
-          description: 'Technische Lösungen, die auf Deine spezifischen Anforderungen zugeschnitten sind'
+          title: 'Workflow Automatisierung',
+          description: 'Wir verbinden Deine digitalen Tools nahtlos und schaffen durchgängige Business Processes ohne Medienbrüche'
         },
         {
           number: '04',
-          title: 'Ergebnisse messbar machen für Dein Erfolgsgefühl',
-          description: 'Transparente Metriken und klare Erfolgsindikatoren'
+          title: 'Messbare Ergebnisse',
+          description: 'Transparente Metriken und klare Erfolgsindikatoren – Du siehst genau, was Deine Investition bringt'
         }
       ],
       stats: [
@@ -641,28 +619,6 @@ export const translations = {
           title: 'Mittelstand & Produktion',
           description: 'Spezialisierte Digitalisierung für den Mittelstand. Von der Produktionsplanung bis zum Kundenservice – wir digitalisieren Deine Business Processes end-to-end mit bewährten digitalen Tools.',
           features: ['ERP-Integration', 'Produktionsoptimierung', 'Supply Chain Digitalisierung', 'Kundenportal-Lösungen']
-        }
-      ]
-    },
-    toolsMethoden: {
-      badge: 'Unsere Expertise',
-      title: 'Unsere Tools & Methoden',
-      subtitle: 'Professionelle Ansätze für Deinen digitalen Erfolg',
-      items: [
-        {
-          title: 'Change Management Prozesse',
-          description: 'Erfolgreiche digitale Transformation braucht mehr als Technologie. Unser Change Management begleitet Dein Team durch den Wandel – von der Strategie bis zur nachhaltigen Verankerung neuer Arbeitsweisen.',
-          features: ['Stakeholder-Analyse', 'Kommunikationsstrategie', 'Schulungsprogramme', 'Erfolgsmessung']
-        },
-        {
-          title: 'Workflow Automatisierung',
-          description: 'Automatisiere repetitive Aufgaben und steigere die Effizienz. Unsere Workflow Automatisierung verbindet Deine digitalen Tools nahtlos und schafft durchgängige Business Processes ohne Medienbrüche.',
-          features: ['Prozessanalyse', 'Tool-Integration', 'Automatisierte Workflows', 'Monitoring & Reporting']
-        },
-        {
-          title: 'SEO & Google Ads Beratung',
-          description: 'Lohnt sich SEO? Definitiv! Unsere professionelle SEO Beratung und Google Ads Kampagnen bringen Dich auf Seite 1. Anders als andere SEO Agenturen arbeiten wir transparent – Du siehst genau, was die Kosten für SEO bringen.',
-          features: ['SEO-Audit & Strategie', 'Google Ads Kampagnen', 'Content-Optimierung', 'Transparentes Reporting']
         }
       ]
     }
