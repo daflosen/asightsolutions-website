@@ -20,6 +20,14 @@ import IndustriesBranchen from '@/components/sections/IndustriesBranchen'
 export const metadata: Metadata = {
   title: 'Digitalisierung Unternehmensberatung Stuttgart | A Sight Solutions',
   description: 'Spezialisierte Unternehmensberatung für Digitalisierung und digitale Transformation. BAFA-gefördert. Experten für KI & Automatisierung im Mittelstand.',
+  alternates: {
+    canonical: 'https://asightsolutions.com',
+    languages: {
+      'en': 'https://asightsolutions.com/en',
+      'de-DE': 'https://asightsolutions.com/de',
+      'x-default': 'https://asightsolutions.com',
+    },
+  },
   keywords: [
     // Hauptkeywords
     'digitalisierung unternehmensberatung',
