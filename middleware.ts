@@ -1,30 +1,29 @@
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 
-// Countries that should see German version
-const GERMAN_SPEAKING_COUNTRIES = ['DE', 'AT', 'CH']
-
-// Simple geo-detection based on Vercel headers (works on Vercel deployment)
-function getCountryFromRequest(request: NextRequest): string | null {
-  // Vercel provides geo data in headers
-  const country = request.headers.get('x-vercel-ip-country')
-  return country
-}
-
-// Get browser language preference
-function getBrowserLanguage(request: NextRequest): string | null {
-  const acceptLanguage = request.headers.get('accept-language')
-  if (!acceptLanguage) return null
-
-  // Parse accept-language header (e.g., "de-DE,de;q=0.9,en;q=0.8")
-  const languages = acceptLanguage.split(',').map(lang => {
-    const [code] = lang.trim().split(';')
-    return code.toLowerCase()
-  })
-
-  // Check if German is preferred
-  const hasGerman = languages.some(lang => lang.startsWith('de'))
-  return hasGerman ? 'de' : 'en'
+// Check if request is from a bot/crawler
+function isBot(request: NextRequest): boolean {
+  const userAgent = request.headers.get('user-agent')?.toLowerCase() || ''
+  const botPatterns = [
+    'googlebot',
+    'bingbot',
+    'slurp',
+    'duckduckbot',
+    'baiduspider',
+    'yandexbot',
+    'facebookexternalhit',
+    'twitterbot',
+    'linkedinbot',
+    'embedly',
+    'quora link preview',
+    'showyoubot',
+    'outbrain',
+    'pinterest',
+    'applebot',
+    'semrushbot',
+    'ahrefsbot',
+  ]
+  return botPatterns.some(bot => userAgent.includes(bot))
 }
 
 export function middleware(request: NextRequest) {
@@ -42,7 +41,13 @@ export function middleware(request: NextRequest) {
     return NextResponse.next()
   }
 
-  // Check for existing language cookie
+  // IMPORTANT: Never redirect or modify responses for bots/crawlers
+  // They must see the page directly with 200 status
+  if (isBot(request)) {
+    return NextResponse.next()
+  }
+
+  // For regular users: set language preference cookie (no redirects!)
   const preferredLang = request.cookies.get('preferred-lang')?.value
 
   // If user is on /en path, set English cookie
@@ -72,7 +77,6 @@ export function middleware(request: NextRequest) {
   }
 
   // For homepage / - default is German (no redirect needed)
-  // Just set the cookie if not already set
   if (pathname === '/') {
     const response = NextResponse.next()
     if (!preferredLang) {

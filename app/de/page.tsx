@@ -23,7 +23,6 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://asightsolutions.com/de',
     languages: {
-      'en': 'https://asightsolutions.com/en',
       'de-DE': 'https://asightsolutions.com/de',
       'x-default': 'https://asightsolutions.com',
     },
