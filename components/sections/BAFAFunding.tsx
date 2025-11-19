@@ -8,45 +8,35 @@ export default function BAFAFunding() {
   const funding = t.funding
 
   return (
-    <section className="py-20 bg-gray-50 relative overflow-hidden">
+    <section className="py-20 relative overflow-hidden" style={{ backgroundColor: '#F5F5F5' }}>
       {/* Grain Overlay */}
       <div className="grain-overlay" style={{ opacity: 0.03 }} />
 
-      <div className="container mx-auto px-6 relative z-10">
-        {/* Badge */}
+      <div className="max-w-7xl mx-auto px-8 relative z-10">
+        {/* Header - Stats Style */}
         <motion.div
-          initial={{ opacity: 0, y: -10 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-8"
         >
-          <span className="inline-flex items-center gap-2 text-sm font-medium text-gray-700">
-            <span className="w-6 h-6 bg-[#3AA6B9] rounded-full inline-flex items-center justify-center text-white text-sm font-bold">
-              €
-            </span>
-            {funding.badge}
-          </span>
+          <div className="flex flex-col md:flex-row items-start gap-6 md:gap-24 mb-12">
+            <div className="flex items-center gap-3">
+              <span className="w-6 h-6 bg-gray-900 rounded-full inline-flex items-center justify-center text-white text-sm font-bold">
+                €
+              </span>
+              <span className="text-sm font-bold">{funding.badge}</span>
+            </div>
+
+            <div>
+              <h2 className="leading-[1.2] mb-4" style={{ fontSize: 'clamp(28px, 7vw, 60px)', fontWeight: 600, fontFamily: 'Inter, sans-serif', color: '#2d3436' }}>
+                {funding.title}
+              </h2>
+              <p className="text-xl" style={{ color: '#B3B4B5' }}>
+                {funding.subtitle}
+              </p>
+            </div>
+          </div>
         </motion.div>
-
-        {/* Heading */}
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-4xl md:text-5xl font-semibold text-gray-900 mb-4 leading-tight"
-        >
-          {funding.title}
-        </motion.h2>
-
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.1 }}
-          className="text-xl text-gray-700 mb-12 max-w-3xl"
-        >
-          {funding.subtitle}
-        </motion.p>
 
         {/* Intro Text */}
         <motion.div
