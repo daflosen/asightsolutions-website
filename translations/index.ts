@@ -342,7 +342,7 @@ export const translations = {
         { title: 'KI & Business Automation', desc: 'Automation in Business – künstliche Intelligenz für Dein Unternehmen' }
       ],
       seoH1: 'Digitalisierung Unternehmensberatung Stuttgart - A Sight Solutions: KI, Automatisierung & Prozessoptimierung für den Mittelstand',
-      tagline: 'Digitale Lösungen und Strategien, die Deine\nProzesse optimieren und Dein Business wachsen lassen.',
+      tagline: 'Digitale Lösungen und Strategien, die Deine Prozesse optimieren und Dein Business wachsen lassen.',
       founderRole: 'Gründer',
       founderCompany: 'bei asight®',
       contactButton: 'Kontakt aufnehmen',

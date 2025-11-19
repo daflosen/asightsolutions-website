@@ -13,6 +13,9 @@ import CTASimple from '@/components/sections/CTASimple'
 import PreFooter from '@/components/sections/PreFooter'
 import FooterSimple from '@/components/sections/FooterSimple'
 import LazySection from '@/components/ui/LazySection'
+import IndustriesBranchen from '@/components/sections/IndustriesBranchen'
+import ToolsMethoden from '@/components/sections/ToolsMethoden'
+import BAFAFunding from '@/components/sections/BAFAFunding'
 
 // Page-specific metadata (overrides layout metadata for this page)
 export const metadata: Metadata = {
@@ -83,6 +86,14 @@ export default function GermanHome() {
       </LazySection>
 
       <LazySection threshold={0.1} rootMargin="200px">
+        <IndustriesBranchen />
+      </LazySection>
+
+      <LazySection threshold={0.1} rootMargin="200px">
+        <ToolsMethoden />
+      </LazySection>
+
+      <LazySection threshold={0.1} rootMargin="200px">
         <AboutUs />
       </LazySection>
 
@@ -101,6 +112,9 @@ export default function GermanHome() {
       <LazySection threshold={0.1} rootMargin="200px">
         <FAQSimple />
       </LazySection>
+
+      {/* BAFA Section - after FAQ for conversion funnel */}
+      <BAFAFunding />
 
       <LazySection threshold={0.1} rootMargin="200px">
         <CTASimple />
