@@ -51,7 +51,7 @@ export const servicesDetailed = {
           description: 'SEO-optimierte Websites mit modernem Design für Top-Rankings bei Google.',
           detailedContent: `<p>Deine Website ist dein wichtigster digitaler Vertriebskanal. Als Full-Service Digitalagentur in Stuttgart entwickeln wir nicht nur optisch ansprechende Websites, sondern digitale Vertriebsmaschinen, die nachweisbar mehr Kunden generieren. Du willst eine Website WordPress erstellen lassen? Wir sind dein Partner.</p>
 
-<p>Unsere WordPress-Websites vereinen modernes Design mit technischer Exzellenz. Wenn du eine professionelle Website WordPress erstellen lassen möchtest, entwickeln wir responsive Webseiten, die auf allen Geräten perfekt funktionieren, blitzschnell laden und bei Google ganz oben ranken. Dabei setzen wir auf bewährte Content-Management-Systeme wie WordPress oder moderne Frameworks wie Next.js für maximale Performance.</p>
+<p>Unsere WordPress-Websites vereinen modernes Design mit technischer Exzellenz. Wir entwickeln responsive Webseiten, die auf allen Geräten perfekt funktionieren, blitzschnell laden und bei Google ganz oben ranken. Die SEO Optimierung Kosten sind dabei transparent – du weißt genau, was du für dein Investment bekommst.</p>
 
 <p>SEO-Optimierung ist bei uns keine Zusatzleistung, sondern Standard. Jede Website wird von Grund auf für Suchmaschinen optimiert: Technisches SEO, On-Page-Optimierung, strukturierte Daten und Core Web Vitals – wir sorgen dafür, dass deine Website bei relevanten Suchanfragen in Stuttgart und Baden-Württemberg gefunden wird. Ein aktuelles Projekt: Nach unserer SEO-Optimierung steigerte ein Stuttgarter Dienstleister seinen organischen Traffic um 380% innerhalb von 6 Monaten.</p>
 

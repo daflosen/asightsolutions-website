@@ -345,7 +345,7 @@ export const translations = {
         {
           number: '002',
           name: 'Unternehmensberatung Digitalisierung Stuttgart – Dein Partner für digitale Transformation',
-          description: 'Ganzheitliche Digitalisierungsstrategie und digitale Transformation Beratung mit professionellem Change Management. Als ERP Berater und Unternehmensberatung Digitalisierung Stuttgart begleiten wir Dich bei der digitalen Transformation.'
+          description: 'Ganzheitliche Digitalisierungsstrategie mit professionellem Change Management. Als Unternehmensberatung Digitalisierung Stuttgart begleiten wir Dich bei der digitalen Transformation – von der Analyse bis zur Umsetzung.'
         },
         {
           number: '003',
@@ -362,8 +362,8 @@ export const translations = {
     about: {
       badge: 'Das sind wir',
       title: 'Über Uns',
-      subtitle: 'Dein Partner für digitale Transformation Beratung Stuttgart',
-      description: 'Wir sind eine spezialisierte Unternehmensberatung für Digitalisierung in Stuttgart. Mit BAFA-Förderung und über 200 erfolgreich abgeschlossenen Projekten begleiten wir Unternehmen bei der digitalen Transformation. Als ERP Berater und BAFA Berater Stuttgart unterstützen wir den Mittelstand mit Prozessautomatisierung Software und professionellem Change Management.',
+      subtitle: 'Dein Partner für Digitalisierung in Stuttgart',
+      description: 'Wir sind eine spezialisierte Unternehmensberatung für Digitalisierung in Stuttgart. Mit BAFA-Förderung und über 200 erfolgreich abgeschlossenen Projekten begleiten wir Unternehmen bei der digitalen Transformation. Als BAFA Berater Stuttgart unterstützen wir den Mittelstand mit maßgeschneiderten Digitalisierungslösungen.',
       brandName: 'asightsolutions®',
       mainTitle: 'Wie wir',
       mainTitleGray: 'Prozessoptimierungs-Projekte und Tool-Integrationen umsetzen.',
