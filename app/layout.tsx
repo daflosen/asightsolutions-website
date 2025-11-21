@@ -88,6 +88,7 @@ export const metadata: Metadata = {
     canonical: 'https://asightsolutions.com',
     languages: {
       'de-DE': 'https://asightsolutions.com',
+      'en': 'https://asightsolutions.com/en',
       'x-default': 'https://asightsolutions.com',
     },
   },
