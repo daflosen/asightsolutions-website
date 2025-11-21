@@ -8,16 +8,26 @@ export default function LoadingScreen() {
   const [shouldExit, setShouldExit] = useState(false)
 
   useEffect(() => {
+    // Lock scroll while loading
+    document.body.style.overflow = 'hidden'
+    window.scrollTo(0, 0)
+
     // Wait for letters to animate, then start exit
     const timer = setTimeout(() => {
       setShouldExit(true)
       // Remove component after animation completes
       setTimeout(() => {
+        // Reset scroll position and unlock
+        window.scrollTo(0, 0)
+        document.body.style.overflow = ''
         setIsVisible(false)
       }, 1400)
     }, 2500)
 
-    return () => clearTimeout(timer)
+    return () => {
+      clearTimeout(timer)
+      document.body.style.overflow = ''
+    }
   }, [])
 
   const letters = 'asightsolutions®'.split('')
