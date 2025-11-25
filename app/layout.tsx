@@ -5,6 +5,7 @@ import LoadingScreen from '@/components/LoadingScreen'
 import Navigation from '@/components/common/Navigation'
 import FloatingContactWidget from '@/components/ui/FloatingContactWidget'
 import { LanguageProvider } from '@/contexts/LanguageContext'
+import { Analytics } from '@vercel/analytics/react'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -164,6 +165,7 @@ export default function RootLayout({
             }),
           }}
         />
+        <Analytics />
       </body>
     </html>
   )
