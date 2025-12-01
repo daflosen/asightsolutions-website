@@ -11,7 +11,7 @@ export const servicesDetailed = {
 
 <p>Unsere Prozessdigitalisierung beginnt mit einer detaillierten Analyse Deiner bestehenden Abläufe. Wir identifizieren Automatisierungspotenziale, eliminieren Medienbrüche und reduzieren manuelle Tätigkeiten auf ein Minimum. Dabei setzen wir auf bewährte Prozessautomatisierung Software wie Robotic Process Automation (RPA), intelligente Dokumentenverarbeitung und Cloud-basierte Workflow Automatisierung Systeme für optimale digitale Prozesse.</p>
 
-<p>Das Ergebnis unserer Digitalisierungsberatung: Deine Prozesse werden bis zu 40% schneller, die Fehlerquote sinkt um durchschnittlich 60%, und Deine Mitarbeiter haben mehr Zeit für wertschöpfende Tätigkeiten. Ein Beispiel aus der Praxis: Ein mittelständischer Maschinenbauer aus Stuttgart konnte durch unsere Prozessautomatisierung die Auftragsbearbeitungszeit von 3 Tagen auf 4 Stunden reduzieren.</p>
+<p>Spezialisierte KI-Lösungen für Bäckereien in Stuttgart-Vaihingen. Das Ergebnis unserer Digitalisierungsberatung: Deine Prozesse werden bis zu 40% schneller, die Fehlerquote sinkt um durchschnittlich 60%, und Deine Mitarbeiter haben mehr Zeit für wertschöpfende Tätigkeiten. Ein Beispiel aus der Praxis: Ein mittelständischer Maschinenbauer aus Stuttgart konnte durch unsere Prozessautomatisierung die Auftragsbearbeitungszeit von 3 Tagen auf 4 Stunden reduzieren.</p>
 
 <p>Wir begleiten Dich von der Strategieentwicklung über die Implementierung bis zur Schulung deiner Mitarbeiter. Deine Digitalisierungsprojekte sind BAFA-förderfähig – bis zu 50% Zuschuss sind möglich. Wir bereiten alle erforderlichen Unterlagen für Dich vor und arbeiten mit erfahrenen BAFA-Beratern zusammen, um Dir die maximale Förderung zu sichern.</p>
 
