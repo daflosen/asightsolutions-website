@@ -11,32 +11,35 @@ interface LazySectionProps {
 }
 
 /**
- * Lazy Loading Section Component
- * Only renders children when section is in viewport
- * Reduces initial page load and improves performance
+ * SSR-Friendly Lazy Animation Section Component
+ * ALWAYS renders children for SEO - only animation is lazy
+ * Content is visible in HTML source for search engines
  *
- * @param threshold - Percentage of visibility needed to trigger (0.0 - 1.0)
- * @param rootMargin - Margin around viewport to start loading early (e.g., "200px")
+ * @param threshold - Percentage of visibility needed to trigger animation (0.0 - 1.0)
+ * @param rootMargin - Margin around viewport to start animation early (e.g., "200px")
  */
 export default function LazySection({
   children,
   className = '',
   threshold = 0.1,
   rootMargin = '200px',
-  fallback = null,
 }: LazySectionProps) {
-  const [isVisible, setIsVisible] = useState(false)
-  const [hasLoaded, setHasLoaded] = useState(false)
+  // Start with true for SSR - content is visible immediately
+  // After hydration, we'll animate elements as they scroll into view
+  const [hasAnimated, setHasAnimated] = useState(true)
+  const [isHydrated, setIsHydrated] = useState(false)
   const sectionRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
+    // Mark as hydrated and reset animation state
+    setIsHydrated(true)
+    setHasAnimated(false)
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting && !hasLoaded) {
-            setIsVisible(true)
-            setHasLoaded(true)
-            // Disconnect after first load
+          if (entry.isIntersecting) {
+            setHasAnimated(true)
             observer.disconnect()
           }
         })
@@ -52,17 +55,20 @@ export default function LazySection({
     }
 
     return () => observer.disconnect()
-  }, [threshold, rootMargin, hasLoaded])
+  }, [threshold, rootMargin])
 
   return (
-    <div ref={sectionRef} className={className}>
-      {isVisible || hasLoaded ? (
-        children
-      ) : (
-        fallback || (
-          <div className="min-h-[400px] bg-gray-50 animate-pulse rounded-lg" />
-        )
-      )}
+    <div
+      ref={sectionRef}
+      className={className}
+      style={isHydrated ? {
+        opacity: hasAnimated ? 1 : 0,
+        transform: hasAnimated ? 'translateY(0)' : 'translateY(30px)',
+        transition: 'opacity 0.6s ease-out, transform 0.6s ease-out',
+      } : undefined}
+    >
+      {/* ALWAYS render children for SEO - content is in HTML source */}
+      {children}
     </div>
   )
 }

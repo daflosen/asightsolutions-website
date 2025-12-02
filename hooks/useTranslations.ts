@@ -1,7 +1,11 @@
 import { useLanguage } from '@/contexts/LanguageContext'
-import { translations } from '@/translations'
+import { getTranslations } from '@/lib/getTranslations'
 
+/**
+ * Hook for translations in Client Components
+ * Uses getTranslations which is SSR-safe
+ */
 export function useTranslations() {
   const { language } = useLanguage()
-  return translations[language]
+  return getTranslations(language)
 }

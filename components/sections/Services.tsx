@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { useTranslations } from '@/hooks/useTranslations'
 
 export default function Services() {
@@ -81,35 +81,32 @@ export default function Services() {
                 </motion.div>
               </div>
 
-              <AnimatePresence>
-                {expandedIndex === index && (
-                  <motion.div
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: 'auto', opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.3 }}
-                    className="overflow-hidden"
-                  >
-                    <div className="pb-8 pl-20 pr-8">
-                      {/* Detailed Content */}
-                      <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 md:p-8">
-                        <div className="prose prose-invert max-w-none">
-                          {servicesDetailed[index]?.detailedContent ? (
-                            <div
-                              className="text-white/90 leading-relaxed space-y-4"
-                              dangerouslySetInnerHTML={{ __html: servicesDetailed[index].detailedContent }}
-                            />
-                          ) : (
-                            <p className="text-white/80 text-lg leading-relaxed">
-                              {service.description}
-                            </p>
-                          )}
-                        </div>
-                      </div>
+              {/* SEO: Always render content, CSS controls visibility */}
+              <div
+                className="overflow-hidden transition-all duration-300"
+                style={{
+                  maxHeight: expandedIndex === index ? '2000px' : '0',
+                  opacity: expandedIndex === index ? 1 : 0,
+                }}
+              >
+                <div className="pb-8 pl-20 pr-8">
+                  {/* Detailed Content - Always in HTML for SEO */}
+                  <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 md:p-8">
+                    <div className="prose prose-invert max-w-none">
+                      {servicesDetailed[index]?.detailedContent ? (
+                        <div
+                          className="text-white/90 leading-relaxed space-y-4 [&_p]:mb-4"
+                          dangerouslySetInnerHTML={{ __html: servicesDetailed[index].detailedContent }}
+                        />
+                      ) : (
+                        <p className="text-white/80 text-lg leading-relaxed">
+                          {service.description}
+                        </p>
+                      )}
                     </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
+                  </div>
+                </div>
+              </div>
             </motion.div>
           ))}
         </div>
