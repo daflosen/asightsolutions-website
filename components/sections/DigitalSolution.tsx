@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import Link from 'next/link'
 import { useTranslations } from '@/hooks/useTranslations'
 
 const projects = [
@@ -14,8 +15,10 @@ const projects = [
     bgColor: 'bg-white',
     logo: '🦍',
     image: '/images/optimized/ApeLedger_New_Free.webp',
-    category: 'ape', // Ape Series - Innovation Line
-    badge: 'Innovation Series'
+    category: 'ape',
+    badge: 'Innovation Series',
+    url: 'https://apeledger.net',
+    status: 'live' as const
   },
   {
     id: 2,
@@ -26,8 +29,9 @@ const projects = [
     bgColor: 'bg-white',
     logo: '🦧',
     image: '/images/optimized/RisKApe_Free_Tuerkis.webp',
-    category: 'ape', // Ape Series - Innovation Line
-    badge: 'Innovation Series'
+    category: 'ape',
+    badge: 'Innovation Series',
+    status: 'coming-soon' as const
   },
   {
     id: 3,
@@ -39,8 +43,9 @@ const projects = [
     logo: '>>>',
     style: 'transform: rotate(45deg)',
     image: '/images/optimized/ERP_365_Logo.webp',
-    category: 'enterprise', // Enterprise Solutions
-    badge: 'Enterprise'
+    category: 'enterprise',
+    badge: 'Enterprise',
+    status: 'coming-soon' as const
   },
   {
     id: 4,
@@ -51,8 +56,9 @@ const projects = [
     bgColor: 'bg-white',
     logo: '✓',
     image: '/images/VAULT_Logo_2.svg',
-    category: 'enterprise', // Enterprise Solutions
-    badge: 'Enterprise'
+    category: 'enterprise',
+    badge: 'Enterprise',
+    status: 'coming-soon' as const
   }
 ]
 
@@ -99,15 +105,15 @@ export default function DigitalSolution() {
 
         {/* Project Grid */}
         <div className="grid md:grid-cols-2 gap-6">
-          {projects.map((project, index) => (
-            <motion.div
-              key={project.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className={`${project.bgColor} rounded-3xl ${(project.id === 1 || project.id === 2 || project.id === 3 || project.id === 4) ? 'p-0 overflow-hidden relative' : 'p-12'} hover:shadow-xl transition-all cursor-pointer group h-[400px]`}
-            >
+          {projects.map((project, index) => {
+            const CardContent = (
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className={`${project.bgColor} rounded-3xl ${(project.id === 1 || project.id === 2 || project.id === 3 || project.id === 4) ? 'p-0 overflow-hidden relative' : 'p-12'} hover:shadow-xl transition-all cursor-pointer group h-[400px]`}
+              >
               {(project.id === 1 || project.id === 2 || project.id === 3 || project.id === 4) && project.image ? (
                 <>
                   <div className="absolute inset-0 z-0">
@@ -123,7 +129,21 @@ export default function DigitalSolution() {
                     />
                   </div>
                   <div className="relative z-10 p-12">
-                    {/* Category Badge - Larger & More Prominent */}
+                    {/* Status Badge - Top Left */}
+                    <div className="absolute top-6 left-6">
+                      {project.status === 'live' ? (
+                        <span className="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full bg-[#3AA6B9] text-white shadow-md">
+                          <span className="w-2 h-2 bg-white rounded-full animate-pulse" />
+                          Live
+                        </span>
+                      ) : (
+                        <span className="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full bg-gray-100 text-gray-500 shadow-sm">
+                          Coming Soon
+                        </span>
+                      )}
+                    </div>
+
+                    {/* Category Badge - Top Right */}
                     <div className="absolute top-6 right-6">
                       <span className={`text-xs font-bold px-4 py-2 rounded-full shadow-md ${
                         project.category === 'ape'
@@ -134,7 +154,16 @@ export default function DigitalSolution() {
                       </span>
                     </div>
 
-                    {/* Removed Title - Only Badge visible */}
+                    {/* External Link Icon - Bottom Right (only for live products) */}
+                    {project.status === 'live' && (
+                      <div className="absolute bottom-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[#3AA6B9] text-white shadow-lg">
+                          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                          </svg>
+                        </span>
+                      </div>
+                    )}
                   </div>
                 </>
               ) : (
@@ -179,8 +208,17 @@ export default function DigitalSolution() {
                   )}
                 </>
               )}
-            </motion.div>
-          ))}
+              </motion.div>
+            )
+
+            return project.url ? (
+              <Link key={project.id} href={project.url} target="_blank" rel="noopener noreferrer">
+                {CardContent}
+              </Link>
+            ) : (
+              <div key={project.id}>{CardContent}</div>
+            )
+          })}
         </div>
       </div>
     </section>
