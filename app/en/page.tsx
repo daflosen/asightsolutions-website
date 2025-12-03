@@ -81,7 +81,7 @@ export default function EnglishHome() {
       </LazySection>
 
       <LazySection threshold={0.1} rootMargin="200px">
-        <Services />
+        <Services lang="en" />
       </LazySection>
 
       <LazySection threshold={0.1} rootMargin="200px">

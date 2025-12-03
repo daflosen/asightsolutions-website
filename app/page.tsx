@@ -88,7 +88,7 @@ export default function Home() {
       </LazySection>
 
       <LazySection threshold={0.1} rootMargin="200px">
-        <Services />
+        <Services lang="de" />
       </LazySection>
 
       <LazySection threshold={0.1} rootMargin="200px">
